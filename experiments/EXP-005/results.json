@@ -1,0 +1,521 @@
+{
+  "design_note": "Single-block binary acquisition. Adaptive submodularity is vacuous here: it licenses adaptive greedy over a sequence of tests, and there is no sequence. Explanation (c) as originally stated is a category error.",
+  "thresholds": {
+    "declared": "before running; no cost or utility adjusted afterwards",
+    "learned_margin": 0.005,
+    "oracle_margin": 0.01,
+    "signal_floor": 0.05
+  },
+  "utilities": {
+    "balanced": {
+      "costs": {
+        "0.0": {
+          "learned_advantage": -0.0016384489350081922,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.004642271982523211,
+              0.0010922992900054614
+            ],
+            "mean_delta": -0.0016384489350081922
+          },
+          "mean_ndv": {
+            "cheapest": 0.005188421627525942,
+            "cost_aware_voi": 0.004369197160021846,
+            "most_predictive": 0.005188421627525942,
+            "none": -0.023211359912616056,
+            "oracle": 0.07072637902785363,
+            "random": -0.010103768432550519,
+            "uncertainty_reduction": 0.006007646095030038
+          },
+          "oracle_acquisition_rate": 0.1310759148006554,
+          "oracle_advantage": 0.0647187329328236,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.05269661387220098,
+              0.07646777717094483
+            ],
+            "mean_delta": 0.0647187329328236
+          },
+          "strongest_non_voi": "uncertainty_reduction",
+          "verdict": "model_side"
+        },
+        "0.01": {
+          "learned_advantage": -0.0018077553249590404,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.004232659748771162,
+              7.113599126160636e-05
+            ],
+            "mean_delta": -0.0018077553249590378
+          },
+          "mean_ndv": {
+            "cheapest": -0.004811578372474041,
+            "cost_aware_voi": -0.005712725286728549,
+            "most_predictive": -0.004811578372474041,
+            "none": -0.023211359912616056,
+            "oracle": 0.06941561987984708,
+            "random": -0.01843801201529218,
+            "uncertainty_reduction": -0.0039049699617695085
+          },
+          "oracle_acquisition_rate": 0.1310759148006554,
+          "oracle_advantage": 0.07332058984161659,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.061364554888039324,
+              0.08504874385581647
+            ],
+            "mean_delta": 0.0733205898416166
+          },
+          "strongest_non_voi": "uncertainty_reduction",
+          "verdict": "model_side"
+        },
+        "0.025": {
+          "learned_advantage": 0.003017476788640089,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.00017783997815400907,
+              0.006485527034407432
+            ],
+            "mean_delta": 0.0030174767886400923
+          },
+          "mean_ndv": {
+            "cheapest": -0.019811578372474044,
+            "cost_aware_voi": -0.01575641725832877,
+            "most_predictive": -0.019811578372474044,
+            "none": -0.023211359912616056,
+            "oracle": 0.06744948115783725,
+            "random": -0.02312943746586564,
+            "uncertainty_reduction": -0.01877389404696886
+          },
+          "oracle_acquisition_rate": 0.1310759148006554,
+          "oracle_advantage": 0.08622337520480611,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.07433984161660295,
+              0.09792019388312397
+            ],
+            "mean_delta": 0.08622337520480612
+          },
+          "strongest_non_voi": "uncertainty_reduction",
+          "verdict": "model_side"
+        },
+        "0.05": {
+          "learned_advantage": -0.0036318951392681625,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.014802020753686515,
+              0.008274167121791366
+            ],
+            "mean_delta": -0.0036318951392681634
+          },
+          "mean_ndv": {
+            "cheapest": -0.04481157837247407,
+            "cost_aware_voi": -0.02684325505188422,
+            "most_predictive": -0.04481157837247407,
+            "none": -0.023211359912616056,
+            "oracle": 0.06417258328782087,
+            "random": -0.03866739486619334,
+            "uncertainty_reduction": -0.04355543418896779
+          },
+          "oracle_acquisition_rate": 0.1310759148006554,
+          "oracle_advantage": 0.08738394320043692,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.07588612779901693,
+              0.1006301201529219
+            ],
+            "mean_delta": 0.08738394320043692
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        },
+        "0.1": {
+          "learned_advantage": 0.0,
+          "learned_delta_ci": {
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "mean_delta": 0.0
+          },
+          "mean_ndv": {
+            "cheapest": -0.09481157837247407,
+            "cost_aware_voi": -0.023211359912616056,
+            "most_predictive": -0.09481157837247407,
+            "none": -0.023211359912616056,
+            "oracle": 0.05761878754778808,
+            "random": -0.05363189513926816,
+            "uncertainty_reduction": -0.0931185144729656
+          },
+          "oracle_acquisition_rate": 0.1310759148006554,
+          "oracle_advantage": 0.08083014746040414,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.06990715456034953,
+              0.09339432004369197
+            ],
+            "mean_delta": 0.08083014746040414
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        }
+      },
+      "heterogeneity": {
+        "max": 1.5,
+        "mean": 0.028399781540142,
+        "min": -1.5,
+        "n": 1831,
+        "sd": 0.4061402093696228,
+        "share_negative": 0.07318405243036592,
+        "share_nonzero": 0.2042599672310213,
+        "share_positive": 0.1310759148006554
+      },
+      "predicted_gain_sd": 0.043812708511055135,
+      "signal": {
+        "degenerate": false,
+        "pearson": 0.014942425436433435,
+        "spearman": 0.05541921667151017
+      }
+    },
+    "false_positive_averse": {
+      "costs": {
+        "0.0": {
+          "learned_advantage": -0.004232659748771156,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.020620562534134353,
+              0.012971054068814856
+            ],
+            "mean_delta": -0.004232659748771164
+          },
+          "mean_ndv": {
+            "cheapest": -0.0804205352266521,
+            "cost_aware_voi": -0.07659748771163298,
+            "most_predictive": -0.0804205352266521,
+            "none": -0.07236482796286182,
+            "oracle": -0.0024576734025122883,
+            "random": -0.07536865101037685,
+            "uncertainty_reduction": -0.08260513380666303
+          },
+          "oracle_acquisition_rate": 0.056253413435281265,
+          "oracle_advantage": 0.06990715456034953,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.056253413435281265,
+              0.08288503549972692
+            ],
+            "mean_delta": 0.06990715456034953
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        },
+        "0.01": {
+          "learned_advantage": 0.0028126706717640643,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.009580283997815403,
+              0.015752457673402512
+            ],
+            "mean_delta": 0.0028126706717640634
+          },
+          "mean_ndv": {
+            "cheapest": -0.09042053522665211,
+            "cost_aware_voi": -0.06955215729109776,
+            "most_predictive": -0.09042053522665211,
+            "none": -0.07236482796286182,
+            "oracle": -0.0030202075368651,
+            "random": -0.08386127799016932,
+            "uncertainty_reduction": -0.09251774986346258
+          },
+          "oracle_acquisition_rate": 0.056253413435281265,
+          "oracle_advantage": 0.06934462042599672,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.05580010922992899,
+              0.08221859639541232
+            ],
+            "mean_delta": 0.06934462042599672
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        },
+        "0.025": {
+          "learned_advantage": 0.0002730748225013707,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.0049563080283997795,
+              0.005341002184598578
+            ],
+            "mean_delta": 0.0002730748225013661
+          },
+          "mean_ndv": {
+            "cheapest": -0.10542053522665207,
+            "cost_aware_voi": -0.07209175314036045,
+            "most_predictive": -0.10542053522665207,
+            "none": -0.07236482796286182,
+            "oracle": -0.0038640087383943213,
+            "random": -0.09549426542872745,
+            "uncertainty_reduction": -0.1073866739486619
+          },
+          "oracle_acquisition_rate": 0.056253413435281265,
+          "oracle_advantage": 0.0685008192244675,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.05512015292190061,
+              0.08121893773894047
+            ],
+            "mean_delta": 0.0685008192244675
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        },
+        "0.05": {
+          "learned_advantage": 0.0,
+          "learned_delta_ci": {
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "mean_delta": 0.0
+          },
+          "mean_ndv": {
+            "cheapest": -0.13042053522665212,
+            "cost_aware_voi": -0.07236482796286182,
+            "most_predictive": -0.13042053522665212,
+            "none": -0.07236482796286182,
+            "oracle": -0.005270344074276354,
+            "random": -0.10354997269251776,
+            "uncertainty_reduction": -0.13216821409066085
+          },
+          "oracle_acquisition_rate": 0.056253413435281265,
+          "oracle_advantage": 0.06709448388858547,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.053986892408519935,
+              0.07955283997815402
+            ],
+            "mean_delta": 0.06709448388858547
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        },
+        "0.1": {
+          "learned_advantage": 0.0,
+          "learned_delta_ci": {
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "mean_delta": 0.0
+          },
+          "mean_ndv": {
+            "cheapest": -0.1804205352266521,
+            "cost_aware_voi": -0.07236482796286182,
+            "most_predictive": -0.1804205352266521,
+            "none": -0.07236482796286182,
+            "oracle": -0.008083014746040415,
+            "random": -0.12943746586564722,
+            "uncertainty_reduction": -0.18173129437465868
+          },
+          "oracle_acquisition_rate": 0.056253413435281265,
+          "oracle_advantage": 0.06428181321682142,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.0517203713817586,
+              0.0762206444565811
+            ],
+            "mean_delta": 0.0642818132168214
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        }
+      },
+      "heterogeneity": {
+        "max": 1.25,
+        "mean": -0.008055707263790278,
+        "min": -1.25,
+        "n": 1831,
+        "sd": 0.4066747025123334,
+        "share_negative": 0.07755324959038777,
+        "share_nonzero": 0.13380666302566904,
+        "share_positive": 0.056253413435281265
+      },
+      "predicted_gain_sd": 0.10426381950007044,
+      "signal": {
+        "degenerate": false,
+        "pearson": -0.06966989926510159,
+        "spearman": -0.016608383727422654
+      }
+    },
+    "opportunity_averse": {
+      "costs": {
+        "0.0": {
+          "learned_advantage": -0.00013653741125067842,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.006147596941561987,
+              0.005461496450027308
+            ],
+            "mean_delta": -0.00013653741125068268
+          },
+          "mean_ndv": {
+            "cheapest": 0.11551064991807755,
+            "cost_aware_voi": 0.11537411250682687,
+            "most_predictive": 0.11551064991807755,
+            "none": 0.11250682687056253,
+            "oracle": 0.1253413435281267,
+            "random": 0.11551064991807755,
+            "uncertainty_reduction": 0.1152375750955762
+          },
+          "oracle_acquisition_rate": 0.03986892408519935,
+          "oracle_advantage": 0.009830693610049152,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.005461496450027308,
+              0.015565264882577826
+            ],
+            "mean_delta": 0.009830693610049153
+          },
+          "strongest_non_voi": "random",
+          "verdict": "problem_side"
+        },
+        "0.01": {
+          "learned_advantage": 4.915346805026144e-05,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.008062670671764062,
+              0.007504778809393773
+            ],
+            "mean_delta": 4.915346805024617e-05
+          },
+          "mean_ndv": {
+            "cheapest": 0.10551064991807758,
+            "cost_aware_voi": 0.11255598033861279,
+            "most_predictive": 0.10551064991807758,
+            "none": 0.11250682687056253,
+            "oracle": 0.12494265428727472,
+            "random": 0.10764609503003825,
+            "uncertainty_reduction": 0.10532495903877663
+          },
+          "oracle_acquisition_rate": 0.03986892408519935,
+          "oracle_advantage": 0.012435827416712189,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.008651010376843255,
+              0.016876979792463134
+            ],
+            "mean_delta": 0.012435827416712177
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        },
+        "0.025": {
+          "learned_advantage": 0.003399781540142019,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.001488257782632441,
+              0.008492968323320589
+            ],
+            "mean_delta": 0.0033997815401419986
+          },
+          "mean_ndv": {
+            "cheapest": 0.09051064991807757,
+            "cost_aware_voi": 0.11590660841070455,
+            "most_predictive": 0.09051064991807757,
+            "none": 0.11250682687056253,
+            "oracle": 0.12434462042599673,
+            "random": 0.09830693610049153,
+            "uncertainty_reduction": 0.09045603495357728
+          },
+          "oracle_acquisition_rate": 0.03986892408519935,
+          "oracle_advantage": 0.011837793555434198,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.008110322228290553,
+              0.016182072637902785
+            ],
+            "mean_delta": 0.01183779355543419
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        },
+        "0.05": {
+          "learned_advantage": -0.00040961223375204914,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.0006280720917531405,
+              -0.0001911523757509558
+            ],
+            "mean_delta": -0.0004096122337520481
+          },
+          "mean_ndv": {
+            "cheapest": 0.06551064991807756,
+            "cost_aware_voi": 0.11209721463681048,
+            "most_predictive": 0.06551064991807756,
+            "none": 0.11250682687056253,
+            "oracle": 0.12334789732386675,
+            "random": 0.08899508465319497,
+            "uncertainty_reduction": 0.06567449481157837
+          },
+          "oracle_acquisition_rate": 0.03986892408519935,
+          "oracle_advantage": 0.010841070453304222,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.007289049699617695,
+              0.015101720371381756
+            ],
+            "mean_delta": 0.010841070453304206
+          },
+          "strongest_non_voi": "none",
+          "verdict": "model_side"
+        },
+        "0.1": {
+          "learned_advantage": -0.00021845985800109102,
+          "learned_delta_ci": {
+            "ci_95": [
+              -0.0004369197160021845,
+              -5.461496450027306e-05
+            ],
+            "mean_delta": -0.00021845985800109224
+          },
+          "mean_ndv": {
+            "cheapest": 0.015510649918077556,
+            "cost_aware_voi": 0.11228836701256144,
+            "most_predictive": 0.015510649918077556,
+            "none": 0.11250682687056253,
+            "oracle": 0.12135445111960677,
+            "random": 0.06630256690333151,
+            "uncertainty_reduction": 0.016111414527580557
+          },
+          "oracle_acquisition_rate": 0.03986892408519935,
+          "oracle_advantage": 0.008847624249044242,
+          "oracle_delta_ci": {
+            "ci_95": [
+              0.00554205352266521,
+              0.01299836155106499
+            ],
+            "mean_delta": 0.008847624249044238
+          },
+          "strongest_non_voi": "none",
+          "verdict": "problem_side"
+        }
+      },
+      "heterogeneity": {
+        "max": 2.0,
+        "mean": 0.003003823047515019,
+        "min": -2.0,
+        "n": 1831,
+        "sd": 0.16335250517395708,
+        "share_negative": 0.008738394320043691,
+        "share_nonzero": 0.04860731840524304,
+        "share_positive": 0.03986892408519935
+      },
+      "predicted_gain_sd": 0.6778023149266555,
+      "signal": {
+        "degenerate": false,
+        "pearson": 0.0003452119256970734,
+        "spearman": 0.1311717851954232
+      }
+    }
+  }
+}

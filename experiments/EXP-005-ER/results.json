@@ -1,0 +1,28 @@
+{
+  "n_pairs": 13773,
+  "threshold_used": 0.75,
+  "strata": {
+    "positive_hard": {
+      "n": 293,
+      "accuracy": 0.0
+    },
+    "positive_easy": {
+      "n": 1480,
+      "accuracy": 0.8763513513513513
+    },
+    "negative_hard": {
+      "n": 6000,
+      "accuracy": 0.739
+    },
+    "negative_easy": {
+      "n": 6000,
+      "accuracy": 0.9991666666666666
+    }
+  },
+  "best_threshold": {
+    "threshold": 0.78,
+    "balanced_accuracy": 0.8005255922165821,
+    "sensitivity": 0.7089678510998308,
+    "specificity": 0.8920833333333333
+  }
+}

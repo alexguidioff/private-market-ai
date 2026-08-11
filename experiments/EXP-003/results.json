@@ -1,0 +1,62 @@
+{
+  "n_claims": 3537,
+  "coverage": 1.0,
+  "false_alarm_rate": 0.0,
+  "naive_false_alarm_rate": 0.3881136950904393,
+  "verdicts": {
+    "verified": 2013,
+    "contradicted": 1524
+  },
+  "naive_verdicts": {
+    "verified": 1274,
+    "contradicted": 2263
+  },
+  "sensitivity": {
+    "scale_error": {
+      "n": 483,
+      "caught": 1.0,
+      "missed_as_verified": 0.0,
+      "not_checkable": 0.0,
+      "naive_caught": 0.8178053830227743
+    },
+    "stale": {
+      "n": 457,
+      "caught": 0.9824945295404814,
+      "missed_as_verified": 0.0175054704595186,
+      "not_checkable": 0.0,
+      "naive_caught": 1.0
+    },
+    "wrong_field": {
+      "n": 462,
+      "caught": 0.9805194805194806,
+      "missed_as_verified": 0.01948051948051948,
+      "not_checkable": 0.0,
+      "naive_caught": 0.9956709956709957
+    },
+    "transposed": {
+      "n": 200,
+      "caught": 0.695,
+      "missed_as_verified": 0.305,
+      "not_checkable": 0.0,
+      "naive_caught": 1.0
+    }
+  },
+  "by_style": {
+    "hedged": {
+      "verified": 549,
+      "contradicted": 359
+    },
+    "rounded": {
+      "verified": 487,
+      "contradicted": 402
+    },
+    "exact": {
+      "verified": 476,
+      "contradicted": 393
+    },
+    "scaled": {
+      "verified": 501,
+      "contradicted": 370
+    }
+  }
+}

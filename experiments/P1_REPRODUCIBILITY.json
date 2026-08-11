@@ -1,0 +1,57 @@
+{
+  "checked": 7,
+  "failures": 0,
+  "note": "sha256 of experiments/<id>/results.json after a fresh run; compared against the hash before the run",
+  "reproducible": true,
+  "results": [
+    {
+      "experiment": "EXP-005",
+      "script": "exp005_why_voi_fails.py",
+      "sha256": "d1c7d4e49aa1c2057bab2035b208213661db75fabfedfcf7fbaff4bb23eb3337",
+      "sha256_before_rerun": "d1c7d4e49aa1c2057bab2035b208213661db75fabfedfcf7fbaff4bb23eb3337",
+      "status": "identical"
+    },
+    {
+      "experiment": "EXP-005-ER",
+      "script": "exp005_entity_resolution.py",
+      "sha256": "24ca4eb23b3140ce60599c731a267ccb2b9d2ae77b671e86e894c83267694594",
+      "sha256_before_rerun": "24ca4eb23b3140ce60599c731a267ccb2b9d2ae77b671e86e894c83267694594",
+      "status": "identical"
+    },
+    {
+      "experiment": "EXP-006",
+      "script": "exp006_stronger_baseline.py",
+      "sha256": "2b6820cb57ff1e4652c5853c602f1b2f8eb0ed0d4073d4cee67d3216969d9a0c",
+      "sha256_before_rerun": "2b6820cb57ff1e4652c5853c602f1b2f8eb0ed0d4073d4cee67d3216969d9a0c",
+      "status": "identical"
+    },
+    {
+      "experiment": "EXP-007",
+      "script": "exp007_topk_transfer.py",
+      "sha256": "1a89c1aa8ecfc6c55bf1a449350fb3b004ab8903aa0bfa55f2e47d5a875f68ea",
+      "sha256_before_rerun": "1a89c1aa8ecfc6c55bf1a449350fb3b004ab8903aa0bfa55f2e47d5a875f68ea",
+      "status": "identical"
+    },
+    {
+      "experiment": "EXP-008",
+      "script": "exp008_where_gain_lives.py",
+      "sha256": "018909e46a86e6aabe531b628e78151ad9e7470948bfc46e5a29f4ad2967cdae",
+      "sha256_before_rerun": "018909e46a86e6aabe531b628e78151ad9e7470948bfc46e5a29f4ad2967cdae",
+      "status": "identical"
+    },
+    {
+      "experiment": "EXP-009",
+      "script": "exp009_change_targeting.py",
+      "sha256": "c48cf4de464f51e6edc9c24a17c9133730d61ace8e3213d2f38e205337ae75ea",
+      "sha256_before_rerun": "c48cf4de464f51e6edc9c24a17c9133730d61ace8e3213d2f38e205337ae75ea",
+      "status": "identical"
+    },
+    {
+      "experiment": "EXP-010",
+      "script": "exp010_condition_sweep.py",
+      "sha256": "ec634166a3e04d909e0b2e6638b4a2136ad5dc9a0562b5c967277b1ac95b0842",
+      "sha256_before_rerun": "ec634166a3e04d909e0b2e6638b4a2136ad5dc9a0562b5c967277b1ac95b0842",
+      "status": "identical"
+    }
+  ]
+}

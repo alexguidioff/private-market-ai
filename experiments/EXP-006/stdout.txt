@@ -1,0 +1,33 @@
+﻿  13773 pairs
+  idf vocabulary 21615 tokens
+  attributes for 288333 (cik, name) records, 37040 unambiguous name->cik entries
+
+  EXP-006 ù can a stronger matcher close the EXP-005 gap?
+  ========================================================================
+
+  matcher                     bal.acc   thr  neg_hard  pos_hard  pos_easy
+  ------------------------------------------------------------------------
+  jaccard_suffix_stripped      77.4%  0.39    68.9%     4.4%    83.6%
+  jaccard_suffix_kept          79.3%  0.34    57.6%    10.9%    93.6%
+  sequence_ratio               80.1%  0.77    78.1%     0.0%    85.2%
+  char_3gram                   81.0%  0.40    73.7%     1.0%    89.9%
+  idf_weighted                 78.4%  0.44    70.6%     2.4%    85.2%
+  idf_and_head                 75.9%  0.45    73.3%     1.7%    77.7%
+  best_of_all                  80.1%  0.77    78.1%     0.0%    85.3%
+
+  strongest: char_3gram at balanced accuracy 81.0%
+
+  non-name attribute agreement (coverage 99.8% of pairs):
+    positive_easy    n=1479   entity_type 96%  industry 96%  state 95%
+    positive_hard    n=291    entity_type 95%  industry 87%  state 91%
+    negative_easy    n=5985   entity_type 29%  industry 22%  state 6%
+    negative_hard    n=5989   entity_type 56%  industry 61%  state 37%
+
+  separation on the cases strings cannot decide:
+    entity_type    same-entity   95%  different-entity   56%  gap +39%  <-- separates
+    industry       same-entity   87%  different-entity   61%  gap +26%  <-- separates
+    state          same-entity   91%  different-entity   37%  gap +53%  <-- separates
+
+  ------------------------------------------------------------------------
+  string ceiling: 81.0% balanced accuracy
+  attributes that separate beyond strings: entity_type, industry, state

@@ -1,0 +1,37 @@
+{
+  "experiment": "EXP-002",
+  "question": "Is point-in-time SEC information sharply informative in the tail, and does that transport to a company-disjoint cohort?",
+  "cohort_file": "datasets\\processed\\sec_form_d_future_2021_2023\\p1_cohort_enriched.csv",
+  "development_anchor_year": 2021,
+  "validation_anchor_year": 2022,
+  "outcome": "subsequent non-amendment Form D notice within 18 months (weak regulatory proxy)",
+  "features_history": [
+    "known_filing_count",
+    "known_new_notice_count",
+    "prior_notice_count",
+    "known_amendment_count",
+    "known_equity_filing_count",
+    "issuer_observed_age_days",
+    "days_since_latest_known_filing"
+  ],
+  "features_filing": [
+    "total_offering_amount",
+    "total_amount_sold",
+    "investor_count",
+    "filing_lag_days",
+    "known_cumulative_amount_sold",
+    "known_max_amount_sold",
+    "latest_known_investor_count",
+    "latest_known_amount_sold"
+  ],
+  "quantiles": [
+    0.3,
+    0.2,
+    0.1,
+    0.05
+  ],
+  "bootstrap": 500,
+  "seed": 20260728,
+  "fdr_alpha": 0.05,
+  "locked_2023_test_used": false
+}

@@ -1,0 +1,471 @@
+{
+  "base_rate": 0.292190060076461,
+  "n_test": 1831,
+  "ranking": "base model predicted probability, descending",
+  "summary": {
+    "cost_decision_disagreements": 20,
+    "magnitude_shifts": 2,
+    "sign_flips": 7,
+    "slices_evaluated": 15,
+    "transfers": 6,
+    "voided_for_size": 0
+  },
+  "thresholds": {
+    "declared": "before running; no slice or margin adjusted afterwards",
+    "min_slice_n": 30,
+    "slices": [
+      0.05,
+      0.1,
+      0.2,
+      0.5,
+      1.0
+    ],
+    "transfer_margin": 0.01
+  },
+  "utilities": {
+    "balanced": {
+      "cohort_mean": 0.028399781540142,
+      "cohort_sd": 0.4061402093696228,
+      "cost_decisions": {
+        "0.0": {
+          "cohort_decision": "acquire",
+          "slices": {
+            "0.05": "agrees",
+            "0.10": "agrees",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.01": {
+          "cohort_decision": "acquire",
+          "slices": {
+            "0.05": "DISAGREES",
+            "0.10": "DISAGREES",
+            "0.20": "DISAGREES",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.025": {
+          "cohort_decision": "acquire",
+          "slices": {
+            "0.05": "DISAGREES",
+            "0.10": "DISAGREES",
+            "0.20": "DISAGREES",
+            "0.50": "DISAGREES",
+            "1.00": "agrees"
+          }
+        },
+        "0.05": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "agrees",
+            "0.10": "agrees",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.1": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "agrees",
+            "0.10": "agrees",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        }
+      },
+      "slices": [
+        {
+          "difference": -0.022964998931446347,
+          "difference_ci": [
+            -0.0434188967777171,
+            -0.0019115237575095577
+          ],
+          "fraction": 0.05,
+          "n": 92,
+          "share_negative": 0.0,
+          "share_nonzero": 0.010869565217391304,
+          "share_positive": 0.010869565217391304,
+          "slice_mean": 0.005434782608695652,
+          "slice_mean_ci": [
+            0.0,
+            0.016304347826086956
+          ],
+          "verdict": "magnitude_shift"
+        },
+        {
+          "difference": -0.02293530066582506,
+          "difference_ci": [
+            -0.043417404565572276,
+            -0.00436770494787703
+          ],
+          "fraction": 0.1,
+          "n": 183,
+          "share_negative": 0.0,
+          "share_nonzero": 0.01092896174863388,
+          "share_positive": 0.01092896174863388,
+          "slice_mean": 0.00546448087431694,
+          "slice_mean_ci": [
+            0.0,
+            0.01366120218579235
+          ],
+          "verdict": "magnitude_shift"
+        },
+        {
+          "difference": -0.020203060228666588,
+          "difference_ci": [
+            -0.04041283541198485,
+            0.00027904367108062995
+          ],
+          "fraction": 0.2,
+          "n": 366,
+          "share_negative": 0.00273224043715847,
+          "share_nonzero": 0.0273224043715847,
+          "share_positive": 0.02459016393442623,
+          "slice_mean": 0.00819672131147541,
+          "slice_mean_ci": [
+            -0.004098360655737705,
+            0.01912568306010929
+          ],
+          "verdict": "transfers"
+        },
+        {
+          "difference": -0.01802860250084069,
+          "difference_ci": [
+            -0.036588448815761544,
+            0.0016247355705594317
+          ],
+          "fraction": 0.5,
+          "n": 916,
+          "share_negative": 0.027292576419213975,
+          "share_nonzero": 0.1299126637554585,
+          "share_positive": 0.10262008733624454,
+          "slice_mean": 0.01037117903930131,
+          "slice_mean_ci": [
+            -0.008733624454148471,
+            0.030021834061135372
+          ],
+          "verdict": "transfers"
+        },
+        {
+          "difference": 0.0,
+          "difference_ci": [
+            0.0,
+            0.0
+          ],
+          "fraction": 1.0,
+          "n": 1831,
+          "share_negative": 0.07318405243036592,
+          "share_nonzero": 0.2042599672310213,
+          "share_positive": 0.1310759148006554,
+          "slice_mean": 0.028399781540142,
+          "slice_mean_ci": [
+            0.009830693610049153,
+            0.04724194429273621
+          ],
+          "verdict": "transfers"
+        }
+      ]
+    },
+    "false_positive_averse": {
+      "cohort_mean": -0.008055707263790278,
+      "cohort_sd": 0.4066747025123334,
+      "cost_decisions": {
+        "0.0": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "DISAGREES",
+            "0.10": "DISAGREES",
+            "0.20": "DISAGREES",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.01": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "DISAGREES",
+            "0.10": "DISAGREES",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.025": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "DISAGREES",
+            "0.10": "DISAGREES",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.05": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "DISAGREES",
+            "0.10": "DISAGREES",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.1": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "agrees",
+            "0.10": "agrees",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        }
+      },
+      "slices": [
+        {
+          "difference": 0.07599048987248593,
+          "difference_ci": [
+            -0.04457056015957068,
+            0.19453316078170638
+          ],
+          "fraction": 0.05,
+          "n": 92,
+          "share_negative": 0.11956521739130435,
+          "share_nonzero": 0.2826086956521739,
+          "share_positive": 0.16304347826086957,
+          "slice_mean": 0.06793478260869565,
+          "slice_mean_ci": [
+            -0.057065217391304345,
+            0.19021739130434784
+          ],
+          "verdict": "sign_flip"
+        },
+        {
+          "difference": 0.06679887666269739,
+          "difference_ci": [
+            -0.010525318363461097,
+            0.14166390607419876
+          ],
+          "fraction": 0.1,
+          "n": 183,
+          "share_negative": 0.10382513661202186,
+          "share_nonzero": 0.24043715846994534,
+          "share_positive": 0.1366120218579235,
+          "slice_mean": 0.05874316939890711,
+          "slice_mean_ci": [
+            -0.023224043715846996,
+            0.1407103825136612
+          ],
+          "verdict": "sign_flip"
+        },
+        {
+          "difference": 0.011471007810238366,
+          "difference_ci": [
+            -0.032522390643232965,
+            0.06011302014784838
+          ],
+          "fraction": 0.2,
+          "n": 366,
+          "share_negative": 0.12568306010928962,
+          "share_nonzero": 0.23224043715846995,
+          "share_positive": 0.10655737704918032,
+          "slice_mean": 0.0034153005464480873,
+          "slice_mean_ci": [
+            -0.04918032786885246,
+            0.060792349726775954
+          ],
+          "verdict": "sign_flip"
+        },
+        {
+          "difference": 0.006964004207021719,
+          "difference_ci": [
+            -0.013508111156954824,
+            0.024831623733898724
+          ],
+          "fraction": 0.5,
+          "n": 916,
+          "share_negative": 0.11135371179039301,
+          "share_nonzero": 0.20087336244541484,
+          "share_positive": 0.08951965065502183,
+          "slice_mean": -0.001091703056768559,
+          "slice_mean_ci": [
+            -0.034934497816593885,
+            0.03084061135371179
+          ],
+          "verdict": "transfers"
+        },
+        {
+          "difference": 0.0,
+          "difference_ci": [
+            0.0,
+            0.0
+          ],
+          "fraction": 1.0,
+          "n": 1831,
+          "share_negative": 0.07755324959038777,
+          "share_nonzero": 0.13380666302566904,
+          "share_positive": 0.056253413435281265,
+          "slice_mean": -0.008055707263790278,
+          "slice_mean_ci": [
+            -0.026488257782632443,
+            0.010376843255051884
+          ],
+          "verdict": "transfers"
+        }
+      ]
+    },
+    "opportunity_averse": {
+      "cohort_mean": 0.003003823047515019,
+      "cohort_sd": 0.16335250517395708,
+      "cost_decisions": {
+        "0.0": {
+          "cohort_decision": "acquire",
+          "slices": {
+            "0.05": "DISAGREES",
+            "0.10": "DISAGREES",
+            "0.20": "DISAGREES",
+            "0.50": "DISAGREES",
+            "1.00": "agrees"
+          }
+        },
+        "0.01": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "agrees",
+            "0.10": "agrees",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.025": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "agrees",
+            "0.10": "agrees",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.05": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "agrees",
+            "0.10": "agrees",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        },
+        "0.1": {
+          "cohort_decision": "do_not_acquire",
+          "slices": {
+            "0.05": "agrees",
+            "0.10": "agrees",
+            "0.20": "agrees",
+            "0.50": "agrees",
+            "1.00": "agrees"
+          }
+        }
+      },
+      "slices": [
+        {
+          "difference": -0.003003823047515019,
+          "difference_ci": [
+            -0.010376843255051884,
+            0.004778809393773894
+          ],
+          "fraction": 0.05,
+          "n": 92,
+          "share_negative": 0.0,
+          "share_nonzero": 0.0,
+          "share_positive": 0.0,
+          "slice_mean": 0.0,
+          "slice_mean_ci": [
+            0.0,
+            0.0
+          ],
+          "verdict": "sign_flip"
+        },
+        {
+          "difference": -0.003003823047515019,
+          "difference_ci": [
+            -0.010376843255051884,
+            0.004778809393773894
+          ],
+          "fraction": 0.1,
+          "n": 183,
+          "share_negative": 0.0,
+          "share_nonzero": 0.0,
+          "share_positive": 0.0,
+          "slice_mean": 0.0,
+          "slice_mean_ci": [
+            0.0,
+            0.0
+          ],
+          "verdict": "sign_flip"
+        },
+        {
+          "difference": -0.003003823047515019,
+          "difference_ci": [
+            -0.010376843255051884,
+            0.004778809393773894
+          ],
+          "fraction": 0.2,
+          "n": 366,
+          "share_negative": 0.0,
+          "share_nonzero": 0.0,
+          "share_positive": 0.0,
+          "slice_mean": 0.0,
+          "slice_mean_ci": [
+            0.0,
+            0.0
+          ],
+          "verdict": "sign_flip"
+        },
+        {
+          "difference": -0.003003823047515019,
+          "difference_ci": [
+            -0.010376843255051884,
+            0.004778809393773894
+          ],
+          "fraction": 0.5,
+          "n": 916,
+          "share_negative": 0.0,
+          "share_nonzero": 0.0,
+          "share_positive": 0.0,
+          "slice_mean": 0.0,
+          "slice_mean_ci": [
+            0.0,
+            0.0
+          ],
+          "verdict": "sign_flip"
+        },
+        {
+          "difference": 0.0,
+          "difference_ci": [
+            0.0,
+            0.0
+          ],
+          "fraction": 1.0,
+          "n": 1831,
+          "share_negative": 0.008738394320043691,
+          "share_nonzero": 0.04860731840524304,
+          "share_positive": 0.03986892408519935,
+          "slice_mean": 0.003003823047515019,
+          "slice_mean_ci": [
+            -0.004778809393773894,
+            0.010376843255051884
+          ],
+          "verdict": "transfers"
+        }
+      ]
+    }
+  }
+}

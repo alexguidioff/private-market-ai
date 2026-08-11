@@ -1,0 +1,42 @@
+{
+  "$id": "p1-decision.schema.json",
+  "title": "P1 information acquisition and decision record",
+  "type": "object",
+  "$defs": {
+    "timestamp": {"type": "string", "format": "date-time"},
+    "informationItem": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "value": {},
+        "available_time": {"$ref": "#/$defs/timestamp"},
+        "source": {"type": "string"},
+        "cost": {"type": "number", "minimum": 0}
+      },
+      "required": ["name", "available_time", "source"]
+    }
+  },
+  "properties": {
+    "record_id": {"type": "string"},
+    "company_id": {"type": "string"},
+    "decision_time": {"$ref": "#/$defs/timestamp"},
+    "information_state": {"type": "array", "items": {"$ref": "#/$defs/informationItem"}},
+    "belief_state": {
+      "type": "object",
+      "properties": {
+        "target": {"type": "string"},
+        "probability": {"type": "number", "minimum": 0, "maximum": 1}
+      },
+      "required": ["target", "probability"]
+    },
+    "acquisition_action": {"type": ["string", "null"]},
+    "action_set": {"type": "array", "items": {"type": "string"}, "minItems": 2},
+    "chosen_action": {"type": "string"},
+    "expected_utility": {"type": "number"},
+    "acquisition_cost": {"type": "number", "minimum": 0},
+    "rationale": {"type": "string"},
+    "outcome": {"type": ["object", "null"]}
+  },
+  "required": ["record_id", "company_id", "decision_time", "information_state", "belief_state", "action_set", "chosen_action", "expected_utility", "acquisition_cost"],
+  "additionalProperties": false
+}

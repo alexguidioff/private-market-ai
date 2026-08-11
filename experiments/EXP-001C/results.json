@@ -1,0 +1,704 @@
+{
+  "claim_boundary": "Exploratory single-block SEC-history acquisition with assumed normalized costs; not buyer-elicited or confirmatory.",
+  "cost_results": {
+    "balanced": {
+      "0.0": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.004642271982523211,
+            0.0010922992900054614
+          ],
+          "mean_delta": -0.0016384489350081922
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": 0.005188421627525942
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.9426542872747132,
+            "act_rate": 0.5554341889677772,
+            "mean_ndv": 0.004369197160021846
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": 0.005188421627525942
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.6127799016930638,
+            "mean_ndv": -0.023211359912616056
+          },
+          "random": {
+            "acquisition_rate": 0.5084653194975424,
+            "act_rate": 0.584380120152922,
+            "mean_ndv": -0.010103768432550519
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.5521572910977608,
+            "mean_ndv": 0.006007646095030038
+          }
+        },
+        "strongest_non_voi": "uncertainty_reduction"
+      },
+      "0.01": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.004313216821409066,
+            0.00020248498088476296
+          ],
+          "mean_delta": -0.0018077553249590378
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": -0.004811578372474041
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.8989623156744948,
+            "act_rate": 0.5554341889677772,
+            "mean_ndv": -0.005712725286728549
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": -0.004811578372474041
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.6127799016930638,
+            "mean_ndv": -0.023211359912616056
+          },
+          "random": {
+            "acquisition_rate": 0.5057345712725286,
+            "act_rate": 0.582195521572911,
+            "mean_ndv": -0.01843801201529218
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.5521572910977608,
+            "mean_ndv": -0.0039049699617695085
+          }
+        },
+        "strongest_non_voi": "uncertainty_reduction"
+      },
+      "0.025": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.0002457673402512236,
+            0.00639029219006008
+          ],
+          "mean_delta": 0.0030174767886400923
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": -0.019811578372474044
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.750409612233752,
+            "act_rate": 0.5625341343528126,
+            "mean_ndv": -0.01575641725832877
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": -0.019811578372474044
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.6127799016930638,
+            "mean_ndv": -0.023211359912616056
+          },
+          "random": {
+            "acquisition_rate": 0.5210267613326052,
+            "act_rate": 0.584380120152922,
+            "mean_ndv": -0.02312943746586564
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.5521572910977608,
+            "mean_ndv": -0.01877389404696886
+          }
+        },
+        "strongest_non_voi": "uncertainty_reduction"
+      },
+      "0.05": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.014337110868377943,
+            0.007728017476788636
+          ],
+          "mean_delta": -0.0036318951392681634
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": -0.04481157837247407
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.18732932823593665,
+            "act_rate": 0.6034953577280174,
+            "mean_ndv": -0.02684325505188422
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": -0.04481157837247407
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.6127799016930638,
+            "mean_ndv": -0.023211359912616056
+          },
+          "random": {
+            "acquisition_rate": 0.5002730748225014,
+            "act_rate": 0.5827416712179138,
+            "mean_ndv": -0.03866739486619334
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.5521572910977608,
+            "mean_ndv": -0.04355543418896779
+          }
+        },
+        "strongest_non_voi": "none"
+      },
+      "0.1": {
+        "cost_aware_delta": {
+          "ci_95": [
+            0.0,
+            0.0
+          ],
+          "mean_delta": 0.0
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": -0.09481157837247407
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.6127799016930638,
+            "mean_ndv": -0.023211359912616056
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.553795740032769,
+            "mean_ndv": -0.09481157837247407
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.6127799016930638,
+            "mean_ndv": -0.023211359912616056
+          },
+          "random": {
+            "acquisition_rate": 0.5035499726925178,
+            "act_rate": 0.5816493719279082,
+            "mean_ndv": -0.05363189513926816
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.5521572910977608,
+            "mean_ndv": -0.0931185144729656
+          }
+        },
+        "strongest_non_voi": "none"
+      }
+    },
+    "false_positive_averse": {
+      "0.0": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.020757099945385035,
+            0.013667394866193325
+          ],
+          "mean_delta": -0.004232659748771164
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.0804205352266521
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.7291097760786456,
+            "act_rate": 0.10431458219552157,
+            "mean_ndv": -0.07659748771163298
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.0804205352266521
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.005461496450027308,
+            "mean_ndv": -0.07236482796286182
+          },
+          "random": {
+            "acquisition_rate": 0.4926269797924631,
+            "act_rate": 0.06990715456034953,
+            "mean_ndv": -0.07536865101037685
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.1299836155106499,
+            "mean_ndv": -0.08260513380666303
+          }
+        },
+        "strongest_non_voi": "none"
+      },
+      "0.01": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.009357454942654289,
+            0.015088476242490437
+          ],
+          "mean_delta": 0.0028126706717640634
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.09042053522665211
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.3058438012015292,
+            "act_rate": 0.05243036592026215,
+            "mean_ndv": -0.06955215729109776
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.09042053522665211
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.005461496450027308,
+            "mean_ndv": -0.07236482796286182
+          },
+          "random": {
+            "acquisition_rate": 0.5079191698525396,
+            "act_rate": 0.07209175314036045,
+            "mean_ndv": -0.08386127799016932
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.1299836155106499,
+            "mean_ndv": -0.09251774986346258
+          }
+        },
+        "strongest_non_voi": "none"
+      },
+      "0.025": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.00479246313489896,
+            0.00521572910977608
+          ],
+          "mean_delta": 0.0002730748225013661
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.10542053522665207
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.03276897870016385,
+            "act_rate": 0.009284543965046422,
+            "mean_ndv": -0.07209175314036045
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.10542053522665207
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.005461496450027308,
+            "mean_ndv": -0.07236482796286182
+          },
+          "random": {
+            "acquisition_rate": 0.4991807755324959,
+            "act_rate": 0.0726379027853632,
+            "mean_ndv": -0.09549426542872745
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.1299836155106499,
+            "mean_ndv": -0.1073866739486619
+          }
+        },
+        "strongest_non_voi": "none"
+      },
+      "0.05": {
+        "cost_aware_delta": {
+          "ci_95": [
+            0.0,
+            0.0
+          ],
+          "mean_delta": 0.0
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.13042053522665212
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.005461496450027308,
+            "mean_ndv": -0.07236482796286182
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.13042053522665212
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.005461496450027308,
+            "mean_ndv": -0.07236482796286182
+          },
+          "random": {
+            "acquisition_rate": 0.5035499726925178,
+            "act_rate": 0.0655379574003277,
+            "mean_ndv": -0.10354997269251776
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.1299836155106499,
+            "mean_ndv": -0.13216821409066085
+          }
+        },
+        "strongest_non_voi": "none"
+      },
+      "0.1": {
+        "cost_aware_delta": {
+          "ci_95": [
+            0.0,
+            0.0
+          ],
+          "mean_delta": 0.0
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.1804205352266521
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.005461496450027308,
+            "mean_ndv": -0.07236482796286182
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.13271436373566356,
+            "mean_ndv": -0.1804205352266521
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.005461496450027308,
+            "mean_ndv": -0.07236482796286182
+          },
+          "random": {
+            "acquisition_rate": 0.4942654287274713,
+            "act_rate": 0.07209175314036045,
+            "mean_ndv": -0.12943746586564722
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.1299836155106499,
+            "mean_ndv": -0.18173129437465868
+          }
+        },
+        "strongest_non_voi": "none"
+      }
+    },
+    "opportunity_averse": {
+      "0.0": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.006280720917531403,
+            0.005324959038776625
+          ],
+          "mean_delta": -0.00013653741125068268
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.11551064991807755
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.6078645548880394,
+            "act_rate": 0.9306389950846532,
+            "mean_ndv": 0.11537411250682687
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.11551064991807755
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.9666848716548334,
+            "mean_ndv": 0.11250682687056253
+          },
+          "random": {
+            "acquisition_rate": 0.4980884762424904,
+            "act_rate": 0.9448388858547242,
+            "mean_ndv": 0.11551064991807755
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.931185144729656,
+            "mean_ndv": 0.1152375750955762
+          }
+        },
+        "strongest_non_voi": "random"
+      },
+      "0.01": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.00783806663025669,
+            0.007620152921900597
+          ],
+          "mean_delta": 4.915346805024617e-05
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.10551064991807758
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.227198252321136,
+            "act_rate": 0.9328235936646642,
+            "mean_ndv": 0.11255598033861279
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.10551064991807758
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.9666848716548334,
+            "mean_ndv": 0.11250682687056253
+          },
+          "random": {
+            "acquisition_rate": 0.4997269251774986,
+            "act_rate": 0.951392681594757,
+            "mean_ndv": 0.10764609503003825
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.931185144729656,
+            "mean_ndv": 0.10532495903877663
+          }
+        },
+        "strongest_non_voi": "none"
+      },
+      "0.025": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.0016657564172583282,
+            0.009057209175314032
+          ],
+          "mean_delta": 0.0033997815401419986
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.09051064991807757
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.08246859639541235,
+            "act_rate": 0.9497542326597488,
+            "mean_ndv": 0.11590660841070455
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.09051064991807757
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.9666848716548334,
+            "mean_ndv": 0.11250682687056253
+          },
+          "random": {
+            "acquisition_rate": 0.496996176952485,
+            "act_rate": 0.9442927362097214,
+            "mean_ndv": 0.09830693610049153
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.931185144729656,
+            "mean_ndv": 0.09045603495357728
+          }
+        },
+        "strongest_non_voi": "none"
+      },
+      "0.05": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.0006280720917531405,
+            -0.00021845985800109232
+          ],
+          "mean_delta": -0.0004096122337520481
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.06551064991807756
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.008192244675040962,
+            "act_rate": 0.9666848716548334,
+            "mean_ndv": 0.11209721463681048
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.06551064991807756
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.9666848716548334,
+            "mean_ndv": 0.11250682687056253
+          },
+          "random": {
+            "acquisition_rate": 0.5084653194975424,
+            "act_rate": 0.9442927362097214,
+            "mean_ndv": 0.08899508465319497
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.931185144729656,
+            "mean_ndv": 0.06567449481157837
+          }
+        },
+        "strongest_non_voi": "none"
+      },
+      "0.1": {
+        "cost_aware_delta": {
+          "ci_95": [
+            -0.0004369197160021845,
+            -5.461496450027306e-05
+          ],
+          "mean_delta": -0.00021845985800109224
+        },
+        "exploratory_gate_pass": false,
+        "policies": {
+          "cheapest": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.015510649918077556
+          },
+          "cost_aware_voi": {
+            "acquisition_rate": 0.002184598580010923,
+            "act_rate": 0.9666848716548334,
+            "mean_ndv": 0.11228836701256144
+          },
+          "most_predictive": {
+            "acquisition_rate": 1.0,
+            "act_rate": 0.9300928454396504,
+            "mean_ndv": 0.015510649918077556
+          },
+          "none": {
+            "acquisition_rate": 0.0,
+            "act_rate": 0.9666848716548334,
+            "mean_ndv": 0.11250682687056253
+          },
+          "random": {
+            "acquisition_rate": 0.4866193336974331,
+            "act_rate": 0.9470234844347352,
+            "mean_ndv": 0.06630256690333151
+          },
+          "uncertainty_reduction": {
+            "acquisition_rate": 0.9912616056799564,
+            "act_rate": 0.931185144729656,
+            "mean_ndv": 0.016111414527580557
+          }
+        },
+        "strongest_non_voi": "none"
+      }
+    }
+  },
+  "experiment": "EXP-001C",
+  "hashes": {
+    "config_sha256": "2af3ed400a87d2a09cc4de0909583a4bd5baf5935b5bf8e381b4fb28508b888e",
+    "input_sha256": "251441c6ff10e7c489a9f97c2934be266b228f67eef9c7a57747c0b4b6d20bd8",
+    "script_sha256": "0bf148ade35c7b0e6145dfb0356b22a057f0d6900edea0f0d1fb0317463621f7"
+  },
+  "scope": "Exploratory one-block acquisition policy using point-in-time SEC issuer history",
+  "selected_c": {
+    "anchor_only": 0.1,
+    "anchor_plus_history": 0.1
+  },
+  "test_predictive": {
+    "anchor_only": {
+      "average_precision": 0.3858868038229606,
+      "brier": 0.19915977084554853,
+      "log_loss": 0.5846527261856498,
+      "mean_probability": 0.2686373372254657,
+      "n": 1831,
+      "positive_rate": 0.292190060076461,
+      "roc_auc": 0.6260708722741433
+    },
+    "anchor_plus_history": {
+      "average_precision": 0.3911989402081104,
+      "brier": 0.1990043632958302,
+      "log_loss": 0.582777166157129,
+      "mean_probability": 0.28438798164290574,
+      "n": 1831,
+      "positive_rate": 0.292190060076461,
+      "roc_auc": 0.6484906830506518
+    }
+  },
+  "validation_log_loss": {
+    "anchor_only": 0.5526680259408058,
+    "anchor_plus_history": 0.5351639594549238,
+    "candidate_scores": {
+      "anchor_only": {
+        "0.1": 0.5526680259408058,
+        "1.0": 0.5532746465717013,
+        "10.0": 0.5553409330587167
+      },
+      "anchor_plus_history": {
+        "0.1": 0.5351639594549238,
+        "1.0": 0.5361906771707646,
+        "10.0": 0.5379135804899435
+      }
+    },
+    "history_lift": 0.017504066485881986
+  }
+}

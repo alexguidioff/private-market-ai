@@ -1,0 +1,247 @@
+{
+  "matchers": {
+    "jaccard_suffix_stripped": {
+      "best": {
+        "threshold": 0.39,
+        "balanced": 0.7738432036097012,
+        "sensitivity": 0.7050197405527355,
+        "specificity": 0.8426666666666667
+      },
+      "strata": {
+        "positive_easy": {
+          "n": 1480,
+          "accuracy": 0.8358108108108108
+        },
+        "positive_hard": {
+          "n": 293,
+          "accuracy": 0.04436860068259386
+        },
+        "negative_easy": {
+          "n": 6000,
+          "accuracy": 0.9983333333333333
+        },
+        "negative_hard": {
+          "n": 6000,
+          "accuracy": 0.687
+        }
+      }
+    },
+    "jaccard_suffix_kept": {
+      "best": {
+        "threshold": 0.39,
+        "balanced": 0.7920326424139876,
+        "sensitivity": 0.7839819514946419,
+        "specificity": 0.8000833333333334
+      },
+      "strata": {
+        "positive_easy": {
+          "n": 1480,
+          "accuracy": 0.9243243243243243
+        },
+        "positive_hard": {
+          "n": 293,
+          "accuracy": 0.07508532423208192
+        },
+        "negative_easy": {
+          "n": 6000,
+          "accuracy": 0.9978333333333333
+        },
+        "negative_hard": {
+          "n": 6000,
+          "accuracy": 0.6023333333333334
+        }
+      }
+    },
+    "sequence_ratio": {
+      "best": {
+        "threshold": 0.77,
+        "balanced": 0.8012369571347997,
+        "sensitivity": 0.7112239142695995,
+        "specificity": 0.89125
+      },
+      "strata": {
+        "positive_easy": {
+          "n": 1480,
+          "accuracy": 0.852027027027027
+        },
+        "positive_hard": {
+          "n": 293,
+          "accuracy": 0.0
+        },
+        "negative_easy": {
+          "n": 6000,
+          "accuracy": 0.9995
+        },
+        "negative_hard": {
+          "n": 6000,
+          "accuracy": 0.783
+        }
+      }
+    },
+    "char_3gram": {
+      "best": {
+        "threshold": 0.41,
+        "balanced": 0.8081157642413987,
+        "sensitivity": 0.7450648618161309,
+        "specificity": 0.8711666666666666
+      },
+      "strata": {
+        "positive_easy": {
+          "n": 1480,
+          "accuracy": 0.8905405405405405
+        },
+        "positive_hard": {
+          "n": 293,
+          "accuracy": 0.010238907849829351
+        },
+        "negative_easy": {
+          "n": 6000,
+          "accuracy": 0.9988333333333334
+        },
+        "negative_hard": {
+          "n": 6000,
+          "accuracy": 0.7435
+        }
+      }
+    },
+    "idf_weighted": {
+      "best": {
+        "threshold": 0.41,
+        "balanced": 0.7827479554427523,
+        "sensitivity": 0.7349125775521714,
+        "specificity": 0.8305833333333333
+      },
+      "strata": {
+        "positive_easy": {
+          "n": 1480,
+          "accuracy": 0.8736486486486487
+        },
+        "positive_hard": {
+          "n": 293,
+          "accuracy": 0.034129692832764506
+        },
+        "negative_easy": {
+          "n": 6000,
+          "accuracy": 0.9998333333333334
+        },
+        "negative_hard": {
+          "n": 6000,
+          "accuracy": 0.6613333333333333
+        }
+      }
+    },
+    "idf_and_head": {
+      "best": {
+        "threshold": 0.36,
+        "balanced": 0.76032388606881,
+        "sensitivity": 0.7061477721376198,
+        "specificity": 0.8145
+      },
+      "strata": {
+        "positive_easy": {
+          "n": 1480,
+          "accuracy": 0.831081081081081
+        },
+        "positive_hard": {
+          "n": 293,
+          "accuracy": 0.07508532423208192
+        },
+        "negative_easy": {
+          "n": 6000,
+          "accuracy": 0.9996666666666667
+        },
+        "negative_hard": {
+          "n": 6000,
+          "accuracy": 0.6293333333333333
+        }
+      }
+    },
+    "best_of_all": {
+      "best": {
+        "threshold": 0.77,
+        "balanced": 0.8015926395939086,
+        "sensitivity": 0.7123519458544839,
+        "specificity": 0.8908333333333334
+      },
+      "strata": {
+        "positive_easy": {
+          "n": 1480,
+          "accuracy": 0.8533783783783784
+        },
+        "positive_hard": {
+          "n": 293,
+          "accuracy": 0.0
+        },
+        "negative_easy": {
+          "n": 6000,
+          "accuracy": 0.9995
+        },
+        "negative_hard": {
+          "n": 6000,
+          "accuracy": 0.7821666666666667
+        }
+      }
+    }
+  },
+  "attributes": {
+    "coverage": 0.9979670369563639,
+    "by_stratum": {
+      "positive_hard": {
+        "state": {
+          "n": 291,
+          "agreement_rate": 0.9072164948453608
+        },
+        "industry": {
+          "n": 291,
+          "agreement_rate": 0.872852233676976
+        },
+        "entity_type": {
+          "n": 291,
+          "agreement_rate": 0.9450171821305842
+        }
+      },
+      "positive_easy": {
+        "state": {
+          "n": 1479,
+          "agreement_rate": 0.9459093982420554
+        },
+        "industry": {
+          "n": 1479,
+          "agreement_rate": 0.9641649763353617
+        },
+        "entity_type": {
+          "n": 1479,
+          "agreement_rate": 0.9567275185936444
+        }
+      },
+      "negative_hard": {
+        "state": {
+          "n": 5990,
+          "agreement_rate": 0.3781302170283806
+        },
+        "industry": {
+          "n": 5990,
+          "agreement_rate": 0.6080133555926545
+        },
+        "entity_type": {
+          "n": 5990,
+          "agreement_rate": 0.5612687813021703
+        }
+      },
+      "negative_easy": {
+        "state": {
+          "n": 5983,
+          "agreement_rate": 0.06368042787899048
+        },
+        "industry": {
+          "n": 5985,
+          "agreement_rate": 0.21119465329991646
+        },
+        "entity_type": {
+          "n": 5985,
+          "agreement_rate": 0.28755221386800334
+        }
+      }
+    }
+  }
+}

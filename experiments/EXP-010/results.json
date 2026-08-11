@@ -1,0 +1,573 @@
+{
+  "cells": [
+    {
+      "base_auc": 0.614341501842264,
+      "base_strength": 0.3,
+      "correlation": 0.06037671409823888,
+      "correlation_ci": [
+        0.03343360656541934,
+        0.08970384027336789
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.7307499999999999,
+          "ci": [
+            -0.006941666666666671,
+            -0.0017374999999999953
+          ],
+          "learned_advantage": -0.004029166666666665,
+          "oracle_advantage": 0.05624166666666667,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.5073333333333333,
+          "ci": [
+            -0.005600833333333336,
+            0.0006308333333333327
+          ],
+          "learned_advantage": -0.002283333333333335,
+          "oracle_advantage": 0.06757250000000001,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.7037845230388153,
+      "lam": 0.0,
+      "mean_gain": 0.027566666666666666,
+      "n_worlds": 40,
+      "share_changed": 0.20966666666666667
+    },
+    {
+      "base_auc": 0.6254257548013358,
+      "base_strength": 0.3,
+      "correlation": 0.015528807160929681,
+      "correlation_ci": [
+        -0.013470490277887454,
+        0.046182273430058
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.7473333333333333,
+          "ci": [
+            -0.005575,
+            -0.0017958333333333327
+          ],
+          "learned_advantage": -0.003554166666666665,
+          "oracle_advantage": 0.0555625,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.48625000000000007,
+          "ci": [
+            -0.0069975000000000055,
+            0.00022666666666666747
+          ],
+          "learned_advantage": -0.003252500000000001,
+          "oracle_advantage": 0.06417083333333334,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.7160614661494481,
+      "lam": 0.5,
+      "mean_gain": 0.027937500000000004,
+      "n_worlds": 40,
+      "share_changed": 0.19791666666666666
+    },
+    {
+      "base_auc": 0.6555508713384325,
+      "base_strength": 0.3,
+      "correlation": 0.005541629378041774,
+      "correlation_ci": [
+        -0.023382542810319106,
+        0.031066349327291565
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.6951666666666666,
+          "ci": [
+            -0.004504166666666659,
+            -0.001095833333333329
+          ],
+          "learned_advantage": -0.00264583333333333,
+          "oracle_advantage": 0.0459625,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.4168333333333333,
+          "ci": [
+            -0.005564166666666667,
+            -3.5000000000006035e-05
+          ],
+          "learned_advantage": -0.0027608333333333382,
+          "oracle_advantage": 0.05720333333333334,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.7168547960676552,
+      "lam": 1.0,
+      "mean_gain": 0.027737500000000005,
+      "n_worlds": 40,
+      "share_changed": 0.16874999999999998
+    },
+    {
+      "base_auc": 0.6605832177459581,
+      "base_strength": 0.3,
+      "correlation": 0.014331766828837253,
+      "correlation_ci": [
+        -0.00920736550428684,
+        0.04006880620690351
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.6739166666666667,
+          "ci": [
+            -0.009316666666666662,
+            -0.0032541666666666643
+          ],
+          "learned_advantage": -0.006062499999999996,
+          "oracle_advantage": 0.04161666666666667,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.3408333333333333,
+          "ci": [
+            -0.01404,
+            -0.0034399999999999995
+          ],
+          "learned_advantage": -0.008125833333333332,
+          "oracle_advantage": 0.05013083333333335,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.7064432244336526,
+      "lam": 1.5,
+      "mean_gain": 0.020370833333333338,
+      "n_worlds": 40,
+      "share_changed": 0.14758333333333334
+    },
+    {
+      "base_auc": 0.6517346499570265,
+      "base_strength": 0.3,
+      "correlation": 0.02520557496227837,
+      "correlation_ci": [
+        0.004986888213741178,
+        0.04381372082616602
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.68975,
+          "ci": [
+            -0.006558333333333333,
+            -0.002029166666666668
+          ],
+          "learned_advantage": -0.004200000000000004,
+          "oracle_advantage": 0.0408,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.3975,
+          "ci": [
+            -0.0050341666666666686,
+            0.0003391666666666696
+          ],
+          "learned_advantage": -0.0021433333333333317,
+          "oracle_advantage": 0.04816583333333334,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.6980166987265211,
+      "lam": 2.5,
+      "mean_gain": 0.012920833333333335,
+      "n_worlds": 40,
+      "share_changed": 0.1370833333333333
+    },
+    {
+      "base_auc": 0.742174822655352,
+      "base_strength": 0.65,
+      "correlation": 0.05629856575504477,
+      "correlation_ci": [
+        0.03249849015930099,
+        0.08238626364601344
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.7335833333333334,
+          "ci": [
+            -0.0035333333333333306,
+            -0.0002416666666666672
+          ],
+          "learned_advantage": -0.001799999999999996,
+          "oracle_advantage": 0.03809583333333334,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.42058333333333336,
+          "ci": [
+            -0.00415083333333334,
+            0.0019983333333333277
+          ],
+          "learned_advantage": -0.0011508333333333414,
+          "oracle_advantage": 0.048426666666666666,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.7935785555877054,
+      "lam": 0.0,
+      "mean_gain": 0.023083333333333338,
+      "n_worlds": 40,
+      "share_changed": 0.156
+    },
+    {
+      "base_auc": 0.7108044746917876,
+      "base_strength": 0.65,
+      "correlation": 0.04932166915740024,
+      "correlation_ci": [
+        0.028724273359825282,
+        0.07180279100235029
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.708,
+          "ci": [
+            -0.008262499999999999,
+            -0.001241666666666664
+          ],
+          "learned_advantage": -0.0041416666666666616,
+          "oracle_advantage": 0.03814583333333334,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.36916666666666664,
+          "ci": [
+            -0.008166666666666664,
+            0.0026166666666666686
+          ],
+          "learned_advantage": -0.0021124999999999985,
+          "oracle_advantage": 0.04753083333333334,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.7623322419661227,
+      "lam": 0.5,
+      "mean_gain": 0.015950000000000002,
+      "n_worlds": 40,
+      "share_changed": 0.1395
+    },
+    {
+      "base_auc": 0.7182829043176879,
+      "base_strength": 0.65,
+      "correlation": 0.03833339048746891,
+      "correlation_ci": [
+        0.020293585737546548,
+        0.05879971295100028
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.7600833333333334,
+          "ci": [
+            -0.006962500000000002,
+            -0.0025625
+          ],
+          "learned_advantage": -0.004641666666666668,
+          "oracle_advantage": 0.03687916666666667,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.46775,
+          "ci": [
+            -0.010397499999999997,
+            -0.0033341666666666615
+          ],
+          "learned_advantage": -0.006666666666666661,
+          "oracle_advantage": 0.04745833333333334,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.7670085027970597,
+      "lam": 1.0,
+      "mean_gain": 0.022800000000000004,
+      "n_worlds": 40,
+      "share_changed": 0.14316666666666666
+    },
+    {
+      "base_auc": 0.7264528679498332,
+      "base_strength": 0.65,
+      "correlation": 0.023834692317582968,
+      "correlation_ci": [
+        -0.0019402143951006549,
+        0.05050221515502039
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.70875,
+          "ci": [
+            -0.004637500000000003,
+            -0.0009000000000000024
+          ],
+          "learned_advantage": -0.002712499999999999,
+          "oracle_advantage": 0.03559166666666667,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.3943333333333333,
+          "ci": [
+            -0.005824166666666669,
+            0.0006475000000000026
+          ],
+          "learned_advantage": -0.0025399999999999984,
+          "oracle_advantage": 0.046119166666666676,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.7662724842965158,
+      "lam": 1.5,
+      "mean_gain": 0.019254166666666666,
+      "n_worlds": 40,
+      "share_changed": 0.13375
+    },
+    {
+      "base_auc": 0.7314035643831971,
+      "base_strength": 0.65,
+      "correlation": 0.006832742902541022,
+      "correlation_ci": [
+        -0.012301673895969392,
+        0.025627323009111514
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.6025833333333332,
+          "ci": [
+            -0.007025000000000006,
+            -0.0020333333333333366
+          ],
+          "learned_advantage": -0.004325000000000005,
+          "oracle_advantage": 0.030487499999999994,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.2514166666666666,
+          "ci": [
+            -0.007984166666666662,
+            -0.002595833333333333
+          ],
+          "learned_advantage": -0.005193333333333333,
+          "oracle_advantage": 0.03836083333333334,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.7640689424290189,
+      "lam": 2.5,
+      "mean_gain": 0.012375000000000002,
+      "n_worlds": 40,
+      "share_changed": 0.11100000000000002
+    },
+    {
+      "base_auc": 0.8239164084998591,
+      "base_strength": 1.2,
+      "correlation": 0.027405558607317575,
+      "correlation_ci": [
+        0.00916553484504136,
+        0.047201173255017555
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.6864166666666666,
+          "ci": [
+            -0.007683333333333325,
+            -0.0033083333333333285
+          ],
+          "learned_advantage": -0.0054249999999999975,
+          "oracle_advantage": 0.03237916666666667,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.32166666666666666,
+          "ci": [
+            -0.005681666666666667,
+            0.0004308333333333407
+          ],
+          "learned_advantage": -0.0025966666666666673,
+          "oracle_advantage": 0.042545000000000006,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.8527515693595982,
+      "lam": 0.0,
+      "mean_gain": 0.014137500000000002,
+      "n_worlds": 40,
+      "share_changed": 0.12325000000000001
+    },
+    {
+      "base_auc": 0.8005638172287215,
+      "base_strength": 1.2,
+      "correlation": 0.02957981149335299,
+      "correlation_ci": [
+        0.011998334698216966,
+        0.04658387402085222
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.72675,
+          "ci": [
+            -0.0082875,
+            -0.002708333333333336
+          ],
+          "learned_advantage": -0.005204166666666668,
+          "oracle_advantage": 0.03391666666666667,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.3355,
+          "ci": [
+            -0.010959166666666676,
+            -0.0029833333333333387
+          ],
+          "learned_advantage": -0.00668000000000001,
+          "oracle_advantage": 0.04255916666666666,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.8301495586893634,
+      "lam": 0.5,
+      "mean_gain": 0.0125,
+      "n_worlds": 40,
+      "share_changed": 0.123
+    },
+    {
+      "base_auc": 0.8401753009789047,
+      "base_strength": 1.2,
+      "correlation": 0.03667707682649342,
+      "correlation_ci": [
+        0.020010225514782397,
+        0.05340935844016007
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.7348333333333332,
+          "ci": [
+            -0.004995833333333341,
+            -0.0013125000000000046
+          ],
+          "learned_advantage": -0.003041666666666674,
+          "oracle_advantage": 0.027358333333333328,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.35458333333333336,
+          "ci": [
+            -0.006593333333333338,
+            -0.0003816666666666572
+          ],
+          "learned_advantage": -0.003367499999999998,
+          "oracle_advantage": 0.0366375,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.8599602472563918,
+      "lam": 1.0,
+      "mean_gain": 0.011104166666666668,
+      "n_worlds": 40,
+      "share_changed": 0.10041666666666667
+    },
+    {
+      "base_auc": 0.8272774274103298,
+      "base_strength": 1.2,
+      "correlation": 0.02919338797031985,
+      "correlation_ci": [
+        0.01176544678433062,
+        0.047816869092099125
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.66175,
+          "ci": [
+            -0.007349999999999998,
+            -0.002487500000000006
+          ],
+          "learned_advantage": -0.004829166666666672,
+          "oracle_advantage": 0.02254583333333333,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.23291666666666666,
+          "ci": [
+            -0.006940833333333338,
+            -0.0008458333333333275
+          ],
+          "learned_advantage": -0.003556666666666665,
+          "oracle_advantage": 0.03239416666666667,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.8505398285714827,
+      "lam": 1.5,
+      "mean_gain": 0.013833333333333333,
+      "n_worlds": 40,
+      "share_changed": 0.08833333333333333
+    },
+    {
+      "base_auc": 0.8338914063171947,
+      "base_strength": 1.2,
+      "correlation": 0.0010939669846088563,
+      "correlation_ci": [
+        -0.02340761327283692,
+        0.026606652379242694
+      ],
+      "costs": {
+        "0.0": {
+          "acquisition_rate": 0.6615833333333334,
+          "ci": [
+            -0.0091,
+            -0.0038624999999999953
+          ],
+          "learned_advantage": -0.006354166666666669,
+          "oracle_advantage": 0.0217125,
+          "refutes_condition": false
+        },
+        "0.02": {
+          "acquisition_rate": 0.27641666666666664,
+          "ci": [
+            -0.00743416666666667,
+            -0.001399166666666667
+          ],
+          "learned_advantage": -0.004389166666666669,
+          "oracle_advantage": 0.029814999999999998,
+          "refutes_condition": false
+        }
+      },
+      "full_auc": 0.8528364763650508,
+      "lam": 2.5,
+      "mean_gain": 0.009870833333333334,
+      "n_worlds": 40,
+      "share_changed": 0.08791666666666667
+    }
+  ],
+  "declared": {
+    "base_strength_grid": [
+      0.3,
+      0.65,
+      1.2
+    ],
+    "cost_grid": [
+      0.0,
+      0.02
+    ],
+    "expectations": "correlation rises with lam; prize falls with lam and with base_strength; learned advantage stays below margin everywhere; no prediction made for the middle region",
+    "gate": "a cell refutes \u00a78.6 if learned advantage > refute_margin with a paired bootstrap interval over worlds excluding zero AND correlation > signal_floor",
+    "lam_grid": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.5
+    ],
+    "refute_margin": 0.01,
+    "signal_floor": 0.05,
+    "worlds_per_cell": 40
+  },
+  "summary": {
+    "cells": 15,
+    "condition_survives": true,
+    "refuting_cells": [],
+    "tests": 30
+  }
+}

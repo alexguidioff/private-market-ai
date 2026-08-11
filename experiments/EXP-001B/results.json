@@ -1,0 +1,357 @@
+{
+  "claim_boundary": "Predictive and zero-acquisition decision baseline on a weak SEC proxy; not a VoI test and not evidence of startup success.",
+  "environment": {
+    "numpy": "2.4.5",
+    "pandas": "3.0.3",
+    "python": "3.13.2",
+    "scikit_learn": "1.8.0"
+  },
+  "experiment": "EXP-001B",
+  "feature_count_input": 29,
+  "hashes": {
+    "config_sha256": "2208bdd69ab025a89f1d2b039f20bc75870749aedeafbb98744a3bdcdbe97156",
+    "input_sha256": "251441c6ff10e7c489a9f97c2934be266b228f67eef9c7a57747c0b4b6d20bd8",
+    "script_sha256": "24ac96c49248244a0f0847af09cd72ef84806b790d8541c4ab853eda8930a129"
+  },
+  "models": {
+    "dummy_prior": {
+      "test": {
+        "average_precision": 0.292190060076461,
+        "brier": 0.2068198335681182,
+        "calibration_bins": [
+          {
+            "interval": "(0.2, 0.3]",
+            "mean_probability": 0.2943820224719102,
+            "n": 1831,
+            "observed_rate": 0.292190060076461
+          }
+        ],
+        "log_loss": 0.6041125794629565,
+        "mean_probability": 0.2943820224719102,
+        "n": 1831,
+        "positive_rate": 0.292190060076461,
+        "roc_auc": 0.5,
+        "utility": {
+          "balanced": {
+            "act_rate": 1.0,
+            "decision_accuracy": 0.292190060076461,
+            "mean_utility": -0.061714909885308575
+          },
+          "false_positive_averse": {
+            "act_rate": 0.0,
+            "decision_accuracy": 0.707809939923539,
+            "mean_utility": -0.07304751501911524
+          },
+          "opportunity_averse": {
+            "act_rate": 1.0,
+            "decision_accuracy": 0.292190060076461,
+            "mean_utility": 0.1152375750955762
+          }
+        }
+      },
+      "validation": {
+        "average_precision": 0.26252983293556087,
+        "brier": 0.1946224817326469,
+        "calibration_bins": [
+          {
+            "interval": "(0.2, 0.3]",
+            "mean_probability": 0.29438202247191014,
+            "n": 2095,
+            "observed_rate": 0.26252983293556087
+          }
+        ],
+        "log_loss": 0.5781837375414741,
+        "mean_probability": 0.29438202247191014,
+        "n": 2095,
+        "positive_rate": 0.26252983293556087,
+        "roc_auc": 0.5,
+        "utility": {
+          "balanced": {
+            "act_rate": 1.0,
+            "decision_accuracy": 0.26252983293556087,
+            "mean_utility": -0.10620525059665871
+          },
+          "false_positive_averse": {
+            "act_rate": 0.0,
+            "decision_accuracy": 0.7374701670644391,
+            "mean_utility": -0.06563245823389022
+          },
+          "opportunity_averse": {
+            "act_rate": 1.0,
+            "decision_accuracy": 0.26252983293556087,
+            "mean_utility": 0.07816229116945107
+          }
+        }
+      }
+    },
+    "logistic_regression": {
+      "test": {
+        "average_precision": 0.3911989402081104,
+        "brier": 0.19900436330422056,
+        "calibration_bins": [
+          {
+            "interval": "(-0.001, 0.1]",
+            "mean_probability": 0.07491733276924122,
+            "n": 85,
+            "observed_rate": 0.09411764705882353
+          },
+          {
+            "interval": "(0.1, 0.2]",
+            "mean_probability": 0.15448564312146618,
+            "n": 421,
+            "observed_rate": 0.16864608076009502
+          },
+          {
+            "interval": "(0.2, 0.3]",
+            "mean_probability": 0.2499860638576269,
+            "n": 612,
+            "observed_rate": 0.2647058823529412
+          },
+          {
+            "interval": "(0.3, 0.4]",
+            "mean_probability": 0.3421047849733766,
+            "n": 395,
+            "observed_rate": 0.4151898734177215
+          },
+          {
+            "interval": "(0.4, 0.5]",
+            "mean_probability": 0.4499785284071371,
+            "n": 169,
+            "observed_rate": 0.4319526627218935
+          },
+          {
+            "interval": "(0.5, 0.6]",
+            "mean_probability": 0.543941165401321,
+            "n": 108,
+            "observed_rate": 0.37962962962962965
+          },
+          {
+            "interval": "(0.6, 0.7]",
+            "mean_probability": 0.6296078579891564,
+            "n": 37,
+            "observed_rate": 0.3783783783783784
+          },
+          {
+            "interval": "(0.7, 0.8]",
+            "mean_probability": 0.7570725490995424,
+            "n": 3,
+            "observed_rate": 0.3333333333333333
+          },
+          {
+            "interval": "(0.8, 0.9]",
+            "mean_probability": 0.8263787751975071,
+            "n": 1,
+            "observed_rate": 1.0
+          }
+        ],
+        "log_loss": 0.5827771661757999,
+        "mean_probability": 0.2843879817133358,
+        "n": 1831,
+        "positive_rate": 0.292190060076461,
+        "roc_auc": 0.6484906830506518,
+        "utility": {
+          "balanced": {
+            "act_rate": 0.553795740032769,
+            "decision_accuracy": 0.582195521572911,
+            "mean_utility": 0.005188421627525942
+          },
+          "false_positive_averse": {
+            "act_rate": 0.13271436373566356,
+            "decision_accuracy": 0.6865101037684326,
+            "mean_utility": -0.0804205352266521
+          },
+          "opportunity_averse": {
+            "act_rate": 0.9300928454396504,
+            "decision_accuracy": 0.346805024576734,
+            "mean_utility": 0.11551064991807755
+          }
+        }
+      },
+      "validation": {
+        "average_precision": 0.40990296291319445,
+        "brier": 0.1789180510136688,
+        "calibration_bins": [
+          {
+            "interval": "(-0.001, 0.1]",
+            "mean_probability": 0.07614828219488509,
+            "n": 127,
+            "observed_rate": 0.06299212598425197
+          },
+          {
+            "interval": "(0.1, 0.2]",
+            "mean_probability": 0.15679687905482084,
+            "n": 498,
+            "observed_rate": 0.13253012048192772
+          },
+          {
+            "interval": "(0.2, 0.3]",
+            "mean_probability": 0.25063069206650873,
+            "n": 713,
+            "observed_rate": 0.2496493688639551
+          },
+          {
+            "interval": "(0.3, 0.4]",
+            "mean_probability": 0.340464371624313,
+            "n": 465,
+            "observed_rate": 0.34838709677419355
+          },
+          {
+            "interval": "(0.4, 0.5]",
+            "mean_probability": 0.44368591074218705,
+            "n": 182,
+            "observed_rate": 0.45054945054945056
+          },
+          {
+            "interval": "(0.5, 0.6]",
+            "mean_probability": 0.5468496239957784,
+            "n": 85,
+            "observed_rate": 0.4823529411764706
+          },
+          {
+            "interval": "(0.6, 0.7]",
+            "mean_probability": 0.6320581780903967,
+            "n": 21,
+            "observed_rate": 0.47619047619047616
+          },
+          {
+            "interval": "(0.7, 0.8]",
+            "mean_probability": 0.7299278061057872,
+            "n": 4,
+            "observed_rate": 0.75
+          }
+        ],
+        "log_loss": 0.5351639594655162,
+        "mean_probability": 0.271215885735474,
+        "n": 2095,
+        "positive_rate": 0.26252983293556087,
+        "roc_auc": 0.6840011768167108,
+        "utility": {
+          "balanced": {
+            "act_rate": 0.5346062052505967,
+            "decision_accuracy": 0.5904534606205251,
+            "mean_utility": -0.010978520286396181
+          },
+          "false_positive_averse": {
+            "act_rate": 0.09307875894988067,
+            "decision_accuracy": 0.7360381861575179,
+            "mean_utility": -0.055608591885441525
+          },
+          "opportunity_averse": {
+            "act_rate": 0.9212410501193318,
+            "decision_accuracy": 0.3279236276849642,
+            "mean_utility": 0.08281622911694511
+          }
+        }
+      }
+    }
+  },
+  "pilot_layer_a_sensitivity": {
+    "claim_boundary": "Balanced owner-accepted model-reviewed pilot; descriptive sensitivity only, no prevalence or gold-test claim.",
+    "known_only": {
+      "average_precision": 0.9051858635191969,
+      "brier": 0.33285565486897273,
+      "log_loss": 0.8881980684214097,
+      "mean_probability": 0.30168299429607004,
+      "n": 13,
+      "positive_rate": 0.6923076923076923,
+      "roc_auc": 0.7777777777777777
+    },
+    "label_counts": {
+      "no_public_evidence": 4,
+      "positive": 9,
+      "unknown": 7
+    },
+    "rows": 20,
+    "unknown_bounds": {
+      "0": {
+        "average_precision": 0.6693460860127528,
+        "brier": 0.2510640841710989,
+        "log_loss": 0.7019449964342817,
+        "mean_probability": 0.2951942882529081,
+        "n": 20,
+        "positive_rate": 0.45,
+        "roc_auc": 0.7373737373737373,
+        "utility": {
+          "balanced": {
+            "act_rate": 0.7,
+            "decision_accuracy": 0.65,
+            "mean_utility": 0.225
+          },
+          "false_positive_averse": {
+            "act_rate": 0.1,
+            "decision_accuracy": 0.55,
+            "mean_utility": -0.1
+          },
+          "opportunity_averse": {
+            "act_rate": 0.95,
+            "decision_accuracy": 0.4,
+            "mean_utility": 0.2125
+          }
+        }
+      },
+      "1": {
+        "average_precision": 0.9153041403041404,
+        "brier": 0.4028634002501736,
+        "log_loss": 1.0548927421849563,
+        "mean_probability": 0.2951942882529081,
+        "n": 20,
+        "positive_rate": 0.8,
+        "roc_auc": 0.71875,
+        "utility": {
+          "balanced": {
+            "act_rate": 0.7,
+            "decision_accuracy": 0.7,
+            "mean_utility": 0.45
+          },
+          "false_positive_averse": {
+            "act_rate": 0.1,
+            "decision_accuracy": 0.3,
+            "mean_utility": -0.075
+          },
+          "opportunity_averse": {
+            "act_rate": 0.95,
+            "decision_accuracy": 0.75,
+            "mean_utility": 0.65
+          }
+        }
+      }
+    }
+  },
+  "scope": "Exploratory real-data predictive and zero-acquisition decision baseline; not a VoI test",
+  "seed": 20260721,
+  "selected_c": 0.1,
+  "split_counts": {
+    "test": 1831,
+    "train": 8455,
+    "validation": 2095
+  },
+  "target": "subsequent_notice_18m",
+  "test_paired_utility_delta_logistic_minus_dummy": {
+    "balanced": {
+      "ci_95": [
+        0.04450436919716002,
+        0.09011469142545057
+      ],
+      "mean_delta": 0.06690333151283452
+    },
+    "false_positive_averse": {
+      "ci_95": [
+        -0.02539595849262698,
+        0.013121245221190594
+      ],
+      "mean_delta": -0.007373020207536865
+    },
+    "opportunity_averse": {
+      "ci_95": [
+        -0.008874931731294375,
+        0.008605270344074272
+      ],
+      "mean_delta": 0.00027307482250136535
+    }
+  },
+  "validation_log_loss_by_c": {
+    "0.1": 0.5351639594655162,
+    "1.0": 0.53619246005139,
+    "10.0": 0.5379275904887209
+  }
+}

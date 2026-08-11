@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Can Non-Financial Signals Price Private Companies? — One-Pager</title>
+<style>
+  @page { size: A4; margin: 18mm 20mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.2pt;
+    line-height: 1.38;
+    color: #111;
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 0 20px;
+    text-align: justify;
+  }
+  h1 { font-size: 16pt; margin: 0 0 2px; line-height: 1.2; }
+  .subtitle { font-style: italic; color: #444; font-size: 11pt; margin: 0 0 6px; }
+  .meta { font-size: 9pt; color: #555; margin: 0 0 8px; text-align: left; }
+  hr { border: none; border-top: 1px solid #bbb; margin: 8px 0 12px; }
+  h2 { font-size: 10.8pt; margin: 12px 0 4px; }
+  p { margin: 0 0 7px; }
+  ul { margin: 3px 0 8px; padding-left: 18px; }
+  li { margin: 0 0 4px; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 10px; font-size: 9.3pt; }
+  th, td { border: 1px solid #ccc; padding: 3px 7px; text-align: left; }
+  th { background: #f2f2f2; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.hl td { background: #eef4ff; font-weight: bold; }
+  .foot { font-style: italic; color: #666; font-size: 8.7pt; margin-top: 12px; text-align: left; }
+  @media print { body { margin: 0; max-width: none; padding: 0; } a { color: #111; text-decoration: none; } }
+</style>
+</head>
+<body>
+
+  <h1>Can Non-Financial Signals Price Private Companies?</h1>
+  <div class="subtitle">A Machine Learning Approach to Startup Valuation</div>
+  <div class="meta">
+    Alessandro Guidi, Saad Rashid, Hao Zhong (ESCP Business School) &nbsp;·&nbsp;
+    Accepted, WI2026 Student Track
+  </div>
+  <hr>
+
+  <h2>Problem</h2>
+  <p>Private startups are hard to price: extreme information asymmetry, non-linear growth, and short
+  histories make DCF impractical and comparables unstable during market swings. <strong>Can
+  non-financial signals substitute for traditional financial metrics in startup valuation?</strong></p>
+
+  <h2>Data</h2>
+  <ul>
+    <li><strong>3,403 venture-capital deals</strong> from PitchBook, plus macro data from GEM (Global
+    Entrepreneurship Monitor).</li>
+    <li><strong>Out-of-time holdout</strong> spanning the post-2022 correction: train on
+    pre-April-2022 (bull, n=2,723), test on post-April-2022 (contraction, n=680) — a genuine regime
+    shift for all models.</li>
+  </ul>
+
+  <h2>Method — a progressive 3-layer design</h2>
+  <ul>
+    <li><strong>Layer 1:</strong> OLS financial baselines (Revenue, EBITDA, Revenue Multiple).</li>
+    <li><strong>Layer 2:</strong> ML on <em>non-financial</em> features only (firmographics, deal
+    context, investor syndicate).</li>
+    <li><strong>Layer 3:</strong> ML on the full set (Layer 2 + financials + macro) — an ablation to
+    measure the marginal value of financial data.</li>
+    <li>Models: Random Forest, Gradient Boosting, ElasticNet. Interpretability via SHAP.</li>
+  </ul>
+
+  <h2>Results (out-of-sample holdout, n=680)</h2>
+  <table>
+    <thead><tr><th>Model</th><th>R&sup2;</th><th>MAE</th></tr></thead>
+    <tbody>
+      <tr><td>OLS Revenue Multiple (best financial baseline)</td><td class="num">0.643</td><td class="num">0.895</td></tr>
+      <tr class="hl"><td>Random Forest — Layer 2 (non-financial only)</td><td class="num">0.557</td><td class="num">0.888</td></tr>
+      <tr><td>Gradient Boosting — Layer 2 (non-financial only)</td><td class="num">0.558</td><td class="num">0.897</td></tr>
+      <tr><td>Gradient Boosting — Layer 3 (full set)</td><td class="num">0.552</td><td class="num">0.901</td></tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><strong>Non-financial ML is competitive with the best financial baseline</strong> — the
+    Layer-2 Random Forest achieves the best absolute error (MAE 0.888).</li>
+    <li>The OLS Revenue Multiple shows a higher R&sup2; (0.643) but the highest cross-validation
+    instability, generalising poorly across regimes; the ML models are more robust.</li>
+    <li><strong>"Information saturation":</strong> adding financial and macro data (Layer 3) yields
+    virtually identical performance to non-financial-only (Layer 2) — trailing financials add
+    minimal value.</li>
+    <li><strong>SHAP:</strong> the collective capital capacity of the investor syndicate
+    (mean AUM, ~31% of explained importance), not firm financials, is the dominant pricing driver —
+    a certification effect.</li>
+  </ul>
+
+  <h2>Contribution</h2>
+  <ul>
+    <li>Evidence that non-financial signals alone can price private companies competitively — and
+    more robustly across market regimes — than financial baselines.</li>
+    <li>A progressive, interpretable 3-layer framework that quantifies the marginal value of
+    financial data (here, largely redundant).</li>
+    <li>A foundation for the deeper question: which information is worth acquiring to support an
+    investment decision under uncertainty.</li>
+  </ul>
+
+  <div class="foot">
+    Contact: alexguidioff@gmail.com &nbsp;·&nbsp; alessandroguidi.site &nbsp;·&nbsp;
+    linkedin.com/in/alessandroguidi1 &nbsp;·&nbsp; github.com/alexguidioff &nbsp;·&nbsp;
+    Full paper available on request.
+  </div>
+
+</body>
+</html>

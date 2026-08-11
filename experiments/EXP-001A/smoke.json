@@ -1,0 +1,43 @@
+{
+  "experiment": "EXP-001A",
+  "mean_acquisition_rate": {
+    "cheapest": 1.0,
+    "cost_aware_voi": 0.196,
+    "most_predictive": 1.0,
+    "none": 0.0,
+    "oracle": 0.226,
+    "random": 0.794,
+    "uncertainty_reduction": 1.0
+  },
+  "mean_ndv": {
+    "cheapest": 0.171586,
+    "cost_aware_voi": 0.20593,
+    "most_predictive": 0.114952,
+    "none": 0.201,
+    "oracle": 0.200487,
+    "random": 0.135195,
+    "uncertainty_reduction": 0.122347
+  },
+  "n_per_year": 100,
+  "paired_bootstrap_95_ci": [
+    -0.013305,
+    0.029394
+  ],
+  "paired_delta": 0.00493,
+  "scope": "synthetic learned-policy test; no market-realism claim",
+  "script_sha256": "6e8d77dba5153aba1e763b158d266307ee254d7c037db1b8c50ee668dfd5ef38",
+  "seed": 20260721,
+  "split": {
+    "test": 2020,
+    "train": [
+      2016,
+      2017,
+      2018
+    ],
+    "validation": 2019
+  },
+  "strongest_non_voi_baseline": "none",
+  "synthetic_gate_pass": false,
+  "test_observations": 500,
+  "worlds": 5
+}

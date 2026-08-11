@@ -1,0 +1,69 @@
+﻿
+  EXP-009 ù calibrated null for slices, and change-targeting
+  ============================================================================
+  test cases 1831, 400 random orderings per utility
+
+  PART A ù how far does a slice mean stray for no reason?
+    balanced
+      top 0.05  n=92    null sd 0.0427  |divergence| median 0.0284  p95 0.0882  max 0.1262
+      top 0.10  n=183   null sd 0.0267  |divergence| median 0.0202  p95 0.0530  max 0.0803
+      top 0.20  n=366   null sd 0.0190  |divergence| median 0.0126  p95 0.0366  max 0.0680
+      base probability     0.05: -0.0230   0.10: -0.0229   0.20: -0.0202 
+      offering size        0.05: -0.0012   0.10: -0.0175   0.20: -0.0188 
+      investor count       0.05: -0.0393   0.10: -0.0339   0.20: -0.0202 
+
+    false_positive_averse
+      top 0.05  n=92    null sd 0.0410  |divergence| median 0.0273  p95 0.0787  max 0.1414
+      top 0.10  n=183   null sd 0.0278  |divergence| median 0.0179  p95 0.0548  max 0.0941
+      top 0.20  n=366   null sd 0.0198  |divergence| median 0.0142  p95 0.0381  max 0.0572
+      base probability     0.05: +0.0760   0.10: +0.0668*  0.20: +0.0115 
+      offering size        0.05: +0.1004*  0.10: +0.0559*  0.20: +0.0142 
+      investor count       0.05: +0.0189   0.10: -0.0220   0.20: -0.0070 
+
+    opportunity_averse
+      top 0.05  n=92    null sd 0.0156  |divergence| median 0.0106  p95 0.0296  max 0.0601
+      top 0.10  n=183   null sd 0.0115  |divergence| median 0.0071  p95 0.0216  max 0.0413
+      top 0.20  n=366   null sd 0.0071  |divergence| median 0.0051  p95 0.0132  max 0.0201
+      base probability     0.05: -0.0030   0.10: -0.0030   0.20: -0.0030 
+      offering size        0.05: -0.0030   0.10: -0.0030   0.20: -0.0071 
+      investor count       0.05: -0.0030   0.10: -0.0030   0.20: -0.0003 
+
+  PART B ù the objection: is a decision change worth anything?
+    balanced: action changes on 20.4% of cases (n=374)
+      E[gain | change] +0.1390 [+0.0508, +0.2273]   helped 64.2% of changes
+      product check +0.0284 vs cohort mean +0.0284
+    false_positive_averse: action changes on 13.4% of cases (n=245)
+      E[gain | change] -0.0602 [-0.1980, +0.0796]   helped 42.0% of changes
+      product check -0.0081 vs cohort mean -0.0081
+    opportunity_averse: action changes on 4.9% of cases (n=89)
+      E[gain | change] +0.0618 [-0.0927, +0.2079]   helped 82.0% of changes
+      product check +0.0030 vs cohort mean +0.0030
+
+  PART B ù the hypothesis: predict the change, then act on it
+    balanced: change-indicator AUC 0.770
+      train share changed 21.0%, test 20.4%, value of a change (train) +0.1411
+        cost 0.0   acquires 94.6%  vs cheapest -0.0005 [-0.0025, +0.0008]
+        cost 0.01  acquires 90.2%  vs cheapest -0.0001 [-0.0027, +0.0018]
+        cost 0.025 acquires 75.8%  vs cheapest +0.0025 [-0.0025, +0.0065]
+        cost 0.05  acquires 15.2%  vs none   -0.0027 [-0.0134, +0.0082]
+        cost 0.1   acquires 0.1%  vs none   -0.0003 [-0.0010, +0.0000]
+
+    false_positive_averse: change-indicator AUC 0.679
+      train share changed 13.1%, test 13.4%, value of a change (train) +0.0689
+        cost 0.0   acquires 98.5%  vs none   -0.0094 [-0.0272, +0.0094]
+        cost 0.01  acquires 26.1%  vs none   +0.0022 [-0.0109, +0.0149]
+        cost 0.025 acquires 0.3%  vs none   -0.0002 [-0.0021, +0.0015]
+        cost 0.05  acquires 0.0%  vs none   +0.0000 [+0.0000, +0.0000]
+        cost 0.1   acquires 0.0%  vs none   +0.0000 [+0.0000, +0.0000]
+
+    opportunity_averse: change-indicator AUC 0.950
+      train share changed 3.9%, test 4.9%, value of a change (train) +0.0916
+        cost 0.0   acquires 58.8%  vs random +0.0000 [-0.0060, +0.0056]
+        cost 0.01  acquires 20.0%  vs none   +0.0009 [-0.0072, +0.0083]
+        cost 0.025 acquires 5.9%  vs none   +0.0025 [-0.0023, +0.0076]
+        cost 0.05  acquires 0.0%  vs none   +0.0000 [+0.0000, +0.0000]
+        cost 0.1   acquires 0.0%  vs none   +0.0000 [+0.0000, +0.0000]
+
+  ============================================================================
+  orderings clearing the calibrated null: 3/27
+  change-targeting wins on NDV: 0/15 cells

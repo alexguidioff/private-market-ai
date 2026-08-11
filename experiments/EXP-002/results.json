@@ -1,0 +1,1280 @@
+{
+  "cohorts": {
+    "development": {
+      "n": 4059,
+      "base_rate": 0.2705
+    },
+    "validation": {
+      "n": 2947,
+      "base_rate": 0.2117
+    },
+    "disjointness": {
+      "dev_issuers": 4059,
+      "test_issuers": 2947,
+      "cik_overlap": 0,
+      "disjoint": true
+    },
+    "split_audit": {
+      "raw_dev_rows": 4618,
+      "raw_test_rows": 4254,
+      "removed_from_test_cross_year": 1018,
+      "dev_rows_after_dedup": 4059,
+      "test_rows_after_dedup": 2947
+    }
+  },
+  "development_scan": {
+    "summary": {
+      "n": 4059,
+      "base_rate": 0.2705,
+      "n_tests": 60,
+      "fdr_alpha": 0.05,
+      "bootstrap": 500,
+      "seed": 20260728,
+      "quantiles": [
+        0.3,
+        0.2,
+        0.1,
+        0.05
+      ],
+      "survivors_fdr": [
+        "issuer_observed_age_days",
+        "known_amendment_count",
+        "known_equity_filing_count",
+        "known_filing_count",
+        "known_new_notice_count",
+        "prior_notice_count"
+      ],
+      "tail_only": [
+        "prior_notice_count",
+        "known_amendment_count",
+        "known_equity_filing_count"
+      ],
+      "monotone": [
+        "known_filing_count",
+        "known_new_notice_count",
+        "prior_notice_count",
+        "known_amendment_count",
+        "known_equity_filing_count"
+      ]
+    },
+    "profiles": [
+      {
+        "feature": "known_filing_count",
+        "auc": 0.6035,
+        "base_rate": 0.2705,
+        "monotone_in_tail": true,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "known_filing_count",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3555,
+            "lift": 1.314,
+            "lift_ci": [
+              1.254,
+              1.405
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_filing_count",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3855,
+            "lift": 1.425,
+            "lift_ci": [
+              1.281,
+              1.494
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_filing_count",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.4163,
+            "lift": 1.539,
+            "lift_ci": [
+              1.335,
+              1.651
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_filing_count",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.468,
+            "lift": 1.73,
+            "lift_ci": [
+              1.508,
+              1.98
+            ],
+            "p_value": 0.002,
+            "significant": true
+          }
+        ]
+      },
+      {
+        "feature": "known_new_notice_count",
+        "auc": 0.601,
+        "base_rate": 0.2705,
+        "monotone_in_tail": true,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "known_new_notice_count",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.358,
+            "lift": 1.323,
+            "lift_ci": [
+              1.249,
+              1.409
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_new_notice_count",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3732,
+            "lift": 1.379,
+            "lift_ci": [
+              1.271,
+              1.477
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_new_notice_count",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3941,
+            "lift": 1.457,
+            "lift_ci": [
+              1.283,
+              1.596
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_new_notice_count",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.4483,
+            "lift": 1.657,
+            "lift_ci": [
+              1.42,
+              1.897
+            ],
+            "p_value": 0.002,
+            "significant": true
+          }
+        ]
+      },
+      {
+        "feature": "prior_notice_count",
+        "auc": 0.5785,
+        "base_rate": 0.2705,
+        "monotone_in_tail": true,
+        "tail_only": true,
+        "lifts": [
+          {
+            "feature": "prior_notice_count",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3473,
+            "lift": 1.284,
+            "lift_ci": [
+              1.181,
+              1.343
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "prior_notice_count",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3559,
+            "lift": 1.316,
+            "lift_ci": [
+              1.195,
+              1.413
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "prior_notice_count",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3818,
+            "lift": 1.411,
+            "lift_ci": [
+              1.242,
+              1.562
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "prior_notice_count",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.4138,
+            "lift": 1.53,
+            "lift_ci": [
+              1.3,
+              1.814
+            ],
+            "p_value": 0.002,
+            "significant": true
+          }
+        ]
+      },
+      {
+        "feature": "known_amendment_count",
+        "auc": 0.5478,
+        "base_rate": 0.2705,
+        "monotone_in_tail": true,
+        "tail_only": true,
+        "lifts": [
+          {
+            "feature": "known_amendment_count",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3358,
+            "lift": 1.241,
+            "lift_ci": [
+              1.117,
+              1.293
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_amendment_count",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3559,
+            "lift": 1.316,
+            "lift_ci": [
+              1.199,
+              1.428
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_amendment_count",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3916,
+            "lift": 1.448,
+            "lift_ci": [
+              1.22,
+              1.574
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_amendment_count",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.4138,
+            "lift": 1.53,
+            "lift_ci": [
+              1.303,
+              1.811
+            ],
+            "p_value": 0.002,
+            "significant": true
+          }
+        ]
+      },
+      {
+        "feature": "known_equity_filing_count",
+        "auc": 0.5729,
+        "base_rate": 0.2705,
+        "monotone_in_tail": true,
+        "tail_only": true,
+        "lifts": [
+          {
+            "feature": "known_equity_filing_count",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3522,
+            "lift": 1.302,
+            "lift_ci": [
+              1.188,
+              1.36
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_equity_filing_count",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3571,
+            "lift": 1.32,
+            "lift_ci": [
+              1.228,
+              1.427
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_equity_filing_count",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3941,
+            "lift": 1.457,
+            "lift_ci": [
+              1.294,
+              1.628
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "known_equity_filing_count",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.4187,
+            "lift": 1.548,
+            "lift_ci": [
+              1.295,
+              1.791
+            ],
+            "p_value": 0.002,
+            "significant": true
+          }
+        ]
+      },
+      {
+        "feature": "issuer_observed_age_days",
+        "auc": 0.5638,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "issuer_observed_age_days",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3161,
+            "lift": 1.169,
+            "lift_ci": [
+              1.09,
+              1.244
+            ],
+            "p_value": 0.002,
+            "significant": true
+          },
+          {
+            "feature": "issuer_observed_age_days",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3079,
+            "lift": 1.138,
+            "lift_ci": [
+              1.03,
+              1.234
+            ],
+            "p_value": 0.006,
+            "significant": true
+          },
+          {
+            "feature": "issuer_observed_age_days",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.298,
+            "lift": 1.102,
+            "lift_ci": [
+              0.95,
+              1.252
+            ],
+            "p_value": 0.1118,
+            "significant": false
+          },
+          {
+            "feature": "issuer_observed_age_days",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.335,
+            "lift": 1.238,
+            "lift_ci": [
+              1.002,
+              1.486
+            ],
+            "p_value": 0.0299,
+            "significant": true
+          }
+        ]
+      },
+      {
+        "feature": "days_since_latest_known_filing",
+        "auc": 0.4284,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "days_since_latest_known_filing",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2529,
+            "lift": 0.935,
+            "lift_ci": [
+              0.777,
+              0.928
+            ],
+            "p_value": 0.9501,
+            "significant": false
+          },
+          {
+            "feature": "days_since_latest_known_filing",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2488,
+            "lift": 0.92,
+            "lift_ci": [
+              0.769,
+              0.951
+            ],
+            "p_value": 0.9501,
+            "significant": false
+          },
+          {
+            "feature": "days_since_latest_known_filing",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2414,
+            "lift": 0.892,
+            "lift_ci": [
+              0.721,
+              0.997
+            ],
+            "p_value": 0.9421,
+            "significant": false
+          },
+          {
+            "feature": "days_since_latest_known_filing",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.266,
+            "lift": 0.983,
+            "lift_ci": [
+              0.644,
+              1.085
+            ],
+            "p_value": 0.5828,
+            "significant": false
+          }
+        ]
+      },
+      {
+        "feature": "total_offering_amount",
+        "auc": 0.5046,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "total_offering_amount",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2479,
+            "lift": 0.917,
+            "lift_ci": [
+              0.84,
+              0.993
+            ],
+            "p_value": 0.98,
+            "significant": false
+          },
+          {
+            "feature": "total_offering_amount",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2229,
+            "lift": 0.824,
+            "lift_ci": [
+              0.723,
+              0.913
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "total_offering_amount",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2094,
+            "lift": 0.774,
+            "lift_ci": [
+              0.611,
+              0.918
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "total_offering_amount",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.1576,
+            "lift": 0.583,
+            "lift_ci": [
+              0.392,
+              0.784
+            ],
+            "p_value": 1.0,
+            "significant": false
+          }
+        ]
+      },
+      {
+        "feature": "total_amount_sold",
+        "auc": 0.5116,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "total_amount_sold",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2422,
+            "lift": 0.895,
+            "lift_ci": [
+              0.822,
+              0.971
+            ],
+            "p_value": 0.992,
+            "significant": false
+          },
+          {
+            "feature": "total_amount_sold",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2241,
+            "lift": 0.829,
+            "lift_ci": [
+              0.728,
+              0.929
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "total_amount_sold",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.1995,
+            "lift": 0.738,
+            "lift_ci": [
+              0.591,
+              0.885
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "total_amount_sold",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.1527,
+            "lift": 0.565,
+            "lift_ci": [
+              0.393,
+              0.775
+            ],
+            "p_value": 1.0,
+            "significant": false
+          }
+        ]
+      },
+      {
+        "feature": "investor_count",
+        "auc": 0.5326,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "investor_count",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2849,
+            "lift": 1.053,
+            "lift_ci": [
+              0.979,
+              1.128
+            ],
+            "p_value": 0.1198,
+            "significant": false
+          },
+          {
+            "feature": "investor_count",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2771,
+            "lift": 1.024,
+            "lift_ci": [
+              0.907,
+              1.117
+            ],
+            "p_value": 0.3293,
+            "significant": false
+          },
+          {
+            "feature": "investor_count",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2783,
+            "lift": 1.029,
+            "lift_ci": [
+              0.879,
+              1.189
+            ],
+            "p_value": 0.3912,
+            "significant": false
+          },
+          {
+            "feature": "investor_count",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2808,
+            "lift": 1.038,
+            "lift_ci": [
+              0.785,
+              1.262
+            ],
+            "p_value": 0.4251,
+            "significant": false
+          }
+        ]
+      },
+      {
+        "feature": "filing_lag_days",
+        "auc": 0.4741,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "filing_lag_days",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2241,
+            "lift": 0.829,
+            "lift_ci": [
+              0.764,
+              0.915
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "filing_lag_days",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.218,
+            "lift": 0.806,
+            "lift_ci": [
+              0.695,
+              0.89
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "filing_lag_days",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2192,
+            "lift": 0.81,
+            "lift_ci": [
+              0.647,
+              0.938
+            ],
+            "p_value": 0.994,
+            "significant": false
+          },
+          {
+            "feature": "filing_lag_days",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2217,
+            "lift": 0.819,
+            "lift_ci": [
+              0.66,
+              1.054
+            ],
+            "p_value": 0.9541,
+            "significant": false
+          }
+        ]
+      },
+      {
+        "feature": "known_cumulative_amount_sold",
+        "auc": 0.536,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "known_cumulative_amount_sold",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.266,
+            "lift": 0.983,
+            "lift_ci": [
+              0.908,
+              1.059
+            ],
+            "p_value": 0.6826,
+            "significant": false
+          },
+          {
+            "feature": "known_cumulative_amount_sold",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2512,
+            "lift": 0.929,
+            "lift_ci": [
+              0.842,
+              1.026
+            ],
+            "p_value": 0.9142,
+            "significant": false
+          },
+          {
+            "feature": "known_cumulative_amount_sold",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2143,
+            "lift": 0.792,
+            "lift_ci": [
+              0.644,
+              0.94
+            ],
+            "p_value": 0.996,
+            "significant": false
+          },
+          {
+            "feature": "known_cumulative_amount_sold",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.202,
+            "lift": 0.747,
+            "lift_ci": [
+              0.531,
+              0.96
+            ],
+            "p_value": 0.99,
+            "significant": false
+          }
+        ]
+      },
+      {
+        "feature": "known_max_amount_sold",
+        "auc": 0.5237,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "known_max_amount_sold",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2521,
+            "lift": 0.932,
+            "lift_ci": [
+              0.858,
+              1.004
+            ],
+            "p_value": 0.9561,
+            "significant": false
+          },
+          {
+            "feature": "known_max_amount_sold",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2254,
+            "lift": 0.833,
+            "lift_ci": [
+              0.727,
+              0.925
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "known_max_amount_sold",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.1995,
+            "lift": 0.738,
+            "lift_ci": [
+              0.58,
+              0.879
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "known_max_amount_sold",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.1823,
+            "lift": 0.674,
+            "lift_ci": [
+              0.493,
+              0.882
+            ],
+            "p_value": 0.998,
+            "significant": false
+          }
+        ]
+      },
+      {
+        "feature": "latest_known_investor_count",
+        "auc": 0.5376,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "latest_known_investor_count",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2939,
+            "lift": 1.087,
+            "lift_ci": [
+              1.004,
+              1.159
+            ],
+            "p_value": 0.02,
+            "significant": true
+          },
+          {
+            "feature": "latest_known_investor_count",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2894,
+            "lift": 1.07,
+            "lift_ci": [
+              0.961,
+              1.175
+            ],
+            "p_value": 0.1178,
+            "significant": false
+          },
+          {
+            "feature": "latest_known_investor_count",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3153,
+            "lift": 1.165,
+            "lift_ci": [
+              0.988,
+              1.314
+            ],
+            "p_value": 0.0259,
+            "significant": false
+          },
+          {
+            "feature": "latest_known_investor_count",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.3202,
+            "lift": 1.184,
+            "lift_ci": [
+              0.933,
+              1.412
+            ],
+            "p_value": 0.0679,
+            "significant": false
+          }
+        ]
+      },
+      {
+        "feature": "latest_known_amount_sold",
+        "auc": 0.5159,
+        "base_rate": 0.2705,
+        "monotone_in_tail": false,
+        "tail_only": false,
+        "lifts": [
+          {
+            "feature": "latest_known_amount_sold",
+            "q": 0.3,
+            "n": 4059,
+            "n_extreme": 1218,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2422,
+            "lift": 0.895,
+            "lift_ci": [
+              0.82,
+              0.969
+            ],
+            "p_value": 0.994,
+            "significant": false
+          },
+          {
+            "feature": "latest_known_amount_sold",
+            "q": 0.2,
+            "n": 4059,
+            "n_extreme": 812,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.2118,
+            "lift": 0.783,
+            "lift_ci": [
+              0.685,
+              0.886
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "latest_known_amount_sold",
+            "q": 0.1,
+            "n": 4059,
+            "n_extreme": 406,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.1773,
+            "lift": 0.656,
+            "lift_ci": [
+              0.507,
+              0.79
+            ],
+            "p_value": 1.0,
+            "significant": false
+          },
+          {
+            "feature": "latest_known_amount_sold",
+            "q": 0.05,
+            "n": 4059,
+            "n_extreme": 203,
+            "base_rate": 0.2705,
+            "rate_in_tail": 0.1527,
+            "lift": 0.565,
+            "lift_ci": [
+              0.399,
+              0.776
+            ],
+            "p_value": 1.0,
+            "significant": false
+          }
+        ]
+      }
+    ]
+  },
+  "transport_q05": [
+    {
+      "feature": "known_amendment_count",
+      "q": 0.05,
+      "dev_lift": 1.53,
+      "test_lift": 1.767,
+      "test_ci": [
+        1.365,
+        2.154
+      ],
+      "test_p": 0.002,
+      "transports": true
+    },
+    {
+      "feature": "known_filing_count",
+      "q": 0.05,
+      "dev_lift": 1.73,
+      "test_lift": 1.446,
+      "test_ci": [
+        1.179,
+        1.923
+      ],
+      "test_p": 0.004,
+      "transports": true
+    },
+    {
+      "feature": "known_new_notice_count",
+      "q": 0.05,
+      "dev_lift": 1.657,
+      "test_lift": 1.446,
+      "test_ci": [
+        1.123,
+        1.886
+      ],
+      "test_p": 0.006,
+      "transports": true
+    },
+    {
+      "feature": "known_equity_filing_count",
+      "q": 0.05,
+      "dev_lift": 1.548,
+      "test_lift": 1.446,
+      "test_ci": [
+        1.123,
+        1.837
+      ],
+      "test_p": 0.006,
+      "transports": true
+    },
+    {
+      "feature": "prior_notice_count",
+      "q": 0.05,
+      "dev_lift": 1.53,
+      "test_lift": 1.317,
+      "test_ci": [
+        0.99,
+        1.762
+      ],
+      "test_p": 0.0359,
+      "transports": false
+    },
+    {
+      "feature": "issuer_observed_age_days",
+      "q": 0.05,
+      "dev_lift": 1.238,
+      "test_lift": 1.189,
+      "test_ci": [
+        0.913,
+        1.572
+      ],
+      "test_p": 0.1238,
+      "transports": false
+    },
+    {
+      "feature": "latest_known_investor_count",
+      "q": 0.05,
+      "dev_lift": 1.184,
+      "test_lift": 1.157,
+      "test_ci": [
+        0.829,
+        1.461
+      ],
+      "test_p": 0.1577,
+      "transports": false
+    },
+    {
+      "feature": "days_since_latest_known_filing",
+      "q": 0.05,
+      "dev_lift": 0.983,
+      "test_lift": 1.124,
+      "test_ci": [
+        0.549,
+        1.156
+      ],
+      "test_p": 0.2056,
+      "transports": false
+    },
+    {
+      "feature": "known_cumulative_amount_sold",
+      "q": 0.05,
+      "dev_lift": 0.747,
+      "test_lift": 1.06,
+      "test_ci": [
+        0.768,
+        1.434
+      ],
+      "test_p": 0.4212,
+      "transports": false
+    },
+    {
+      "feature": "known_max_amount_sold",
+      "q": 0.05,
+      "dev_lift": 0.674,
+      "test_lift": 1.06,
+      "test_ci": [
+        0.774,
+        1.384
+      ],
+      "test_p": 0.4112,
+      "transports": false
+    },
+    {
+      "feature": "total_offering_amount",
+      "q": 0.05,
+      "dev_lift": 0.583,
+      "test_lift": 0.996,
+      "test_ci": [
+        0.667,
+        1.334
+      ],
+      "test_p": 0.5908,
+      "transports": false
+    },
+    {
+      "feature": "total_amount_sold",
+      "q": 0.05,
+      "dev_lift": 0.565,
+      "test_lift": 0.964,
+      "test_ci": [
+        0.663,
+        1.278
+      ],
+      "test_p": 0.6707,
+      "transports": false
+    },
+    {
+      "feature": "investor_count",
+      "q": 0.05,
+      "dev_lift": 1.038,
+      "test_lift": 0.932,
+      "test_ci": [
+        0.645,
+        1.272
+      ],
+      "test_p": 0.6627,
+      "transports": false
+    },
+    {
+      "feature": "latest_known_amount_sold",
+      "q": 0.05,
+      "dev_lift": 0.565,
+      "test_lift": 0.932,
+      "test_ci": [
+        0.603,
+        1.278
+      ],
+      "test_p": 0.7365,
+      "transports": false
+    },
+    {
+      "feature": "filing_lag_days",
+      "q": 0.05,
+      "dev_lift": 0.819,
+      "test_lift": 0.643,
+      "test_ci": [
+        0.417,
+        0.964
+      ],
+      "test_p": 0.988,
+      "transports": false
+    }
+  ]
+}

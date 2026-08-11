@@ -1,0 +1,56 @@
+﻿
+  EXP-007 ù does the cohort-level acquisition estimate reach the top slice?
+  ============================================================================
+  test cases 1831, base rate 29.2%
+  pipeline ranking: base model predicted probability, descending
+  declared: slices [0.05, 0.1, 0.2, 0.5, 1.0], transfer margin 0.01, minimum slice n 30
+
+  balanced: cohort mean gain +0.0284 (sd 0.4061)
+    slice     n    mean gain            vs cohort            verdict
+       5%    92  +0.0054 [+0.0000,+0.0163]  -0.0230 [-0.0434,-0.0019]  magnitude_shift
+      10%   183  +0.0055 [+0.0000,+0.0137]  -0.0229 [-0.0434,-0.0044]  magnitude_shift
+      20%   366  +0.0082 [-0.0041,+0.0191]  -0.0202 [-0.0404,+0.0003]  transfers
+      50%   916  +0.0104 [-0.0087,+0.0300]  -0.0180 [-0.0366,+0.0016]  transfers
+     100%  1831  +0.0284 [+0.0098,+0.0472]  +0.0000 [+0.0000,+0.0000]  transfers
+
+  false_positive_averse: cohort mean gain -0.0081 (sd 0.4067)
+    slice     n    mean gain            vs cohort            verdict
+       5%    92  +0.0679 [-0.0571,+0.1902]  +0.0760 [-0.0446,+0.1945]  sign_flip
+      10%   183  +0.0587 [-0.0232,+0.1407]  +0.0668 [-0.0105,+0.1417]  sign_flip
+      20%   366  +0.0034 [-0.0492,+0.0608]  +0.0115 [-0.0325,+0.0601]  sign_flip
+      50%   916  -0.0011 [-0.0349,+0.0308]  +0.0070 [-0.0135,+0.0248]  transfers
+     100%  1831  -0.0081 [-0.0265,+0.0104]  +0.0000 [+0.0000,+0.0000]  transfers
+
+  opportunity_averse: cohort mean gain +0.0030 (sd 0.1634)
+    slice     n    mean gain            vs cohort            verdict
+       5%    92  +0.0000 [+0.0000,+0.0000]  -0.0030 [-0.0104,+0.0048]  sign_flip
+      10%   183  +0.0000 [+0.0000,+0.0000]  -0.0030 [-0.0104,+0.0048]  sign_flip
+      20%   366  +0.0000 [+0.0000,+0.0000]  -0.0030 [-0.0104,+0.0048]  sign_flip
+      50%   916  +0.0000 [+0.0000,+0.0000]  -0.0030 [-0.0104,+0.0048]  sign_flip
+     100%  1831  +0.0030 [-0.0048,+0.0104]  +0.0000 [+0.0000,+0.0000]  transfers
+
+  all-or-nothing decision, cohort estimate vs slice estimate:
+    balanced                 cost 0.0   cohort says acquire          0.05:agrees 0.10:agrees 0.20:agrees 0.50:agrees 1.00:agrees
+    balanced                 cost 0.01  cohort says acquire          0.05:DISAGREES 0.10:DISAGREES 0.20:DISAGREES 0.50:agrees 1.00:agrees
+    balanced                 cost 0.025 cohort says acquire          0.05:DISAGREES 0.10:DISAGREES 0.20:DISAGREES 0.50:DISAGREES 1.00:agrees
+    balanced                 cost 0.05  cohort says do_not_acquire   0.05:agrees 0.10:agrees 0.20:agrees 0.50:agrees 1.00:agrees
+    balanced                 cost 0.1   cohort says do_not_acquire   0.05:agrees 0.10:agrees 0.20:agrees 0.50:agrees 1.00:agrees
+    false_positive_averse    cost 0.0   cohort says do_not_acquire   0.05:DISAGREES 0.10:DISAGREES 0.20:DISAGREES 0.50:agrees 1.00:agrees
+    false_positive_averse    cost 0.01  cohort says do_not_acquire   0.05:DISAGREES 0.10:DISAGREES 0.20:agrees 0.50:agrees 1.00:agrees
+    false_positive_averse    cost 0.025 cohort says do_not_acquire   0.05:DISAGREES 0.10:DISAGREES 0.20:agrees 0.50:agrees 1.00:agrees
+    false_positive_averse    cost 0.05  cohort says do_not_acquire   0.05:DISAGREES 0.10:DISAGREES 0.20:agrees 0.50:agrees 1.00:agrees
+    false_positive_averse    cost 0.1   cohort says do_not_acquire   0.05:agrees 0.10:agrees 0.20:agrees 0.50:agrees 1.00:agrees
+    opportunity_averse       cost 0.0   cohort says acquire          0.05:DISAGREES 0.10:DISAGREES 0.20:DISAGREES 0.50:DISAGREES 1.00:agrees
+    opportunity_averse       cost 0.01  cohort says do_not_acquire   0.05:agrees 0.10:agrees 0.20:agrees 0.50:agrees 1.00:agrees
+    opportunity_averse       cost 0.025 cohort says do_not_acquire   0.05:agrees 0.10:agrees 0.20:agrees 0.50:agrees 1.00:agrees
+    opportunity_averse       cost 0.05  cohort says do_not_acquire   0.05:agrees 0.10:agrees 0.20:agrees 0.50:agrees 1.00:agrees
+    opportunity_averse       cost 0.1   cohort says do_not_acquire   0.05:agrees 0.10:agrees 0.20:agrees 0.50:agrees 1.00:agrees
+
+  ============================================================================
+  slices evaluated 15, transfers 6, sign flips 7, magnitude shifts 2, voided for size 0
+  all-or-nothing decision disagreements: 20
+
+  The cohort estimate does not reach the slice a budget works. P5 cannot
+  inherit EXP-005's population mean and must estimate inside the top-k,
+  which is where the sample is smallest ù the compounding caution is real
+  and now quantified rather than anticipated.

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PhD Project Outline — Alessandro Guidi</title>
+<style>
+  @page { size: A4; margin: 20mm 22mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.6pt;
+    line-height: 1.42;
+    color: #111;
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 0 20px;
+    text-align: justify;
+  }
+  h1 { font-size: 19pt; margin: 0 0 2px; }
+  .subtitle { font-style: italic; color: #444; font-size: 12pt; margin: 0 0 8px; }
+  .contact { font-size: 8.5pt; color: #666; margin: 0 0 10px; text-align: left; }
+  hr { border: none; border-top: 1px solid #bbb; margin: 10px 0 16px; }
+  h2 { font-size: 11.5pt; margin: 16px 0 5px; }
+  p { margin: 0 0 8px; }
+  ul { margin: 4px 0 10px; padding-left: 20px; }
+  li { margin: 0 0 5px; }
+  code { font-family: "Consolas", monospace; font-size: 9.4pt; background: #f4f4f4; padding: 0 2px; }
+  .refs { text-align: left; }
+  .refs p { margin: 0 0 4px; padding-left: 20px; text-indent: -20px; font-size: 10pt; }
+  .foot { font-style: italic; color: #666; font-size: 9pt; margin-top: 16px; text-align: left; }
+  @media print { body { margin: 0; max-width: none; padding: 0; } a { color: #111; text-decoration: none; } }
+</style>
+</head>
+<body>
+
+  <h1>PhD Project Outline</h1>
+  <div class="subtitle">Value of Information for Investment Decisions under Uncertainty</div>
+  <div class="contact">
+    Alessandro Guidi &nbsp;·&nbsp; alexguidioff@gmail.com &nbsp;·&nbsp; alessandroguidi.site
+    &nbsp;·&nbsp; linkedin.com/in/alessandroguidi1 &nbsp;·&nbsp; github.com/alexguidioff
+  </div>
+  <hr>
+
+  <h2>Target institution</h2>
+  <p>ETH Zurich, Department of Computer Science (D-INFK) — Optimization &amp; Decision Intelligence
+  (ODI) Group, Institute for Machine Learning (Prof. Niao He). A domain co-advisor at HSG
+  (private-markets / entrepreneurial finance) is envisaged.</p>
+
+  <h2>1.&nbsp;&nbsp;Research context and focus</h2>
+  <p>Investors in private markets decide under extreme uncertainty on fragmentary, non-standardised
+  information. The dominant AI framing — <em>predict</em> which company will succeed — is
+  increasingly crowded and, on its own, of limited practical value: an investor does not buy a
+  prediction, they buy <strong>information</strong> that improves a decision. This project studies
+  the prior, under-explored question: given a decision under uncertainty, <em>which</em> missing
+  piece of information — at what cost — most improves the decision?</p>
+  <p>This builds on my accepted WI2026 Student Track paper (<em>Can Non-Financial Signals Price
+  Private Companies?</em>), which shows on 3,403 PitchBook deals, under a strict out-of-time holdout,
+  that ML on non-financial signals alone prices private companies competitively with financial
+  baselines, and that <strong>investor-syndicate structure</strong> — not firm financials — is the
+  dominant driver. That result exposes the ceiling of a purely predictive approach and motivates the
+  shift from <em>prediction</em> to <em>value of information</em>. The natural home for this shift is
+  decision-making under uncertainty: the acquisition of information is itself a sequential decision
+  to be optimised, not a prediction to be improved.</p>
+
+  <h2>2.&nbsp;&nbsp;Research questions</h2>
+  <p><strong>Main question:</strong> In investment decisions under uncertainty, which information
+  acquisition — at what cost — most improves decision quality?</p>
+  <ul>
+    <li>How can each decision be represented by its <em>information state</em>: what is knowable at
+    time <em>t</em>, reconstructed point-in-time, before the outcome is realised?</li>
+    <li>How do we quantify the <em>marginal value</em> of acquiring an additional piece of
+    information (a signal, a due-diligence step) relative to its cost?</li>
+    <li>Can the acquisition process be framed as a sequential decision / optimisation-under-uncertainty
+    problem with regret or optimality guarantees on <em>which</em> step to take next under a cost
+    budget?</li>
+  </ul>
+
+  <h2>3.&nbsp;&nbsp;Theoretical framework</h2>
+  <p>The project sits at the intersection of decision theory under uncertainty and information
+  economics, operationalised with modern optimisation and ML. The core object is the <em>value of
+  information</em>: the expected improvement in decision quality from moving
+  <code>Decision(state) → acquire info (cost c) → state' → Decision(state')</code>. The natural formal
+  home is the ODI group's own language — the trade-off between the value of more information and its
+  cost. This is precisely the object of the group's work on the <em>bias–variance–cost trade-off of
+  stochastic optimisation</em> (NeurIPS 2021): acquiring more or better information reduces error but
+  is costly, and the question is how much to acquire and when to stop. My project transports that
+  trade-off from the estimation setting into a <em>decision</em> setting — where the "sample" is a
+  diligence step and the "error" is decision regret. Two further group results supply the sequential
+  machinery: constrained-MDP formulations with regret guarantees (<em>Truly No-Regret Learning in
+  Constrained MDPs</em>, ICML 2024) formalise "acquire the highest-value information subject to a
+  cost/time budget," and stochastic optimisation under uncertainty for revenue management
+  (<em>Operations Research</em>, 2024) is a template for turning a real allocation decision into a
+  tractable objective. The methods exist; their application to private-market investment decisions
+  is open.</p>
+
+  <h2>4.&nbsp;&nbsp;Methodology</h2>
+  <p>Feasibility does not depend on proprietary data. Ground truth comes from a <em>point-in-time
+  reconstruction</em> of public sources (so the information state at time <em>t</em> excludes
+  look-ahead) plus a <em>virtual-fund simulator</em> that lets us measure decision quality
+  counterfactually — a natural sequential-decision environment in which an acquisition policy can be
+  learned and evaluated. On top of this I formalise value-of-information estimators and an
+  acquisition policy that selects the next diligence step by expected marginal value per unit cost,
+  benchmarked against the WI2026 pipeline as a predictive baseline.</p>
+  <ul>
+    <li><strong>Year 1:</strong> formalise the information-state / value-of-information objective;
+    build the point-in-time dataset and simulator; first acquisition-policy experiments.</li>
+    <li><strong>Year 2:</strong> complete and submit the flagship paper (if it grows: a follow-up on
+    how to evaluate whether a decision was good given what was knowable, not by its eventual outcome).</li>
+    <li><strong>Year 3–4:</strong> extensions (robustness, portfolio-level acquisition), writing,
+    publications.</li>
+  </ul>
+
+  <h2>5.&nbsp;&nbsp;Expected contribution</h2>
+  <p>The project contributes (i) a formalisation of value of information for private-market decisions
+  as a sequential optimisation-under-uncertainty problem; (ii) a reproducible point-in-time and
+  simulator methodology that makes the question testable without proprietary data; and (iii)
+  empirical evidence on which information is worth acquiring in VC diligence. The contribution is
+  domain-general: the same formulation applies beyond venture capital (private equity, credit, M&amp;A),
+  which is what makes it a research line rather than a single application.</p>
+
+  <h2>6.&nbsp;&nbsp;Fit with host institution</h2>
+  <p>The ODI group's stated focus — algorithmic and theoretical foundations for solving data-driven
+  decision-making problems, large-scale optimisation, optimisation under uncertainty, and
+  reinforcement learning — is precisely the toolbox this question needs. Framing value of information
+  as a sequential / constrained decision problem is a direct extension of the group's
+  optimisation-under-uncertainty and constrained-MDP work into a new, high-stakes application domain.
+  The methodological core would live in your group; a private-markets co-advisor at HSG would anchor
+  the domain, giving the "ML rigour + domain credibility" pairing. I note the group's SNSF Starting
+  Grant and current openings, and would be glad to discuss whether this fits a funded position.</p>
+
+  <h2>7.&nbsp;&nbsp;Selected references</h2>
+  <div class="refs">
+    <p>Howard, R.&nbsp;A. (1966). <em>Information Value Theory.</em> IEEE Trans. Systems Science and
+    Cybernetics, 2(1), 22–26.</p>
+    <p>Savage, L.&nbsp;J. (1954). <em>The Foundations of Statistics.</em> Wiley.</p>
+    <p>Hu, Y., Chen, X., &amp; He, N. (2021). <em>On the Bias-Variance-Cost Tradeoff of Stochastic
+    Optimization.</em> NeurIPS 2021.</p>
+    <p>Müller, A., Alatur, P., Cevher, V., Ramponi, G., &amp; He, N. (2024). <em>Truly No-Regret
+    Learning in Constrained MDPs.</em> ICML 2024.</p>
+    <p>Chen, X., He, N., Hu, Y., &amp; Ye, Z. (2024). <em>Efficient Algorithms for a Class of
+    Stochastic Hidden Convex Optimization and Its Applications in Network Revenue Management.</em>
+    Operations Research.</p>
+    <p>Guidi, A., Rashid, S., &amp; Zhong, H. (2026). <em>Can Non-Financial Signals Price Private
+    Companies?</em> WI2026 Student Track (accepted).</p>
+  </div>
+
+  <div class="foot">One-page WI2026 summary attached. Code and manuscript available on request.</div>
+
+</body>
+</html>

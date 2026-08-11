@@ -1,0 +1,23 @@
+{
+  "experiment": "EXP-001D",
+  "scope": "Assumption-bound temporal transport baseline; no acquisition action",
+  "seed": 20260722,
+  "target": "subsequent_notice_18m",
+  "development_split": "future_train",
+  "evaluation_split": "future_validation",
+  "locked_split": "locked_test",
+  "selection": {
+    "method": "5-fold stratified CV within 2021 development only",
+    "metric": "log_loss",
+    "c_grid": [0.01, 0.1, 1.0, 10.0]
+  },
+  "bootstrap_draws": 1000,
+  "models": ["development_prior", "anchor_only", "anchor_plus_sec_history"],
+  "utility_grid": {
+    "balanced": {"tp": 1.0, "fp": -0.5, "fn": -0.5, "tn": 0.0},
+    "false_positive_averse": {"tp": 1.0, "fp": -1.0, "fn": -0.25, "tn": 0.0},
+    "opportunity_averse": {"tp": 1.0, "fp": -0.25, "fn": -1.0, "tn": 0.0}
+  },
+  "utility_status": "assumption-bound; no buyer elicitation",
+  "claim_boundary": "2021-to-2022 method development only; 2023 outcomes remain locked; not a VoI test"
+}

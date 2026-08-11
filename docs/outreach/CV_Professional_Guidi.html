@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alessandro Guidi — CV</title>
+<style>
+  @page { size: A4; margin: 10mm 13mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Calibri", "Helvetica Neue", Arial, sans-serif;
+    font-size: 9pt;
+    line-height: 1.2;
+    color: #111;
+    max-width: 760px;
+    margin: 12px auto;
+    padding: 0 16px;
+  }
+  header { text-align: center; margin-bottom: 2px; }
+  h1 { font-size: 16pt; margin: 0 0 1px; letter-spacing: 0.5px; }
+  .tagline { font-weight: bold; color: #24506b; font-size: 9.5pt; margin: 0 0 2px; }
+  .contacts { font-size: 8pt; color: #444; }
+  .langs { font-size: 8pt; color: #444; margin-top: 1px; }
+  hr { border: none; border-top: 1px solid #bbb; margin: 5px 0 3px; }
+  h2 {
+    font-size: 9.4pt; text-transform: uppercase; letter-spacing: 0.8px; color: #24506b;
+    border-bottom: 1.2px solid #24506b; padding-bottom: 1px; margin: 8px 0 3px;
+  }
+  .entry { margin-bottom: 5px; }
+  .row { display: flex; justify-content: space-between; gap: 12px; }
+  .role { font-weight: bold; }
+  .place { font-style: italic; color: #333; }
+  .date { color: #555; white-space: nowrap; font-size: 8.3pt; }
+  ul { margin: 1px 0 0; padding-left: 16px; }
+  li { margin: 0 0 1px; }
+  p { margin: 0 0 3px; }
+  .summary { text-align: justify; }
+  .skills p { margin: 0 0 2px; }
+  .tag { font-weight: bold; color: #24506b; }
+  @media print { body { margin: 0; max-width: none; padding: 0; } a { color: #111; text-decoration: none; } }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Alessandro Guidi</h1>
+    <div class="tagline">Product Manager &nbsp;·&nbsp; AI / Data Products &nbsp;·&nbsp; Fintech &amp; Financial Services</div>
+    <div class="contacts">
+      +39 347 291 1103 &nbsp;·&nbsp; alexguidioff@gmail.com &nbsp;·&nbsp; linkedin.com/in/alessandroguidi1 &nbsp;·&nbsp; alessandroguidi.site<br>
+      Lugano / Turin &nbsp;·&nbsp; Italian (EU citizen) &nbsp;·&nbsp; Eligible to work in Switzerland &nbsp;·&nbsp; Availability: September 2026
+    </div>
+    <div class="langs">Italian (Native) &nbsp;·&nbsp; English (C1 · IELTS 7.0) &nbsp;·&nbsp; French (B2)</div>
+  </header>
+  <hr>
+
+  <h2>Professional Summary</h2>
+  <p class="summary">Product Manager with experience in Big Tech (Amazon) and Tier-1 consulting (Capgemini),
+  specializing in fintech and financial-services product strategy. Combines business execution with technical
+  depth in ML pipelines, LLMs, and blockchain/DeFi (PMP, MasterZ, Neural Academy certified) and applied ML
+  research (co-author of a paper accepted at WI 2026). Uniquely positioned to translate ML model outputs into
+  product decisions, bridging data science teams and business stakeholders.</p>
+
+  <h2>Work Experience</h2>
+  <div class="entry">
+    <div class="row"><span><span class="role">EU5 3P Product Manager (Apprenticeship)</span> — <span class="place">Amazon</span>, Paris, France</span><span class="date">Sep 2025 – present</span></div>
+    <ul>
+      <li>Own product strategy and roadmap for onboarding strategic B2B sellers (+€100M annual revenue) into EU5 Amazon Business, coordinating across Sales, Tech, Legal, and Ops in 5 markets.</li>
+      <li>Redesigned Salesforce-based CRM workflows using data-driven automation, reducing operational overhead by ~25% and cutting commercial cycle time end-to-end.</li>
+      <li>Defined and tracked funnel KPIs (lead-to-contract conversion, onboarding velocity) to drive prioritization decisions and report to senior stakeholders.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span><span class="role">Consultant</span> — <span class="place">Capgemini, Technology Consulting</span>, Milan, Italy</span><span class="date">Sep 2023 – Aug 2025</span></div>
+    <ul>
+      <li>Delivered financial modelling and process reengineering for Tier-1 banking clients in highly regulated environments, contributing to ~€2M in documented cost savings.</li>
+      <li>Built market analysis models and risk assessment tools to support executive decision-making on digital transformation roadmaps.</li>
+      <li>Designed KPI frameworks and data reporting structures, presenting insights to C-level stakeholders at regulated financial institutions.</li>
+    </ul>
+  </div>
+
+  <h2>Research &amp; Publications</h2>
+  <div class="entry">
+    <div class="row"><span><span class="role">A Data-Driven Decision Support System for Venture Capital Valuation</span></span><span class="date">2025 – 2026</span></div>
+    <div class="place">Master's Thesis &amp; Conference Paper — ESCP Business School (Paris / Turin)</div>
+    <ul>
+      <li>Built an end-to-end ML pipeline to predict private-company valuations using investor-syndicate co-investment network features, funding history, and market signals — on a dataset of <span class="tag">3,403 PitchBook-backed deals</span>.</li>
+      <li>Engineered graph-based features from investor co-investment networks (centrality, clustering, syndicate overlap) to capture the signal value of investor reputation and collaboration patterns.</li>
+      <li>Trained and benchmarked ensemble models (Random Forest, XGBoost, SHAP) against DCF/comparables baselines on an out-of-time holdout spanning the 2022 correction; best model performed <span class="tag">competitively with, and more robustly than</span>, traditional baselines (RF R² = 0.557, MAE = 0.888). Key finding: investor-syndicate capacity (mean co-investor AUM) is the dominant valuation driver via SHAP, evidence of information saturation. <span class="tag">Accepted at WI 2026</span> (Business Informatics), Student Track.</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="row"><span><span class="role">Master in Management</span> — GPA 3.8/4.0 — <span class="place">ESCP Business School</span> (Turin · Berlin · Madrid · Paris)</span><span class="date">Sep 2022 – Sep 2026</span></div>
+    <ul>
+      <li>Specialisations: International Business Consulting &amp; Corporate Finance / Financial Markets.</li>
+      <li>Programme includes integrated professional apprenticeship years (standard ESCP MiM format: Capgemini, Amazon).</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span><span class="role">The Future of Financial Institutions Mgmt.</span> — <span class="place">SDA Bocconi &amp; Capgemini</span>, Milan, Italy</span><span class="date">Sep 2023</span></div>
+    <ul>
+      <li>Corporate-sponsored program on financial markets, digital innovation, and strategic management trends in banking.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span><span class="role">Bachelor's in Business &amp; Management</span> — 110/110 <em>summa cum laude</em> — <span class="place">Università degli Studi di Torino</span>, Italy</span><span class="date">Sep 2019 – Sep 2022</span></div>
+    <ul>
+      <li>Core focus: corporate finance, financial accounting (IFRS), business strategy, and quantitative methods; highest grade achievable in the Italian system.</li>
+    </ul>
+  </div>
+
+  <h2>Certifications</h2>
+  <div class="entry">
+    <ul>
+      <li><span class="role">PMP – Project Management Professional</span> · Project Management Institute · 2025</li>
+      <li><span class="role">LLMs &amp; Generative AI</span> · Neural Academy · 2023 — LLM architecture, fine-tuning, deployment; applied to the end-to-end ML pipeline for the master's thesis.</li>
+      <li><span class="role">Blockchain &amp; Digital Assets</span> · MasterZ (EU's largest Blockchain Training Hub) · 2022 — DeFi protocols, tokenization, staking, digital asset custody, Web3 business models, smart contract fundamentals.</li>
+    </ul>
+  </div>
+
+  <h2>Leadership &amp; Volunteering</h2>
+  <div class="entry">
+    <div class="row"><span><span class="role">180 Degrees Consulting</span> — <span class="place">Turin</span></span><span class="date">Sep 2022 – Jul 2025</span></div>
+    <ul>
+      <li>Progressed from Consultant → Project Manager → Consulting Director → President; defined strategy, managed project portfolio, and coached PMs.</li>
+      <li>Led CiboCrudo's B2B EU5 expansion through reseller partnerships, driving ~30% revenue growth.</li>
+    </ul>
+  </div>
+
+  <h2>Skills &amp; Tools</h2>
+  <div class="skills">
+    <p><span class="tag">Analytics &amp; Tech:</span> Python (scikit-learn, XGBoost, SHAP), SQL (Redshift), feature engineering, graph analytics, model explainability, LLM development.</p>
+    <p><span class="tag">Blockchain &amp; Digital Assets:</span> DeFi protocols, tokenization, staking, digital asset custody, Web3 business models, smart contract fundamentals (MasterZ certified).</p>
+    <p><span class="tag">BI &amp; Reporting:</span> Tableau, Power BI, Excel (advanced), financial modelling.</p>
+    <p><span class="tag">Project Management:</span> Roadmapping, KPI design, funnel analytics, stakeholder management, Salesforce CRM, Agile/Scrum, PMP-certified.</p>
+    <p><span class="tag">Finance &amp; Markets:</span> Corporate finance, valuation (DCF, comparables, ML-based), VC/startup ecosystems, financial risk.</p>
+  </div>
+
+</body>
+</html>

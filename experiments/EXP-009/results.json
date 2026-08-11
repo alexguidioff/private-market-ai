@@ -1,0 +1,480 @@
+{
+  "declared": {
+    "change_margin": 0.005,
+    "decision_floor": 0.55,
+    "discipline": "NDV against the strongest non-VoI baseline decides; a good AUC on the change indicator settles nothing on its own",
+    "expectation": "E[gain|change] positive under balanced, negative under false_positive_averse; change indicator more predictable than per-case gain; no prediction on whether it wins on NDV",
+    "n_null": 400
+  },
+  "n_test": 1831,
+  "summary": {
+    "ordering_slices_tested": 27,
+    "orderings_clearing_null": 3,
+    "policy_cells": 15,
+    "policy_wins": 0
+  },
+  "utilities": {
+    "balanced": {
+      "calibrated_null": {
+        "0.05": {
+          "n_null": 400,
+          "n_slice": 92,
+          "null_abs_max": 0.12622586849666373,
+          "null_abs_median": 0.028399781540142,
+          "null_abs_p95": 0.08818239023579418,
+          "null_sd": 0.04269227570938034
+        },
+        "0.10": {
+          "n_null": 400,
+          "n_slice": 183,
+          "null_abs_max": 0.08031234984615293,
+          "null_abs_median": 0.020203060228666588,
+          "null_abs_p95": 0.05298994547456823,
+          "null_sd": 0.026726549153110117
+        },
+        "0.20": {
+          "n_null": 400,
+          "n_slice": 366,
+          "null_abs_max": 0.06801726787893982,
+          "null_abs_median": 0.012583825017235047,
+          "null_abs_p95": 0.03659650285161741,
+          "null_sd": 0.019020484248062304
+        }
+      },
+      "change_model": {
+        "auc": 0.7701250463372471,
+        "predictable": true,
+        "test_share_changed": 0.2042599672310213,
+        "train_share_changed": 0.20993494973388527,
+        "value_of_change_from_train": 0.14112676056338028
+      },
+      "objection": {
+        "ci": [
+          0.05080213903743316,
+          0.22727272727272727
+        ],
+        "cohort_mean_gain": 0.028399781540142,
+        "insufficient": false,
+        "mean_gain_given_change": 0.13903743315508021,
+        "n_changed": 374,
+        "product_check": 0.028399781540142,
+        "sd_gain_given_change": 0.8900370320300471,
+        "share_changed": 0.2042599672310213,
+        "share_helped_given_change": 0.6417112299465241
+      },
+      "policy": {
+        "0.0": {
+          "acquisition_rate": 0.9464773347897324,
+          "advantage": -0.000546149645002731,
+          "delta_ci": [
+            -0.0024576734025122883,
+            0.0008192244675040961
+          ],
+          "strongest_non_voi": "cheapest",
+          "wins": false
+        },
+        "0.01": {
+          "acquisition_rate": 0.9016930638995084,
+          "advantage": -0.00010922992900054811,
+          "delta_ci": [
+            -0.0027314309120699065,
+            0.0018024303659202627
+          ],
+          "strongest_non_voi": "cheapest",
+          "wins": false
+        },
+        "0.025": {
+          "acquisition_rate": 0.7580557072637902,
+          "advantage": 0.0024986346258874907,
+          "delta_ci": [
+            -0.0024999999999999974,
+            0.006485527034407431
+          ],
+          "strongest_non_voi": "cheapest",
+          "wins": false
+        },
+        "0.05": {
+          "acquisition_rate": 0.1523757509557619,
+          "advantage": -0.0027034407427635188,
+          "delta_ci": [
+            -0.013360185690879304,
+            0.008193610049153463
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        },
+        "0.1": {
+          "acquisition_rate": 0.0005461496450027307,
+          "advantage": -0.00032768978700164,
+          "delta_ci": [
+            -0.0009830693610049152,
+            0.0
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        }
+      },
+      "real_orderings": {
+        "base probability": {
+          "0.05": {
+            "clears_null": false,
+            "divergence": -0.022964998931446347,
+            "null_p95": 0.08818239023579418
+          },
+          "0.10": {
+            "clears_null": false,
+            "divergence": -0.02293530066582506,
+            "null_p95": 0.05298994547456823
+          },
+          "0.20": {
+            "clears_null": false,
+            "divergence": -0.020203060228666588,
+            "null_p95": 0.03659650285161741
+          }
+        },
+        "investor count": {
+          "0.05": {
+            "clears_null": false,
+            "divergence": -0.039269346757533304,
+            "null_p95": 0.08818239023579418
+          },
+          "0.10": {
+            "clears_null": false,
+            "divergence": -0.03386426241445894,
+            "null_p95": 0.05298994547456823
+          },
+          "0.20": {
+            "clears_null": false,
+            "divergence": -0.020203060228666588,
+            "null_p95": 0.03659650285161741
+          }
+        },
+        "offering size": {
+          "0.05": {
+            "clears_null": false,
+            "divergence": -0.0012258684966637394,
+            "null_p95": 0.08818239023579418
+          },
+          "0.10": {
+            "clears_null": false,
+            "divergence": -0.01747081979150812,
+            "null_p95": 0.05298994547456823
+          },
+          "0.20": {
+            "clears_null": false,
+            "divergence": -0.018836940010087354,
+            "null_p95": 0.03659650285161741
+          }
+        }
+      }
+    },
+    "false_positive_averse": {
+      "calibrated_null": {
+        "0.05": {
+          "n_null": 400,
+          "n_slice": 92,
+          "null_abs_max": 0.14140081447534014,
+          "null_abs_median": 0.02727037969273146,
+          "null_abs_p95": 0.07870788117683375,
+          "null_sd": 0.04099045623151297
+        },
+        "0.10": {
+          "n_null": 400,
+          "n_slice": 183,
+          "null_abs_max": 0.09412128103428208,
+          "null_abs_median": 0.01790057688921519,
+          "null_abs_p95": 0.05478582279085453,
+          "null_sd": 0.027792526467681506
+        },
+        "0.20": {
+          "n_null": 400,
+          "n_slice": 366,
+          "null_abs_max": 0.057236035132642735,
+          "null_abs_median": 0.014203248247396836,
+          "null_abs_p95": 0.038110352072533445,
+          "null_sd": 0.01976571362526083
+        }
+      },
+      "change_model": {
+        "auc": 0.6785572741076255,
+        "predictable": true,
+        "test_share_changed": 0.13380666302566904,
+        "train_share_changed": 0.13081017149615612,
+        "value_of_change_from_train": 0.06894213381555153
+      },
+      "objection": {
+        "ci": [
+          -0.19795918367346937,
+          0.07959183673469387
+        ],
+        "cohort_mean_gain": -0.008055707263790278,
+        "insufficient": false,
+        "mean_gain_given_change": -0.06020408163265306,
+        "n_changed": 245,
+        "product_check": -0.008055707263790278,
+        "sd_gain_given_change": 1.1103400652014244,
+        "share_changed": 0.13380666302566904,
+        "share_helped_given_change": 0.4204081632653061
+      },
+      "policy": {
+        "0.0": {
+          "acquisition_rate": 0.9852539595849262,
+          "advantage": -0.009421081376297102,
+          "delta_ci": [
+            -0.027174358274167122,
+            0.009424494811578369
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        },
+        "0.01": {
+          "acquisition_rate": 0.2605133806663026,
+          "advantage": 0.00217367558711086,
+          "delta_ci": [
+            -0.010850491534680503,
+            0.01492995630802839
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        },
+        "0.025": {
+          "acquisition_rate": 0.002730748225013654,
+          "advantage": -0.00020480611687602457,
+          "delta_ci": [
+            -0.002116671217913708,
+            0.0015162479519388306
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        },
+        "0.05": {
+          "acquisition_rate": 0.0,
+          "advantage": 0.0,
+          "delta_ci": [
+            0.0,
+            0.0
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        },
+        "0.1": {
+          "acquisition_rate": 0.0,
+          "advantage": 0.0,
+          "delta_ci": [
+            0.0,
+            0.0
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        }
+      },
+      "real_orderings": {
+        "base probability": {
+          "0.05": {
+            "clears_null": false,
+            "divergence": 0.07599048987248593,
+            "null_p95": 0.07870788117683375
+          },
+          "0.10": {
+            "clears_null": true,
+            "divergence": 0.06679887666269739,
+            "null_p95": 0.05478582279085453
+          },
+          "0.20": {
+            "clears_null": false,
+            "divergence": 0.011471007810238366,
+            "null_p95": 0.038110352072533445
+          }
+        },
+        "investor count": {
+          "0.05": {
+            "clears_null": false,
+            "divergence": 0.01892527248118158,
+            "null_p95": 0.07870788117683375
+          },
+          "0.10": {
+            "clears_null": false,
+            "divergence": -0.02199893754495289,
+            "null_p95": 0.05478582279085453
+          },
+          "0.20": {
+            "clears_null": false,
+            "divergence": -0.006971615140581306,
+            "null_p95": 0.038110352072533445
+          }
+        },
+        "offering size": {
+          "0.05": {
+            "clears_null": true,
+            "divergence": 0.10044701161161636,
+            "null_p95": 0.07870788117683375
+          },
+          "0.10": {
+            "clears_null": true,
+            "divergence": 0.0558699149140635,
+            "null_p95": 0.05478582279085453
+          },
+          "0.20": {
+            "clears_null": false,
+            "divergence": 0.014203248247396836,
+            "null_p95": 0.038110352072533445
+          }
+        }
+      }
+    },
+    "opportunity_averse": {
+      "calibrated_null": {
+        "0.05": {
+          "n_null": 400,
+          "n_slice": 92,
+          "null_abs_max": 0.06006904043881936,
+          "null_abs_median": 0.010583133474224111,
+          "null_abs_p95": 0.029604872604658893,
+          "null_sd": 0.015563381276719147
+        },
+        "0.10": {
+          "n_null": 400,
+          "n_slice": 183,
+          "null_abs_max": 0.0412551891677336,
+          "null_abs_median": 0.007102183703252724,
+          "null_abs_p95": 0.02158634088691121,
+          "null_sd": 0.011547513986183375
+        },
+        "0.20": {
+          "n_null": 400,
+          "n_slice": 366,
+          "null_abs_max": 0.020080325779755458,
+          "null_abs_median": 0.005053003375383872,
+          "null_abs_p95": 0.01324972468685928,
+          "null_sd": 0.007135443996783532
+        }
+      },
+      "change_model": {
+        "auc": 0.9496188031321353,
+        "predictable": true,
+        "test_share_changed": 0.04860731840524304,
+        "train_share_changed": 0.03938497930218805,
+        "value_of_change_from_train": 0.0915915915915916
+      },
+      "objection": {
+        "ci": [
+          -0.09269662921348315,
+          0.20786516853932585
+        ],
+        "cohort_mean_gain": 0.003003823047515019,
+        "insufficient": false,
+        "mean_gain_given_change": 0.06179775280898876,
+        "n_changed": 89,
+        "product_check": 0.003003823047515019,
+        "sd_gain_given_change": 0.7384702709781523,
+        "share_changed": 0.04860731840524304,
+        "share_helped_given_change": 0.8202247191011236
+      },
+      "policy": {
+        "0.0": {
+          "acquisition_rate": 0.5876570180229382,
+          "advantage": 0.0,
+          "delta_ci": [
+            -0.006007646095030038,
+            0.0056048607318405184
+          ],
+          "strongest_non_voi": "random",
+          "wins": false
+        },
+        "0.01": {
+          "acquisition_rate": 0.19989077007099945,
+          "advantage": 0.0008683779355543597,
+          "delta_ci": [
+            -0.007232796286182411,
+            0.008291643910431456
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        },
+        "0.025": {
+          "acquisition_rate": 0.05898416166029492,
+          "advantage": 0.0024849808847624416,
+          "delta_ci": [
+            -0.002294852539595849,
+            0.007591480065537958
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        },
+        "0.05": {
+          "acquisition_rate": 0.0,
+          "advantage": 0.0,
+          "delta_ci": [
+            0.0,
+            0.0
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        },
+        "0.1": {
+          "acquisition_rate": 0.0,
+          "advantage": 0.0,
+          "delta_ci": [
+            0.0,
+            0.0
+          ],
+          "strongest_non_voi": "none",
+          "wins": false
+        }
+      },
+      "real_orderings": {
+        "base probability": {
+          "0.05": {
+            "clears_null": false,
+            "divergence": -0.003003823047515019,
+            "null_p95": 0.029604872604658893
+          },
+          "0.10": {
+            "clears_null": false,
+            "divergence": -0.003003823047515019,
+            "null_p95": 0.02158634088691121
+          },
+          "0.20": {
+            "clears_null": false,
+            "divergence": -0.003003823047515019,
+            "null_p95": 0.01324972468685928
+          }
+        },
+        "investor count": {
+          "0.05": {
+            "clears_null": false,
+            "divergence": -0.003003823047515019,
+            "null_p95": 0.029604872604658893
+          },
+          "0.10": {
+            "clears_null": false,
+            "divergence": -0.003003823047515019,
+            "null_p95": 0.02158634088691121
+          },
+          "0.20": {
+            "clears_null": false,
+            "divergence": -0.00027158261035654897,
+            "null_p95": 0.01324972468685928
+          }
+        },
+        "offering size": {
+          "0.05": {
+            "clears_null": false,
+            "divergence": -0.003003823047515019,
+            "null_p95": 0.029604872604658893
+          },
+          "0.10": {
+            "clears_null": false,
+            "divergence": -0.003003823047515019,
+            "null_p95": 0.02158634088691121
+          },
+          "0.20": {
+            "clears_null": false,
+            "divergence": -0.007102183703252724,
+            "null_p95": 0.01324972468685928
+          }
+        }
+      }
+    }
+  }
+}

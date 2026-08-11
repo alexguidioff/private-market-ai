@@ -1,0 +1,48 @@
+version: "0.6-p0"
+updated: "2026-07-21"
+source_of_truth: true
+mission: "Decision Intelligence for Private Capital Markets"
+foundational_study:
+  id: F0
+  title: "Explainable ML for Startup Valuation"
+  status: accepted
+  venue: "WI2026 Student Track"
+core_papers:
+  - id: P1
+    title: "Value of Information for VC Diligence"
+    maturity: M2-real-baseline-transported-one-block-falsified-plus-synthetic-conditional
+    next_gate: "identify another qualitatively different PiT-safe block after SBIR temporal fail, USPTO access gate, OpenAlex identity fail and Form C coverage fail (52/2369 development); develop on 2021 against frozen EXP-001D baseline; validate once on 2022; keep 2023 closed"
+  - id: P2
+    title: "Decision Quality for VC"
+    maturity: M1
+    dependency: P1
+  - id: P3
+    title: "Human-AI at the Investment Committee"
+    maturity: M1
+    dependency: P1
+continuations:
+  - {id: P4, title: "Gaming-Robustness of VC Signals", maturity: M0}
+  - {id: P5, title: "Portfolio-Level Value of Information", maturity: M0}
+enabling_assets:
+  - point_in_time_data_layer
+  - executable_ontology
+  - synthetic_test_harness
+  - decision_graph
+p1_vertical_slice:
+  cohort: "US technology-related primary issuers with non-amendment Form D anchors, 2016-2020"
+  decision_time: "12 months after public filing availability"
+  decision: "acquire an additional information block before act vs stop"
+  outcome: "subsequent non-amendment Form D notice within the following 18 months (weak proxy)"
+  status: real_sec_history_block_predictive_pass_cost_aware_voi_fail_exploratory
+p1_future_evaluation:
+  cohort: "company-disjoint US technology-related primary issuers with 2021-2023 anchors"
+  splits: "development 2021 n=2369; validation 2022 n=2243; locked test 2023 n=914"
+  label_coverage_end: "2025-12-31 with a three-month late-filing buffer"
+  historical_cik_overlap: 0
+  status: development_validation_baseline_transport_pass_2023_locked
+  baseline: "EXP-001D anchor+SEC-history; 2022 ROC-AUC 0.6551, assumption-bound utility"
+  utility_status: "assumption-bound until buyer elicitation becomes available"
+  lock_manifest: "datasets/P1_FUTURE_COHORT_LOCK.md"
+primary_metric: net_decision_value
+falsification_gate: "P1 must beat all preregistered non-VoI baselines"
+product_stage: B0

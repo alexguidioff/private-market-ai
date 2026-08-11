@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PhD Project Outline — Alessandro Guidi</title>
+<style>
+  @page { size: A4; margin: 20mm 22mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.6pt;
+    line-height: 1.42;
+    color: #111;
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 0 20px;
+    text-align: justify;
+  }
+  h1 { font-size: 19pt; margin: 0 0 2px; }
+  .subtitle { font-style: italic; color: #444; font-size: 12pt; margin: 0 0 8px; }
+  .contact { font-size: 8.5pt; color: #666; margin: 0 0 10px; text-align: left; }
+  hr { border: none; border-top: 1px solid #bbb; margin: 10px 0 16px; }
+  h2 { font-size: 11.5pt; margin: 16px 0 5px; border-bottom: 0; }
+  p { margin: 0 0 8px; }
+  ul { margin: 4px 0 10px; padding-left: 20px; }
+  li { margin: 0 0 5px; }
+  .refs { text-align: left; }
+  .refs p { margin: 0 0 4px; padding-left: 20px; text-indent: -20px; font-size: 10pt; }
+  .foot { font-style: italic; color: #666; font-size: 9pt; margin-top: 16px; text-align: left; }
+  @media print {
+    body { margin: 0; max-width: none; padding: 0; }
+    a { color: #111; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+  <h1>PhD Project Outline</h1>
+  <div class="subtitle">The Value of Information in Venture Capital Diligence</div>
+  <div class="contact">
+    Alessandro Guidi &nbsp;·&nbsp; alexguidioff@gmail.com &nbsp;·&nbsp; alessandroguidi.site
+    &nbsp;·&nbsp; linkedin.com/in/alessandroguidi1 &nbsp;·&nbsp; github.com/alexguidioff
+  </div>
+  <hr>
+
+  <h2>Target institution</h2>
+  <p>University of St.&nbsp;Gallen, Institute of Technology Management (ITEM-HSG) — Prof. Dr. Petrit
+  Ademi (Entrepreneurial Finance). A methodological co-advisor at ETH (decision-making under
+  uncertainty / optimisation) is envisaged for the modelling side.</p>
+
+  <h2>1.&nbsp;&nbsp;Research context and focus</h2>
+  <p>Venture investors decide under extreme uncertainty on fragmentary, non-standardised
+  information. Research — including your own conjoint studies of how (corporate) venture capitalists
+  evaluate opportunities — has mapped <em>which attributes investors weight</em> when they screen and
+  decide. The question I want to open sits one step earlier and is, so far, largely unasked in
+  venture finance: given a decision, <em>which missing piece of information — at what cost — most
+  improves it?</em> Not &ldquo;which feature predicts success,&rdquo; but &ldquo;which diligence step
+  is worth doing.&rdquo;</p>
+  <p>This builds on my accepted WI2026 Student Track paper (<em>Can Non-Financial Signals Price
+  Private Companies?</em>), which shows on 3,403 PitchBook deals, under a strict out-of-time holdout,
+  that non-financial signals price private companies competitively with financial baselines — and
+  that <strong>investor-syndicate structure</strong>, not firm financials, is the dominant driver.
+  That last finding connects directly to your work on syndication decisions, and it exposes the
+  ceiling of a purely predictive approach: knowing <em>what predicts</em> is not the same as knowing
+  <em>what to go and learn</em>.</p>
+
+  <h2>2.&nbsp;&nbsp;Research questions</h2>
+  <p><strong>Main question:</strong> In venture diligence, which information acquisition — at what
+  cost — most improves the quality of the investment decision?</p>
+  <ul>
+    <li>How can each decision be represented by its <em>information state</em>: what a partner
+    actually knows at time <em>t</em> (reconstructed point-in-time), before the outcome is realised?</li>
+    <li>How do we quantify the <em>marginal value</em> of an additional diligence step (a reference
+    call, a cohort metric, a syndicate signal) relative to its cost?</li>
+    <li>Which diligence steps do investors appear to under- or over-invest in relative to their
+    information value — and does this differ across deal stages or syndicated vs solo deals?</li>
+  </ul>
+
+  <h2>3.&nbsp;&nbsp;Theoretical framework</h2>
+  <p>The project brings the economics of <em>value of information</em> (Howard; Savage) into venture
+  diligence. Where your conjoint experiments identify the <em>revealed weighting</em> of attributes
+  in investor decision-making, value-of-information theory asks the normative counterpart: <em>what
+  would be worth knowing next.</em> Placing the two side by side — how investors actually weight
+  information vs. how much that information is objectively worth to the decision — is the conceptual
+  core. The technical machinery (Bayesian experimental design / expected information gain; sequential
+  decision-making under uncertainty) exists in the ML literature; its application to venture
+  diligence is open, and it needs a domain anchor in entrepreneurial finance to be posed correctly.</p>
+
+  <h2>4.&nbsp;&nbsp;Methodology</h2>
+  <p>Feasibility does not depend on proprietary data. Ground truth comes from a <em>point-in-time
+  reconstruction</em> of public sources (so the information state at time <em>t</em> excludes
+  look-ahead) plus a <em>virtual-fund simulator</em> that measures decision quality
+  counterfactually. On top of this I estimate the value of each information type and rank diligence
+  steps by expected value per unit cost, benchmarked against the WI2026 pipeline as a predictive
+  baseline. The design naturally extends to your experimental tradition: a later stage could compare
+  model-implied information value against investors' revealed weighting in a conjoint-style study.</p>
+  <ul>
+    <li><strong>Year 1:</strong> formalise the information-state / value-of-information framing;
+    build the point-in-time dataset and the simulator.</li>
+    <li><strong>Year 2:</strong> estimate information value across diligence steps; complete and
+    submit the paper (if it grows: a follow-up on evaluating decision quality by what was knowable,
+    not by the eventual exit).</li>
+    <li><strong>Year 3–4:</strong> extensions (syndication signals, human-vs-model weighting),
+    writing, publications.</li>
+  </ul>
+
+  <h2>5.&nbsp;&nbsp;Expected contribution</h2>
+  <p>The project contributes (i) a <em>value-of-information framing for venture diligence</em> — a
+  normative account of which signals are worth acquiring; (ii) a reproducible point-in-time and
+  simulator methodology that makes the question testable without proprietary data; and (iii)
+  empirical evidence, connectable to investors' revealed decision weights, on where diligence effort
+  is mis-allocated. It speaks to entrepreneurial-finance audiences (how investors decide) and
+  generalises beyond VC (PE, credit, M&amp;A), which is what makes it a research line rather than a
+  single study.</p>
+
+  <h2>6.&nbsp;&nbsp;Fit with host institution</h2>
+  <p>Your research programme — the decision-making of (corporate) venture capitalists, venture
+  screening, and syndication — is exactly the domain this question needs. <em>Venture Capital
+  Screening</em> (Drover and Ademi, 2024) frames the very act I want to formalise: what investors
+  examine before committing. Your conjoint experiments on CVC evaluation give a rigorous behavioural
+  counterpart to the normative value-of-information model, and your work on syndication decisions
+  connects to my paper's central finding. I would value ITEM-HSG as the domain home for the project,
+  with an ETH methodological co-advisor for the modelling. I already have an accepted publication in
+  the area and want to build a coherent line of research, not a single paper.</p>
+
+  <h2>7.&nbsp;&nbsp;Selected references</h2>
+  <div class="refs">
+    <p>Howard, R.&nbsp;A. (1966). <em>Information Value Theory.</em> IEEE Trans. Systems Science and
+    Cybernetics, 2(1), 22–26.</p>
+    <p>Savage, L.&nbsp;J. (1954). <em>The Foundations of Statistics.</em> Wiley.</p>
+    <p>Drover, W., &amp; Ademi, P. (2024). <em>Venture Capital Screening.</em> Palgrave Macmillan.</p>
+    <p>Ademi, P., Schuhmacher, M., &amp; Zacharakis, A. (2023). <em>Evaluating Affordance-Based
+    Opportunities: A Conjoint Experiment of Corporate Venture Capital Managers' Decision-Making.</em>
+    Entrepreneurship Theory and Practice, 47(6).</p>
+    <p>Ademi, P., Schuhmacher, M., &amp; Zacharakis, A. (2023). <em>When Do Sharks Partner Up? An
+    Experiment of Corporate Venture Capital Syndication Decisions.</em></p>
+    <p>Guidi, A., Rashid, S., &amp; Zhong, H. (2026). <em>Can Non-Financial Signals Price Private
+    Companies?</em> WI2026 Student Track (accepted).</p>
+  </div>
+
+  <div class="foot">One-page WI2026 summary attached. Code and manuscript available on request.</div>
+
+</body>
+</html>

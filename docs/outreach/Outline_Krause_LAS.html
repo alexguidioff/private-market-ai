@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PhD Project Outline — Alessandro Guidi</title>
+<style>
+  @page { size: A4; margin: 18mm 20mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.2pt;
+    line-height: 1.38;
+    color: #111;
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 0 20px;
+    text-align: justify;
+  }
+  h1 { font-size: 18pt; margin: 0 0 2px; }
+  .subtitle { font-style: italic; color: #444; font-size: 11.5pt; margin: 0 0 8px; }
+  .contact { font-size: 8.5pt; color: #666; margin: 0 0 10px; text-align: left; }
+  hr { border: none; border-top: 1px solid #bbb; margin: 10px 0 14px; }
+  h2 { font-size: 11pt; margin: 14px 0 5px; }
+  p { margin: 0 0 7px; }
+  ul { margin: 4px 0 9px; padding-left: 20px; }
+  li { margin: 0 0 4px; }
+  code { font-family: "Consolas", monospace; font-size: 9.2pt; background: #f4f4f4; padding: 0 2px; }
+  .refs { text-align: left; }
+  .refs p { margin: 0 0 4px; padding-left: 20px; text-indent: -20px; font-size: 9.4pt; }
+  .foot { font-style: italic; color: #666; font-size: 9pt; margin-top: 14px; text-align: left; }
+  @media print { body { margin: 0; max-width: none; padding: 0; } a { color: #111; text-decoration: none; } }
+</style>
+</head>
+<body>
+
+  <h1>PhD Project Outline</h1>
+  <div class="subtitle">Decision-Oriented Information Acquisition for Private-Market Investment
+  Decisions: When Does Acquiring the Next Signal Pay for Itself?</div>
+  <div class="contact">
+    Alessandro Guidi &nbsp;·&nbsp; alexguidioff@gmail.com &nbsp;·&nbsp; alessandroguidi.site
+    &nbsp;·&nbsp; linkedin.com/in/alessandroguidi1 &nbsp;·&nbsp; github.com/alexguidioff
+  </div>
+  <hr>
+
+  <h2>Target institution</h2>
+  <p>ETH Zurich, Department of Computer Science (D-INFK) — Learning &amp; Adaptive Systems Group
+  (Prof. Andreas Krause), Institute for Machine Learning. A domain co-advisor at HSG (private markets /
+  entrepreneurial finance) is envisaged.</p>
+
+  <h2>1.&nbsp;&nbsp;Research context</h2>
+  <p>An investor deciding under uncertainty does not buy a prediction. They buy <strong>information</strong>
+  that changes a decision. Yet the dominant AI framing in private markets is predictive: forecast which
+  company succeeds. That framing is crowded and, taken alone, answers the wrong question — it improves
+  an estimate without telling anyone what to go and find out next.</p>
+  <p>The prior question is decision-oriented: <strong>given the current information state and a cost
+  budget, which information block — if any — should be acquired before continuing or stopping
+  diligence?</strong></p>
+  <p>This is not a new question in the abstract. It is precisely the object of your group's work on
+  optimising value of information, of <em>Near-Optimal Bayesian Active Learning for Decision Making</em>
+  (Javdani et al., AISTATS 2014), and of adaptive submodularity as a structural condition under which
+  adaptive greedy acquisition is provably near-optimal (Golovin &amp; Krause, JAIR 2011). Yuxin Chen's
+  ETH thesis, <em>Near-optimal Adaptive Information Acquisition</em> (2017), is the closest existing
+  statement of the machinery.</p>
+  <p><strong>What is open is the domain.</strong> That apparatus has been validated on active learning,
+  troubleshooting, object detection, sensor placement and viral marketing — settings with cheap,
+  repeatable, largely independent tests. Private-market investment decisions violate almost every one of
+  those conveniences: tests are expensive and slow, correlated, partly unobservable, and the outcome
+  arrives years later under confounding. My claim is not that the theory needs replacing. It is that
+  <strong>this is the setting in which its assumptions bind hardest, and nobody has checked what happens
+  there.</strong></p>
+
+  <h2>2.&nbsp;&nbsp;Research questions</h2>
+  <p><strong>Main question:</strong> In investment decisions under uncertainty, which information
+  acquisition — at what cost and delay — most improves decision quality, and when should acquisition
+  stop?</p>
+  <ul>
+    <li>How should the <em>information state</em> <code>I_t</code> be defined so that it contains only
+    what was defensibly observable at time <em>t</em>, with no look-ahead?</li>
+    <li>Do the structural conditions that license near-optimal adaptive greedy acquisition (adaptive
+    submodularity, or a usable surrogate) <strong>hold, approximately hold, or fail</strong> when tests
+    are costly, correlated and noisy in the way diligence steps are?</li>
+    <li>Under what cost structure does a decision-aware acquisition policy beat cheaper heuristics on
+    <strong>net decision value</strong> — and under what cost structure does it provably not?</li>
+  </ul>
+  <p>That third question is where my current evidence points, and I state it as a question rather than a
+  claim because my own result so far is negative (see §3).</p>
+
+  <h2>3.&nbsp;&nbsp;Foundation and honest evidence boundary</h2>
+  <p><strong>Completed work.</strong> <em>Can Non-Financial Signals Price Private Companies?</em> (Guidi,
+  Rashid &amp; Zhong; accepted, WI2026 Student Track, Business Informatics). On 3,403 PitchBook deals
+  under a strict out-of-time holdout spanning the 2022 regime shift, non-financial signals priced private
+  companies competitively with the strongest financial baseline, and investor-syndicate capacity was the
+  most influential signal among those tested. The value of that result here is diagnostic: it maps the
+  ceiling of the predictive framing and motivates the shift to acquisition.</p>
+  <p><strong>Current state of the flagship — stated plainly.</strong> I have built a point-in-time
+  pipeline on public SEC data: US technology-related primary issuers with non-amendment Form D anchors;
+  decision time 12 months after filing availability; company-disjoint temporal splits (development 2021,
+  validation 2022, locked test 2023 untouched).</p>
+  <ul>
+    <li>A real SEC-history information block is <strong>predictive</strong>: the frozen baseline raises
+    ROC-AUC from 0.5930 to 0.6551 on the 2022 validation cohort, and transports across cohorts.</li>
+    <li>The <strong>cost-aware value-of-information policy currently fails</strong> to beat the
+    preregistered non-VoI baselines on net decision value: it passes 0 of 15 declared utility-by-cost
+    scenarios, with a best point estimate of +0.00340 whose bootstrap interval crosses zero. Costs were
+    not adjusted after seeing that result. This is an exploratory negative result, not a published
+    finding.</li>
+    <li>The outcome label is an explicitly <strong>weak proxy</strong> (a later non-amendment Form D
+    notice within 18 months) — not a priced round, Series A, or success label. A 20-case model-reviewed
+    pilot reached 75% raw exact agreement with 45% initially unresolved; I treat it as adequate for
+    protocol development and sensitivity analysis only, <strong>not</strong> as human-adjudicated gold
+    data.</li>
+  </ul>
+  <p>I lead with the negative result deliberately. Either the utility model is mis-specified, or the cost
+  structure of public information makes acquisition genuinely not worth it in this regime, or the
+  structural conditions for decision-oriented greedy acquisition do not hold here. <strong>Which of those
+  three it is, is a research question worth a thesis, and it is a methodological question, not a finance
+  one.</strong></p>
+
+  <h2>4.&nbsp;&nbsp;Methodology</h2>
+  <p>Feasibility does not depend on proprietary data.</p>
+  <ul>
+    <li><strong>Point-in-time reconstruction</strong> from dated public evidence defines
+    <code>I_t</code> and excludes look-ahead. Proprietary sources (PitchBook, Orbis) are not a
+    dependency; they may later enter <em>as acquirable blocks whose marginal value is estimated</em> — so
+    "is this paid signal worth its cost?" stays a research question rather than a precondition.</li>
+    <li><strong>Diagnosing the negative result:</strong> separate mis-specified utility from genuinely
+    unfavourable cost structure from failure of the structural conditions. This is the Year-1 core and
+    the part that most needs your group's theory.</li>
+    <li><strong>A synthetic multi-world harness</strong> where the data-generating process is sealed from
+    the tested policy, used for recovery and counterfactual checks. It validates plumbing and method
+    recovery; it does <em>not</em> establish market realism, and I will not present it as evidence of
+    real-world performance.</li>
+    <li><strong>Preregistered baselines</strong> — acquire-all, acquire-none, cheapest-first,
+    uncertainty-based, decision-aware VoI — scored on decision value net of information cost and delay,
+    never on prediction accuracy alone. The 2023 cohort stays locked.</li>
+  </ul>
+  <ul>
+    <li><strong>Year 1:</strong> formalise the acquisition objective and stopping rule; diagnose the
+    negative result; test whether a usable structural condition or surrogate exists in this setting.</li>
+    <li><strong>Year 2:</strong> completion and submission. (If it grows: how to judge whether a decision
+    was good given what was knowable, separately from how it turned out.)</li>
+    <li><strong>Year 3–4:</strong> robustness, correlated and partially observable tests, writing.</li>
+  </ul>
+
+  <h2>5.&nbsp;&nbsp;Expected contribution</h2>
+  <p>(i) A <strong>stress test of decision-oriented information acquisition</strong> in a domain where
+  its standard assumptions are violated — costly, delayed, correlated, partly unobservable tests with
+  confounded long-horizon outcomes; (ii) a <strong>reproducible point-in-time methodology</strong> that
+  makes the question testable on public data, with the evidence boundary stated rather than blurred;
+  (iii) a characterisation of <strong>when cost-aware acquisition does and does not pay</strong>, which
+  is domain-general — the same formulation applies to credit, M&amp;A, and clinical or defence triage.
+  Private markets are the entry domain, not the limit.</p>
+
+  <h2>6.&nbsp;&nbsp;Fit with the group</h2>
+  <p>Your group's stated focus is systems that "actively acquire information, reason and reliably make
+  decisions in complex and uncertain domains." My project is that sentence applied to a domain the group
+  has not worked in, and it arrives with the infrastructure already built and a falsified first attempt
+  rather than a proposal.</p>
+  <p>I am aware the group's current output centres on foundation models, flow-based generative
+  optimisation, test-time training and reinforcement learning rather than the 2010–2017 value-of-information
+  line. I read that as an opportunity rather than a mismatch: the recent work on <strong>active data
+  selection</strong> — deciding which data is worth acquiring at test time — is the same question under a
+  modern name, and my setting supplies an application where acquisition cost is real money and real delay
+  rather than compute.</p>
+  <p>What I bring is not theoretical depth, which is what I am asking to acquire. It is a built
+  point-in-time data layer, a strict evaluation discipline, and a demonstrated willingness to report my
+  own negative result before someone else finds it. My degrees are in management and my professional roles
+  have been in product management (currently Amazon Business, previously consulting at Capgemini), so the
+  empirical and engineering work is self-taught and self-directed.</p>
+
+  <h2>7.&nbsp;&nbsp;Selected references</h2>
+  <div class="refs">
+    <p>Howard, R.&nbsp;A. (1966). <em>Information Value Theory.</em> IEEE Trans. Systems Science and
+    Cybernetics, 2(1), 22–26.</p>
+    <p>Golovin, D., &amp; Krause, A. (2011). <em>Adaptive Submodularity: Theory and Applications in
+    Active Learning and Stochastic Optimization.</em> JAIR 42.</p>
+    <p>Javdani, S., Chen, Y., Karbasi, A., Krause, A., Bagnell, J.&nbsp;A., &amp; Srinivasa, S. (2014).
+    <em>Near-Optimal Bayesian Active Learning for Decision Making.</em> AISTATS.</p>
+    <p>Chen, Y., Javdani, S., Karbasi, A., Bagnell, J.&nbsp;A., Srinivasa, S., &amp; Krause, A. (2015).
+    <em>Submodular Surrogates for Value of Information.</em> AAAI.</p>
+    <p>Chen, Y., Renders, J.&nbsp;M., Chehreghani, M.&nbsp;H., &amp; Krause, A. (2017). <em>Efficient
+    Online Learning for Optimizing Value of Information.</em> UAI.</p>
+    <p>Chen, Y. (2017). <em>Near-optimal Adaptive Information Acquisition: Theory and Applications.</em>
+    PhD thesis, ETH Zurich.</p>
+    <p>Ma, C., et al. (2019). <em>EDDI: Efficient Dynamic Discovery of High-Value Information.</em> ICML.</p>
+    <p>Fu, H., &amp; Taylor, L. (2024). <em>Due Diligence and the Allocation of Venture Capital.</em>
+    SSRN 5014747.</p>
+    <p>Gompers, P., Gornall, W., Kaplan, S., &amp; Strebulaev, I. (2020). <em>How Do Venture Capitalists
+    Make Decisions?</em> Journal of Financial Economics.</p>
+    <p>Guidi, A., Rashid, S., &amp; Zhong, H. (2026). <em>Can Non-Financial Signals Price Private
+    Companies?</em> WI2026 Student Track (accepted).</p>
+  </div>
+
+  <div class="foot">One-page WI2026 summary attached. Code, point-in-time pipeline and manuscript
+  available on request.</div>
+
+</body>
+</html>

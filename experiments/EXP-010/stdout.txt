@@ -1,0 +1,46 @@
+﻿
+  EXP-010 ù is the º8.6 condition a mechanism or a cohort artefact?
+  ==============================================================================
+  40 synthetic worlds per cell; lam = how much the base state anticipates the acquirable block
+  gate: a cell refutes the condition if learned advantage > 0.01 with interval excluding zero AND corr > 0.05
+
+   base_str   lam   base_auc  changed   prize      corr            learned adv (cost 0.0)      verdict
+      0.30   0.0   0.614    21.0%  +0.0276  +0.060 [+0.033,+0.090]  -0.0040 [-0.0069,-0.0017]   consistent
+      0.30   0.5   0.625    19.8%  +0.0279  +0.016 [-0.013,+0.046]  -0.0036 [-0.0056,-0.0018]   consistent
+      0.30   1.0   0.656    16.9%  +0.0277  +0.006 [-0.023,+0.031]  -0.0026 [-0.0045,-0.0011]   consistent
+      0.30   1.5   0.661    14.8%  +0.0204  +0.014 [-0.009,+0.040]  -0.0061 [-0.0093,-0.0033]   consistent
+      0.30   2.5   0.652    13.7%  +0.0129  +0.025 [+0.005,+0.044]  -0.0042 [-0.0066,-0.0020]   consistent
+      0.65   0.0   0.742    15.6%  +0.0231  +0.056 [+0.032,+0.082]  -0.0018 [-0.0035,-0.0002]   consistent
+      0.65   0.5   0.711    14.0%  +0.0160  +0.049 [+0.029,+0.072]  -0.0041 [-0.0083,-0.0012]   consistent
+      0.65   1.0   0.718    14.3%  +0.0228  +0.038 [+0.020,+0.059]  -0.0046 [-0.0070,-0.0026]   consistent
+      0.65   1.5   0.726    13.4%  +0.0193  +0.024 [-0.002,+0.051]  -0.0027 [-0.0046,-0.0009]   consistent
+      0.65   2.5   0.731    11.1%  +0.0124  +0.007 [-0.012,+0.026]  -0.0043 [-0.0070,-0.0020]   consistent
+      1.20   0.0   0.824    12.3%  +0.0141  +0.027 [+0.009,+0.047]  -0.0054 [-0.0077,-0.0033]   consistent
+      1.20   0.5   0.801    12.3%  +0.0125  +0.030 [+0.012,+0.047]  -0.0052 [-0.0083,-0.0027]   consistent
+      1.20   1.0   0.840    10.0%  +0.0111  +0.037 [+0.020,+0.053]  -0.0030 [-0.0050,-0.0013]   consistent
+      1.20   1.5   0.827     8.8%  +0.0138  +0.029 [+0.012,+0.048]  -0.0048 [-0.0073,-0.0025]   consistent
+      1.20   2.5   0.834     8.8%  +0.0099  +0.001 [-0.023,+0.027]  -0.0064 [-0.0091,-0.0039]   consistent
+
+  oracle advantage, to confirm a prize existed at all:
+     base_str 0.30  lam 0.0   oracle +0.0562   acquires 73.1%
+     base_str 0.30  lam 0.5   oracle +0.0556   acquires 74.7%
+     base_str 0.30  lam 1.0   oracle +0.0460   acquires 69.5%
+     base_str 0.30  lam 1.5   oracle +0.0416   acquires 67.4%
+     base_str 0.30  lam 2.5   oracle +0.0408   acquires 69.0%
+     base_str 0.65  lam 0.0   oracle +0.0381   acquires 73.4%
+     base_str 0.65  lam 0.5   oracle +0.0381   acquires 70.8%
+     base_str 0.65  lam 1.0   oracle +0.0369   acquires 76.0%
+     base_str 0.65  lam 1.5   oracle +0.0356   acquires 70.9%
+     base_str 0.65  lam 2.5   oracle +0.0305   acquires 60.3%
+     base_str 1.20  lam 0.0   oracle +0.0324   acquires 68.6%
+     base_str 1.20  lam 0.5   oracle +0.0339   acquires 72.7%
+     base_str 1.20  lam 1.0   oracle +0.0274   acquires 73.5%
+     base_str 1.20  lam 1.5   oracle +0.0225   acquires 66.2%
+     base_str 1.20  lam 2.5   oracle +0.0217   acquires 66.2%
+
+  ==============================================================================
+  cells 15, tests 30, refuting 0
+  The condition survives the sweep. Predictability of direction and the
+  prize for acquiring trade off against each other across the whole grid,
+  so no region supports a selective policy. This is mechanism evidence
+  for º8.6 and not a substitute for a second real information block.

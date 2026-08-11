@@ -1,0 +1,38 @@
+{
+  "experiment": "EXP-001B",
+  "scope": "Exploratory real-data predictive and zero-acquisition decision baseline; not a VoI test",
+  "seed": 20260721,
+  "target": "subsequent_notice_18m",
+  "splits": {"train": [2016, 2017, 2018], "validation": [2019], "test": [2020]},
+  "model_selection": {"metric": "validation_log_loss", "c_grid": [0.1, 1.0, 10.0]},
+  "models": ["dummy_prior", "logistic_regression"],
+  "bootstrap_draws": 1000,
+  "categorical_features": [
+    "industry_group", "entity_type", "state", "jurisdiction", "incorporation_age_band",
+    "revenue_range", "federal_exemptions"
+  ],
+  "numeric_features": [
+    "incorporation_year", "is_equity", "is_debt", "total_offering_amount",
+    "total_amount_sold", "investor_count", "prior_notice_count", "days_since_prior_notice",
+    "filing_lag_days", "pre_decision_followon", "known_filing_count", "known_new_notice_count",
+    "known_amendment_count", "known_equity_filing_count", "known_debt_filing_count",
+    "known_cumulative_amount_sold", "known_cumulative_offering_amount", "known_max_amount_sold",
+    "days_since_latest_known_filing", "issuer_observed_age_days", "latest_known_amount_sold",
+    "latest_known_investor_count"
+  ],
+  "signed_log1p_features": [
+    "total_offering_amount", "total_amount_sold", "investor_count", "prior_notice_count",
+    "days_since_prior_notice", "filing_lag_days", "known_filing_count", "known_new_notice_count",
+    "known_amendment_count", "known_equity_filing_count", "known_debt_filing_count",
+    "known_cumulative_amount_sold", "known_cumulative_offering_amount", "known_max_amount_sold",
+    "days_since_latest_known_filing", "issuer_observed_age_days", "latest_known_amount_sold",
+    "latest_known_investor_count"
+  ],
+  "utility_grid": {
+    "balanced": {"tp": 1.0, "fp": -0.5, "fn": -0.5, "tn": 0.0},
+    "false_positive_averse": {"tp": 1.0, "fp": -1.0, "fn": -0.25, "tn": 0.0},
+    "opportunity_averse": {"tp": 1.0, "fp": -0.25, "fn": -1.0, "tn": 0.0}
+  },
+  "acquisition_cost": 0.0,
+  "pilot_unknown_sensitivity": [0, 1]
+}

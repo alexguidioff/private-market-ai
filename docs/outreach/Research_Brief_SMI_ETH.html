@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-Supported Information Acquisition — Alessandro Guidi</title>
+<style>
+  @page { size: A4; margin: 13mm 15mm; }
+  * { box-sizing: border-box; }
+  html { background: #eceff1; }
+  body { width: 210mm; min-height: 297mm; margin: 18px auto; padding: 13mm 15mm; background: #fff; color: #17202a; font-family: Georgia, "Times New Roman", serif; font-size: 9.15pt; line-height: 1.27; }
+  header { border-bottom: 1.5px solid #1f4e5f; padding-bottom: 5px; margin-bottom: 7px; }
+  h1 { color: #173f4d; font-size: 17pt; line-height: 1.08; margin: 0 0 4px; letter-spacing: -.15px; }
+  .context { color: #4f5d63; font-size: 9pt; font-style: italic; margin-bottom: 3px; }
+  .contacts { color: #45545a; font-family: Arial, Helvetica, sans-serif; font-size: 7.8pt; }
+  h2 { color: #1f4e5f; font-family: Arial, Helvetica, sans-serif; font-size: 8.9pt; line-height: 1.1; letter-spacing: .65px; text-transform: uppercase; margin: 8px 0 3px; }
+  p { margin: 0 0 4.5px; }
+  .question { margin: 5px 9px 6px; padding: 5px 8px; border-left: 3px solid #b8872d; background: #f8f5ed; color: #17202a; font-size: 10pt; line-height: 1.25; font-weight: bold; }
+  .flow { margin: 4px 0 5px; padding: 4px 6px; background: #eef4f5; color: #173f4d; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; }
+  ol { margin: 2px 0 3px; padding-left: 18px; }
+  li { margin: 0 0 3px; padding-left: 1px; }
+  .boundary { border: 1px solid #bdc8cc; background: #f6f8f8; padding: 5px 7px; margin: 3px 0 5px; }
+  .boundary strong:first-child { color: #7a4f00; }
+  .ask { border-top: 1px solid #9aabad; margin-top: 6px; padding-top: 5px; }
+  strong { color: #142f39; }
+  em { color: #283c44; }
+  @media print { html { background: #fff; } body { width: auto; min-height: 0; margin: 0; padding: 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>AI-Supported Information Acquisition for Strategic Decisions under Uncertainty</h1>
+  <div class="context">Research brief for ETH Zurich — Strategic Management and Innovation</div>
+  <div class="contacts"><strong>Alessandro Guidi</strong> &nbsp;·&nbsp; alexguidioff@gmail.com &nbsp;·&nbsp; alessandroguidi.site &nbsp;·&nbsp; linkedin.com/in/alessandroguidi1 &nbsp;·&nbsp; github.com/alexguidioff</div>
+</header>
+
+<h2>Motivation and research question</h2>
+<p>Strategic investment decisions are made with incomplete evidence, limited attention, and costly opportunities to learn more. AI is commonly used to predict outcomes or summarise available information; a prior organizational question is <strong>how AI changes what decision-makers choose to investigate, when they escalate or stop, and how judgment is allocated between people and machines</strong>.</p>
+<div class="question">How does AI-supported information acquisition reshape organizational attention and decision processes under uncertainty—and when does it improve decision quality rather than merely prediction accuracy?</div>
+<p>Private-market investment provides a demanding empirical setting: evidence is fragmented, diligence is costly, outcomes are delayed, and teams must decide whether to continue investigating or stop. The unit of analysis is a decision at a fixed time, represented by the information defensibly available then. An AI system may recommend acquiring an information block—or no additional information—subject to cost and delay.</p>
+<div class="flow">information state → acquire / do not acquire → updated state → continue diligence / stop</div>
+
+<h2>Foundation</h2>
+<p>My study <em>Can Non-Financial Signals Price Private Companies? A Machine Learning Approach to Startup Valuation</em> (with S. Rashid and H. Zhong; accepted, <strong>WI2026 Student Track</strong>) analyses <strong>3,403 PitchBook deals</strong> under a strict out-of-time holdout across the 2022 regime shift. In that study, non-financial signals priced private companies competitively with the strongest financial baseline; within the tested models, investor-syndicate capacity was the most influential signal. This motivates moving beyond outcome prediction toward the design and evaluation of information-acquisition processes.</p>
+
+<h2>Proposed empirical programme</h2>
+<ol>
+  <li><strong>Reconstruct point-in-time information states.</strong> Use dated public evidence to represent what could defensibly have been observed at each decision time, separating later outcome evidence from contemporaneously available information.</li>
+  <li><strong>Evaluate cost-aware acquisition policies.</strong> Compare AI-supported recommendations with preregistered non-VoI baselines on decision value net of information cost and delay—not prediction accuracy alone. A synthetic multi-world branch can test recovery and counterfactual logic but will not be treated as evidence of market realism.</li>
+  <li><strong>Study organizational mechanisms.</strong> Through controlled experiments and, if available, a field or archival study with an investment team, examine effects on attention allocation, escalation and stopping, confidence, overrides, and the division of judgment between humans and AI. A partner would strengthen external validity but is not required for initial method development.</li>
+</ol>
+
+<h2>Feasibility and evidence boundary</h2>
+<div class="boundary"><strong>Current evidence boundary.</strong> An initial public-data pipeline uses US technology-related primary issuers with Form D anchors; its current outcome is an explicitly weak proxy, not a Series A, priced round, or success label. A <strong>20-case AI-assisted double-review feasibility pilot</strong> obtained 75% raw exact agreement, while 45% of cases were initially unknown or unresolved. It supports protocol development and sensitivity analysis only: it is not human-adjudicated gold data, does not estimate prevalence, and does not demonstrate that a value-of-information policy works. Stronger claims would require independent human adjudication or partner data.</div>
+
+<h2>Expected contribution and fit with SMI</h2>
+<p>The intended contribution is organizational rather than a private-market prediction tool: a process account of how AI-mediated information acquisition redistributes attention, structures strategy creation, changes escalation and stopping, and reallocates judgment in consequential decisions. Private markets serve as the empirical setting through which these mechanisms can be observed and tested.</p>
+<p>This direction fits SMI’s interest in digital technology and AI as tools and agents in strategy creation, organizational adaptation, and knowledge processes. My background combines entrepreneurial-finance research, applied machine learning, product management, and cross-functional organizational work; I seek supervision to deepen the organizational theory, research design, and decision-theoretic foundations.</p>
+
+<div class="ask">
+  <h2>What I am seeking</h2>
+  <p>I would value feedback on the scientific fit and whether this question could connect to a <strong>PhD, research-assistant role, collaboration, or future funded project</strong> at SMI. The immediate aim is to refine a falsifiable research design—not to pitch a company or assume proprietary data access.</p>
+</div>
+</body>
+</html>

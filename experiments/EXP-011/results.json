@@ -1,0 +1,366 @@
+{
+  "our_data": [
+    {
+      "method": "ours_string_combined",
+      "threshold_from_train": 0.77,
+      "in_sample_train": {
+        "balanced_accuracy": 0.7969471407072988,
+        "sensitivity": 0.7110609480812641,
+        "specificity": 0.8828333333333334,
+        "precision": 0.47261815453863465,
+        "f1": 0.5678233438485805,
+        "tp": 630,
+        "fp": 703,
+        "tn": 5297,
+        "fn": 256
+      },
+      "out_of_sample_test": {
+        "balanced_accuracy": 0.8068303269447576,
+        "sensitivity": 0.7226606538895152,
+        "specificity": 0.891,
+        "precision": 0.49498069498069497,
+        "f1": 0.5875343721356554,
+        "tp": 641,
+        "fp": 654,
+        "tn": 5346,
+        "fn": 246
+      },
+      "oracle_threshold_on_test": {
+        "balanced_accuracy": 0.8068303269447576,
+        "sensitivity": 0.7226606538895152,
+        "specificity": 0.891,
+        "precision": 0.49498069498069497,
+        "f1": 0.5875343721356554,
+        "tp": 641,
+        "fp": 654,
+        "tn": 5346,
+        "fn": 246
+      },
+      "roc_auc_test": 0.8690001878992859,
+      "average_precision_test": 0.6051614005300815,
+      "seconds": 1.16,
+      "strata_test": {
+        "positive_easy": {
+          "n": 740,
+          "accuracy": 0.8662162162162163
+        },
+        "positive_hard": {
+          "n": 147,
+          "accuracy": 0.0
+        },
+        "negative_easy": {
+          "n": 3000,
+          "accuracy": 0.9993333333333333
+        },
+        "negative_hard": {
+          "n": 3000,
+          "accuracy": 0.7826666666666666
+        }
+      }
+    },
+    {
+      "method": "splink_4",
+      "threshold_from_train": 0.67,
+      "in_sample_train": {
+        "balanced_accuracy": 0.7697084273890142,
+        "sensitivity": 0.6410835214446953,
+        "specificity": 0.8983333333333333,
+        "precision": 0.48217317487266553,
+        "f1": 0.5503875968992249,
+        "tp": 568,
+        "fp": 610,
+        "tn": 5390,
+        "fn": 318
+      },
+      "out_of_sample_test": {
+        "balanced_accuracy": 0.7727096016535138,
+        "sensitivity": 0.6482525366403608,
+        "specificity": 0.8971666666666667,
+        "precision": 0.4823825503355705,
+        "f1": 0.5531505531505533,
+        "tp": 575,
+        "fp": 617,
+        "tn": 5383,
+        "fn": 312
+      },
+      "oracle_threshold_on_test": {
+        "balanced_accuracy": 0.7727096016535138,
+        "sensitivity": 0.6482525366403608,
+        "specificity": 0.8971666666666667,
+        "precision": 0.4823825503355705,
+        "f1": 0.5531505531505533,
+        "tp": 575,
+        "fp": 617,
+        "tn": 5383,
+        "fn": 312
+      },
+      "roc_auc_test": 0.8061381999248403,
+      "average_precision_test": 0.5775806470609002,
+      "seconds": 9.11,
+      "strata_test": {
+        "positive_easy": {
+          "n": 740,
+          "accuracy": 0.777027027027027
+        },
+        "positive_hard": {
+          "n": 147,
+          "accuracy": 0.0
+        },
+        "negative_easy": {
+          "n": 3000,
+          "accuracy": 0.9993333333333333
+        },
+        "negative_hard": {
+          "n": 3000,
+          "accuracy": 0.795
+        }
+      },
+      "blocking_coverage_all_pairs": 0.38219705220358674,
+      "blocking_coverage_by_stratum": {
+        "positive_easy": 0.893918918918919,
+        "positive_hard": 0.13993174061433447,
+        "negative_easy": 0.007,
+        "negative_hard": 0.643
+      },
+      "n_candidate_pairs_generated": 1222545
+    },
+    {
+      "method": "recordlinkage_fellegi_sunter_ecm",
+      "threshold_from_train": 0.86,
+      "in_sample_train": {
+        "balanced_accuracy": 0.7709597441685478,
+        "sensitivity": 0.6162528216704289,
+        "specificity": 0.9256666666666666,
+        "precision": 0.5504032258064516,
+        "f1": 0.5814696485623003,
+        "tp": 546,
+        "fp": 446,
+        "tn": 5554,
+        "fn": 340
+      },
+      "out_of_sample_test": {
+        "balanced_accuracy": 0.7754797068771139,
+        "sensitivity": 0.6279594137542277,
+        "specificity": 0.923,
+        "precision": 0.5466143277723258,
+        "f1": 0.5844700944386148,
+        "tp": 557,
+        "fp": 462,
+        "tn": 5538,
+        "fn": 330
+      },
+      "oracle_threshold_on_test": {
+        "balanced_accuracy": 0.7754797068771139,
+        "sensitivity": 0.6279594137542277,
+        "specificity": 0.923,
+        "precision": 0.5466143277723258,
+        "f1": 0.5844700944386148,
+        "tp": 557,
+        "fp": 462,
+        "tn": 5538,
+        "fn": 330
+      },
+      "roc_auc_test": 0.8240926343479895,
+      "average_precision_test": 0.5417988285221612,
+      "seconds": 0.28,
+      "strata_test": {
+        "positive_easy": {
+          "n": 740,
+          "accuracy": 0.7527027027027027
+        },
+        "positive_hard": {
+          "n": 147,
+          "accuracy": 0.0
+        },
+        "negative_easy": {
+          "n": 3000,
+          "accuracy": 0.9996666666666667
+        },
+        "negative_hard": {
+          "n": 3000,
+          "accuracy": 0.8463333333333334
+        }
+      }
+    },
+    {
+      "method": "recordlinkage_logistic_supervised",
+      "threshold_from_train": 0.18,
+      "in_sample_train": {
+        "balanced_accuracy": 0.7968404815650865,
+        "sensitivity": 0.7223476297968398,
+        "specificity": 0.8713333333333333,
+        "precision": 0.45325779036827196,
+        "f1": 0.5570060922541341,
+        "tp": 640,
+        "fp": 772,
+        "tn": 5228,
+        "fn": 246
+      },
+      "out_of_sample_test": {
+        "balanced_accuracy": 0.8031928786170612,
+        "sensitivity": 0.7305524239007892,
+        "specificity": 0.8758333333333334,
+        "precision": 0.46518305814788224,
+        "f1": 0.5684210526315789,
+        "tp": 648,
+        "fp": 745,
+        "tn": 5255,
+        "fn": 239
+      },
+      "oracle_threshold_on_test": {
+        "balanced_accuracy": 0.8072177752724539,
+        "sensitivity": 0.7147688838782412,
+        "specificity": 0.8996666666666666,
+        "precision": 0.5129449838187702,
+        "f1": 0.5972680169571362,
+        "tp": 634,
+        "fp": 602,
+        "tn": 5398,
+        "fn": 253
+      },
+      "roc_auc_test": 0.8730408680947012,
+      "average_precision_test": 0.6875188552338245,
+      "seconds": 0.04,
+      "strata_test": {
+        "positive_easy": {
+          "n": 740,
+          "accuracy": 0.8756756756756757
+        },
+        "positive_hard": {
+          "n": 147,
+          "accuracy": 0.0
+        },
+        "negative_easy": {
+          "n": 3000,
+          "accuracy": 0.999
+        },
+        "negative_hard": {
+          "n": 3000,
+          "accuracy": 0.7526666666666667
+        }
+      }
+    }
+  ],
+  "their_data_febrl": {
+    "ours": {
+      "method": "ours_on_febrl",
+      "threshold_from_train": 0.84,
+      "in_sample_train": {
+        "balanced_accuracy": 0.917915805715039,
+        "sensitivity": 0.8452830188679246,
+        "specificity": 0.9905485925621533,
+        "precision": 0.7088607594936709,
+        "f1": 0.7710843373493976,
+        "tp": 448,
+        "fp": 184,
+        "tn": 19284,
+        "fn": 82
+      },
+      "out_of_sample_test": {
+        "balanced_accuracy": 0.915413244204502,
+        "sensitivity": 0.8402255639097744,
+        "specificity": 0.9906009244992295,
+        "precision": 0.7095238095238096,
+        "f1": 0.7693631669535285,
+        "tp": 447,
+        "fp": 183,
+        "tn": 19287,
+        "fn": 85
+      },
+      "oracle_threshold_on_test": {
+        "balanced_accuracy": 0.9163891045023962,
+        "sensitivity": 0.8402255639097744,
+        "specificity": 0.992552645095018,
+        "precision": 0.7550675675675675,
+        "f1": 0.795373665480427,
+        "tp": 447,
+        "fp": 145,
+        "tn": 19325,
+        "fn": 85
+      },
+      "roc_auc_test": 0.9222192615591365,
+      "average_precision_test": 0.7423885292634109,
+      "seconds": 1.78,
+      "strata_test": {
+        "positive_easy": {
+          "n": 509,
+          "accuracy": 0.8781925343811395
+        },
+        "positive_hard": {
+          "n": 23,
+          "accuracy": 0.0
+        },
+        "negative_easy": {
+          "n": 565,
+          "accuracy": 1.0
+        },
+        "negative_hard": {
+          "n": 18905,
+          "accuracy": 0.9903200211584237
+        }
+      },
+      "n_pairs": 40000,
+      "positive_rate": 0.02655
+    },
+    "baselines": [
+      {
+        "method": "recordlinkage_logistic_on_febrl",
+        "threshold_from_train": 0.11,
+        "in_sample_train": {
+          "balanced_accuracy": 0.917665855143031,
+          "sensitivity": 0.8433962264150944,
+          "specificity": 0.9919354838709677,
+          "precision": 0.7400662251655629,
+          "f1": 0.7883597883597883,
+          "tp": 447,
+          "fp": 157,
+          "tn": 19311,
+          "fn": 83
+        },
+        "out_of_sample_test": {
+          "balanced_accuracy": 0.915875493819294,
+          "sensitivity": 0.8402255639097744,
+          "specificity": 0.9915254237288136,
+          "precision": 0.7303921568627451,
+          "f1": 0.7814685314685315,
+          "tp": 447,
+          "fp": 165,
+          "tn": 19305,
+          "fn": 85
+        },
+        "oracle_threshold_on_test": {
+          "balanced_accuracy": 0.915875493819294,
+          "sensitivity": 0.8402255639097744,
+          "specificity": 0.9915254237288136,
+          "precision": 0.7303921568627451,
+          "f1": 0.7814685314685315,
+          "tp": 447,
+          "fp": 165,
+          "tn": 19305,
+          "fn": 85
+        },
+        "roc_auc_test": 0.9163324818208851,
+        "average_precision_test": 0.7416165021994576,
+        "seconds": 0.04,
+        "strata_test": {
+          "positive_easy": {
+            "n": 509,
+            "accuracy": 0.8781925343811395
+          },
+          "positive_hard": {
+            "n": 23,
+            "accuracy": 0.0
+          },
+          "negative_easy": {
+            "n": 565,
+            "accuracy": 1.0
+          },
+          "negative_hard": {
+            "n": 18905,
+            "accuracy": 0.9912721502248083
+          }
+        }
+      }
+    ]
+  }
+}

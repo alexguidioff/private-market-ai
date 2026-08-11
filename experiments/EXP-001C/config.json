@@ -1,0 +1,43 @@
+{
+  "experiment": "EXP-001C",
+  "scope": "Exploratory one-block acquisition policy using point-in-time SEC issuer history",
+  "seed": 20260721,
+  "target": "subsequent_notice_18m",
+  "splits": {"train": [2016, 2017, 2018], "validation": [2019], "test": [2020]},
+  "model_selection": {"metric": "validation_log_loss", "c_grid": [0.1, 1.0, 10.0]},
+  "bootstrap_draws": 1000,
+  "cross_fit_folds": 5,
+  "policies": ["none", "random", "cheapest", "most_predictive", "uncertainty_reduction", "cost_aware_voi"],
+  "base_categorical_features": [
+    "industry_group", "entity_type", "state", "jurisdiction", "incorporation_age_band",
+    "revenue_range", "federal_exemptions"
+  ],
+  "base_numeric_features": [
+    "incorporation_year", "is_equity", "is_debt", "total_offering_amount",
+    "total_amount_sold", "investor_count", "filing_lag_days"
+  ],
+  "history_numeric_features": [
+    "prior_notice_count", "days_since_prior_notice", "pre_decision_followon",
+    "known_filing_count", "known_new_notice_count", "known_amendment_count",
+    "known_equity_filing_count", "known_debt_filing_count", "known_cumulative_amount_sold",
+    "known_cumulative_offering_amount", "known_max_amount_sold",
+    "days_since_latest_known_filing", "issuer_observed_age_days",
+    "latest_known_amount_sold", "latest_known_investor_count"
+  ],
+  "signed_log1p_features": [
+    "total_offering_amount", "total_amount_sold", "investor_count", "filing_lag_days",
+    "prior_notice_count", "days_since_prior_notice", "known_filing_count",
+    "known_new_notice_count", "known_amendment_count", "known_equity_filing_count",
+    "known_debt_filing_count", "known_cumulative_amount_sold",
+    "known_cumulative_offering_amount", "known_max_amount_sold",
+    "days_since_latest_known_filing", "issuer_observed_age_days",
+    "latest_known_amount_sold", "latest_known_investor_count"
+  ],
+  "utility_grid": {
+    "balanced": {"tp": 1.0, "fp": -0.5, "fn": -0.5, "tn": 0.0},
+    "false_positive_averse": {"tp": 1.0, "fp": -1.0, "fn": -0.25, "tn": 0.0},
+    "opportunity_averse": {"tp": 1.0, "fp": -0.25, "fn": -1.0, "tn": 0.0}
+  },
+  "normalized_cost_grid": [0.0, 0.01, 0.025, 0.05, 0.1],
+  "cost_status": "assumption grid pending buyer elicitation"
+}

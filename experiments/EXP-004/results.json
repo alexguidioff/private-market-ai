@@ -1,0 +1,20 @@
+{
+  "documents_used": 6,
+  "claims_attempted": 150,
+  "mean_numbers_per_document": 993.6666666666666,
+  "mean_share_needing_unit_scaling": 0.806544037414168,
+  "verdicts": {
+    "found_ambiguous": 103,
+    "found_unique": 47
+  },
+  "digits_only_verdicts": {
+    "not_found": 108,
+    "found_unique": 23,
+    "found_ambiguous": 19
+  },
+  "unique_share": 0.31333333333333335,
+  "ambiguous_share": 0.6866666666666666,
+  "not_found_share": 0.0,
+  "digits_only_unique_share": 0.15333333333333332,
+  "mean_ambiguity_degree": 4.223300970873787
+}

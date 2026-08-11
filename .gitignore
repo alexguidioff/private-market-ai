@@ -1,0 +1,34 @@
+# --- Proprietary / licensed data: NEVER commit ---
+*.pitchbook
+datasets/raw/
+datasets/processed/
+datasets/**/*.csv
+datasets/**/*.parquet
+datasets/**/*.xlsx
+datasets/**/*.sqlite
+datasets/.cache_docs/
+!datasets/README.md
+
+# Secrets
+.env
+*.key
+*.pem
+secrets*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Large binaries (optional — track PDFs deliberately)
+*.zip
+*.tar.gz

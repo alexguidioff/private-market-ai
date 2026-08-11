@@ -1,0 +1,90 @@
+{
+  "$id": "p1-gold-label.schema.json",
+  "title": "P1 open-source adjudicated label",
+  "description": "One reviewed issuer-anchor record; unknown is distinct from no public evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "gold_record_id", "cik", "anchor_accession", "decision_time",
+    "label_window_end", "weak_proxy_label", "financing_event_label", "strong_round_label",
+    "event_in_window", "evidence_available_by_window_end", "priced_round",
+    "institutional_investor", "round_stage", "censoring_status", "review_status", "evidence"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "gold_record_id": {"type": "string", "pattern": "^P1G-[A-F0-9]{12}$"},
+    "cik": {"type": "string", "minLength": 1},
+    "canonical_company_id": {"type": ["string", "null"]},
+    "anchor_accession": {"type": "string", "minLength": 1},
+    "decision_time": {"type": "string", "format": "date"},
+    "label_window_end": {"type": "string", "format": "date"},
+    "weak_proxy_label": {"type": "integer", "enum": [0, 1]},
+    "financing_event_label": {
+      "description": "Layer A: any publicly evidenced financing event in the outcome window.",
+      "type": "string", "enum": ["positive", "no_public_evidence", "unknown"]
+    },
+    "strong_round_label": {
+      "description": "Layer B: priced equity round with a named institutional investor; unknown unless every component is evidenced.",
+      "type": "string", "enum": ["positive", "not_qualifying", "unknown"]
+    },
+    "event_in_window": {"$ref": "#/$defs/ternary"},
+    "evidence_available_by_window_end": {"$ref": "#/$defs/ternary"},
+    "outcome_event_date": {"type": ["string", "null"], "format": "date"},
+    "outcome_publication_date": {"type": ["string", "null"], "format": "date"},
+    "priced_round": {"$ref": "#/$defs/ternary"},
+    "institutional_investor": {"$ref": "#/$defs/ternary"},
+    "round_stage": {
+      "type": "string",
+      "enum": ["pre_seed", "seed", "series_a", "series_b_or_later", "other", "not_stated", "unknown"]
+    },
+    "censoring_status": {
+      "type": "string", "enum": ["complete", "right_censored", "identity_unresolved", "unknown"]
+    },
+    "review_status": {
+      "type": "string", "enum": ["pending", "single_review", "agreed", "adjudicated", "unresolved"]
+    },
+    "reviewer_1": {"type": ["string", "null"]},
+    "reviewer_2": {"type": ["string", "null"]},
+    "adjudicator": {"type": ["string", "null"]},
+    "review_rationale": {"type": ["string", "null"], "maxLength": 2000},
+    "evidence": {
+      "type": "array", "items": {"$ref": "#/$defs/evidence"}, "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "ternary": {"type": "string", "enum": ["yes", "no", "unknown"]},
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_type", "url", "publication_date", "retrieved_at", "supports", "reviewer_confidence"
+      ],
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "issuer_announcement", "investor_announcement", "investor_portfolio",
+            "regulator", "business_registry", "reputable_news", "archived_page", "other"
+          ]
+        },
+        "url": {"type": "string", "format": "uri"},
+        "archive_url": {"type": ["string", "null"], "format": "uri"},
+        "event_date": {"type": ["string", "null"], "format": "date"},
+        "publication_date": {"type": "string", "format": "date"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "content_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+        "supports": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["identity", "financing", "amount", "stage", "pricing", "investor", "event_date"]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reviewer_confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+        "note": {"type": ["string", "null"], "maxLength": 1000}
+      }
+    }
+  }
+}
